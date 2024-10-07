@@ -16,8 +16,8 @@ looking for a match starting from the longest possible substring.
 
 For example: The sound  "au" ("aʊ̯") in "Frau" includes the "s"
 
-[!NOTE]
-Pronunciation remarks for Japanese speakers:
+> [!NOTE]
+> Pronunciation remarks for Japanese speakers:
 - If the word ends in 「ス」, in 99% of the cases it is pronounced just *s*, instead of *su*.
   - 「ハウス」 is pronounced *Haus*
     (not *Hausu*)
