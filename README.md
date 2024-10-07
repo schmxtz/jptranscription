@@ -24,7 +24,7 @@ For example: The sound  "au" ("aʊ̯") in "Frau" includes the "s"
 >  - If the word ends in 「ト」, there is a chance that the *o* in *to* is either silent or not. In that case the reader
 >is forced to look at its German counterpart and make a case-by-case decision.
 >    - If the German word ends with *to* like in *Auto*, it is pronounced. But if it ends with *t*, *tt*, *dt* or *d*, then
->  the *o* in *to* is silent like in [*alt*](https://www.youtube.com/watch?v=d8XzbxmtrbY) (「アルト」), [*Bett*](https://www.youtube.com/watch?v=nLU6-9qDJMA) (「ベット」), [*Stadt*] (https://www.youtube.com/watch?v=Q-qnZiMsD_U) (「シュタット」) and *Fahrrad* 
+>  the *o* in *to* is silent like in [*alt*](https://www.youtube.com/watch?v=d8XzbxmtrbY) (「アルト」), [*Bett*](https://www.youtube.com/watch?v=nLU6-9qDJMA) (「ベット」), [*Stadt*](https://www.youtube.com/watch?v=Q-qnZiMsD_U) (「シュタット」) and *Fahrrad* 
 >  (「ファーラート」).
 
 
