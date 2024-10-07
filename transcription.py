@@ -3,13 +3,13 @@ import pandas
 
 mappings = {
     # Diphtongs
-    'aʊ̯': '\u30A2\u30AA',  # アオ
-    'ʁaʊ̯': '\u30E9\u30AA',  # ラオ
+    'aʊ̯': '\u30A2\u30A6',  # aʊ̯ -> アウ (sound "au" in "Auto")
+    'ʁaʊ̯': '\u30E9\u30A6',  # ラウ
 
     # Vowels (Long Vowel)
     'ʏ': '\u30A4',  # イ
     'ə': '\u30A8',  # エ
-    'aː': '\u30A2\u30FC',  # アー
+    'aː': '\u30A2\u30FC',  # aː -> アー (sound "a" in "Abend")
     'ɐ': '\u30A2',  # ア
     'ʊ': '\u30A6',  # ウ
 
@@ -17,10 +17,11 @@ mappings = {
     'bə': '\u30D9',  # ベ
     'ba': '\u30D0',  # バ
     'biː': '\u30D3',  # ビ
+    'biːə': '\u30D3\u30FC',  # biːə -> ビー (sound "bie" in "Biene")
     'bʊ': '\u30D6',  # ブ
 
     # D+Vowel (Long Vowel)
-    'dɐ': '\u30C0\u30FC',  # ダー
+    'dɐ': '\u30C0',  # dɐ -> ダ (sound "der" in "Bruder")
     'dɔɔ': '\u30C9',  # ド
 
     # F+Vowel
@@ -53,6 +54,7 @@ mappings = {
     'luː': '\u30EB\u30FC',  # ルー
     'liː': '\u30EA\u30FC',  # リー
     'lə': '\u30EC',  # レ
+    'lloː': '\u30C3\u30ED\u30FC',  # ッロー
 
     # M+Vowel (Long Vowel)
     'mə': '\u30E1',  # メ
