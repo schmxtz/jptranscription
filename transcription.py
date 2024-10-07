@@ -9,6 +9,7 @@ mappings = {
     # Vowels (Long Vowel)
     'ʏ': '\u30A4',  # イ
     'ə': '\u30A8',  # エ
+    'a': '\u30A2',  # a -> ア (sound "a" in "alt")
     'aː': '\u30A2\u30FC',  # aː -> アー (sound "a" in "Abend")
     'ɐ': '\u30A2',  # ア
     'ʊ': '\u30A6',  # ウ
