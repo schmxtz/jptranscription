@@ -14,5 +14,12 @@ So this project attempts to generate the Katakana pronunciation of all German wo
 Since some sound-combinations include shorter sounds/sound-combinations that might be pronounced differently, I'll start
 looking for a match starting from the longest possible substring.
 
-For example: The sound  "au" ("aʊ̯") in "Frau" includes the ""
+For example: The sound  "au" ("aʊ̯") in "Frau" includes the "s"
+
+
+Pronunciation remarks for Japanese speakers:
+- If the word ends in 「ス」, in 99% of the cases it is pronounced just *s*, instead of *su*. 
+    
+  - 「ハウス」 is pronounced *Haus*
+    (not *Hausu*)
 
