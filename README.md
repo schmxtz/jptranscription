@@ -18,14 +18,14 @@ For example: The sound  "au" ("aʊ̯") in "Frau" includes the "s"
 
 > [!NOTE]
 > Pronunciation remarks for Japanese speakers:
-- If the word ends in 「ス」, in 99% of the cases it is pronounced just *s*, instead of *su*.
-  - 「ハウス」 is pronounced *Haus*
-    (not *Hausu*)
-- If the word ends in 「ト」, there is a chance that the *o* in *to* is either silent or not. In that case the reader
-is forced to look at its German counterpart and make a case-by-case decision.
-  - If the German word ends with *to* like in *Auto*, it is pronounced. But if it ends with *t*, *tt*, *dt* or *d*, then
-  the *o* in *to* is silent like in *alt* (「アルト」), *Bett* (「ベット」), *Stadt* (「シュタット」) and *Fahrrad* 
-  (「ファーラート」).
+>- If the word ends in 「ス」, in 99% of the cases it is pronounced just *s*, instead of *su*.
+>  - 「ハウス」 is pronounced *Haus*
+>    (not *Hausu*)
+>- If the word ends in 「ト」, there is a chance that the *o* in *to* is either silent or not. In that case the reader
+>is forced to look at its German counterpart and make a case-by-case decision.
+>  - If the German word ends with *to* like in *Auto*, it is pronounced. But if it ends with *t*, *tt*, *dt* or *d*, then
+>  the *o* in *to* is silent like in *alt* (「アルト」), *Bett* (「ベット」), *Stadt* (「シュタット」) and *Fahrrad* 
+>  (「ファーラート」).
 
 
 
