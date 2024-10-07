@@ -27,3 +27,5 @@ is forced to look at its German counterpart and make a case-by-case decision.
   the *o* in *to* is silent like in *alt* (「アルト」), *Bett* (「ベット」), *Stadt* (「シュタット」) and *Fahrrad* 
   (「ファーラート」).
 
+
+
