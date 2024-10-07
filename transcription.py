@@ -3,107 +3,141 @@ import pandas
 
 mappings = {
     # Diphtongs
-    'aʊ̯': '\u30A2\u30AA',
+    'aʊ̯': '\u30A2\u30AA',  # アオ
+    'ʁaʊ̯': '\u30E9\u30AA',  # ラオ
 
     # Vowels (Long Vowel)
-    'ʏ': '\u30A4',
-    'ə': '\u30A8',
-    'aː': '\u30A2\u30FC',
-    'ʊ': '\u30A6',
+    'ʏ': '\u30A4',  # イ
+    'ə': '\u30A8',  # エ
+    'aː': '\u30A2\u30FC',  # アー
+    'ɐ': '\u30A2',  # ア
+    'ʊ': '\u30A6',  # ウ
 
     # B+Vowel (Long Vowel)
-    'bə': '\u30D9',
-    'ba': '\u30D0',
-    'biː': '\u30D3',
-    'bʊ': '\u30D6',
+    'bə': '\u30D9',  # ベ
+    'ba': '\u30D0',  # バ
+    'biː': '\u30D3',  # ビ
+    'bʊ': '\u30D6',  # ブ
 
     # D+Vowel (Long Vowel)
-    'dɐ': '\u30C0\u30FC',
-    'dɔɔ': '\u30C9',
+    'dɐ': '\u30C0\u30FC',  # ダー
+    'dɔɔ': '\u30C9',  # ド
 
     # F+Vowel
-    'fa': '\u30D5\u30A1',
-    'fɪ': '\u30D5\u30A3',
-    'fe': '\u30D5\u30A7',
-    'faːɐ': '\u30D5\u30A1\u30FC',
-    'faʁ': '\u30D5\u30A1\u30FC',
+    'fa': '\u30D5\u30A1',  # ファ
+    'fɪ': '\u30D5\u30A3',  # フィ
+    'feː': '\u30D5\u30A7',  # フェ
+    'faːɐ': '\u30D5\u30A1\u30FC',  # ファー
+    'faʁ': '\u30D5\u30A1\u30FC',  # ファー
 
     # G+Vowel
-    'gə': '\u30B2',
-    'gɛ': '\u30B2',
+    'gə': '\u30B2',  # ゲ
+    'gɛ': '\u30B2',  # ゲ
 
     # H+Vowel
-    'ha': '\u30CF',
-    'hoː': '\u30DB',
-    'hʊ': '\u30D5',
+    'ha': '\u30CF',  # ハ
+    'hoː': '\u30DB',  # ホ
+    'hʊ': '\u30D5',  # フ
 
     # J+Vowel
-    'jaːɐ': '\u30E4\u30FC',
-    'jaː': '\u30E4\u30FC',
-    'jʊ': '\u30E6',
+    'jaːɐ': '\u30E4\u30FC',  # ヤー
+    'jaː': '\u30E4\u30FC',  # ヤー
+    'jʊ': '\u30E6',  # ユ
 
     # K+Vowel
-    'ka': '\u30AB',
-    'kɪ': '\u30AD',
+    'ka': '\u30AB',  # カ
+    'kɪ': '\u30AD',  # キ
 
     # L+Vowel (Long Vowel)
-    'la': '\u30E9',
-    'luː': '\u30EB\u30FC',
-    'liː': '\u30EA\u30FC',
+    'la': '\u30E9',  # ラ
+    'luː': '\u30EB\u30FC',  # ルー
+    'liː': '\u30EA\u30FC',  # リー
+    'lə': '\u30EC',  # レ
 
     # M+Vowel (Long Vowel)
-    'mə': '\u30E1',
-    'miː': '\u30DF',
+    'mə': '\u30E1',  # メ
+    'mɛː': '\u30E1',  # メ
+    'miː': '\u30DF',  # ミ
+    'ma': '\u30DE',  # マ
+    'moː': '\u30E2',  # モ
+    'mɔ': '\u30E2',  # モ
+    'muː': '\u30E0',  # ム
+    'mʊ': '\u30E0',  # ム
+
+    # N+Vowel
+    'na': '\u30CA',  # ナ
+    'naː': '\u30CA',  # ナ
+    'nə': '\u30CD',  # ネ
+    'nəə': '\u30CD\u30FC',  # ネー
 
     # P+Vowel
-    'pa': '\u30D1',
+    'pa': '\u30D1',  # パ
+    'piː': '\u30D4',  # ピ
 
     # R+Vowel (Long Vowel)
-    'ʁiː': '\u30EA\u30FC',
-    'ʁoː': '\u30ED\u30FC',
-    'ʁuː': '\u30EB\u30FC',
-    'ʁaː': '\u30E9\u30FC',
-    'ʁaː': '\u30E9\u30FC',
-    'ʁɔɔ': '\u30ED',
+    'ʁiː': '\u30EA\u30FC',  # リー
+    'ʁuː': '\u30EB\u30FC',  # ルー
+    'ʁaː': '\u30E9\u30FC',  # ラー
+    'ʁɔɔ': '\u30ED',  # ロ
+    'ʁɔ': '\u30ED',  # ロ
+    'ʁoː': '\u30ED\u30FC',  # ロー
+    'ʁeː': '\u30EC\u30FC',  # レー
 
     # T+Vowel
-    'tak': '\u30BF\u30FC\u30AF',
-    'toː': '\u30C8',
-    'tʏ': '\u30C8\u30A5',
-    'tɛ': '\u30C6',
+    'tak': '\u30BF\u30FC\u30AF',  # ターク
+    'tɐ': '\u30BF',  # タ
+    'tat': '\u30BF\u30C3\u30C8',  # タット
+    'toː': '\u30C8',  # ト
+    'tʏ': '\u30C8\u30A5',  # ト
+    'tɛ': '\u30C6',  # テ
+
+    # V+Vowel
+    'vɛ': '\u30F4\u30A7',  # ヴェ
+
+    # Z+Vowel
+    'zeː': '\u30BC\u30FC',  # ゼー
+    'szə': '\u30C3\u30BC',  # ッゼ
+    'zoː': '\u30BE\u30FC',  # ゾー
+    'zɔ': '\u30BE',  # ゾ
 
     # Consonants
-    'n': '\u30F3',
-    '̯n': '\u30F3',
-    'ŋ': '\u30F3',
-    'k': '\u30AF',
-    'ŋk': '\u30F3\u30AF',
-    '̯k': '\u30AF',
-    't': '\u30C8',
-    'ʁ': '\u30A2',  # R-sound
-    'b': '\u30D6',
-    'f': '\u30D5',
-    's': '\u30B9',
-    '̯s': '\u30B9',
-    'l': '\u30EB',
-    'm': '\u30E0',
-    'ts': '\u30C4',
+    'n': '\u30F3',  # ン
+    '̯n': '\u30F3',  # ン
+    'ŋ': '\u30F3',  # ン
+    'nn': '\u30F3',  # ン
+    'k': '\u30AF',  # ク
+    'ŋk': '\u30F3\u30AF',  # ンク
+    '̯k': '\u30AF',  # ク
+    't': '\u30C8',  # ト
+    'ʁ': '\u30A2',  # ア
+    'b': '\u30D6',  # ブ
+    'f': '\u30D5',  # フ
+    's': '\u30B9',  # ス
+    '̯s': '\u30B9',  # ス
+    'l': '\u30EB',  # ル
+    'm': '\u30E0',  # ム
+    'ts': '\u30C4',  # ツ
+    'p': '\u30D7',  # プ
 
     # Full syllables (Need seperation because 'x' sounds depends on previous one)
-    'buːx': '\u30D6\u30FC\u30D5',
-    'fʁaʊ̯': '\u30D5\u30E9\u30AA',
+    'buːx': '\u30D6\u30FC\u30D5',  # ブーフ
+    'naχ': '\u30CA\u30CF',  # ナハ
+    'zɔnə': '\u30BE\u30F3\u30CD',  # ゾンネ
 
     # Uncategorized (unsure what to call these)
-    '̯t͡ʃ': '\u30C1\u30E5',
-    'ŋɐ': '\u30F3\u30AC',
-    'ŋə': '\u30F3\u30B2',
-    'tsɔ': '\u30C4\u30A9',
-    'tsə': '\u30C3\u30C4\u30A7',
-    'ʁyː': '\u30EA\u30E5\u30FC',
-    'ʃɛ': '\u30B7\u30A7',
+    '̯t͡ʃ': '\u30C1\u30E5',  # チュ
+    'ʃ': '\u30B7\u30E5',  # シュ
+    'ʃuː': '\u30B7\u30E5\u30FC',  # シュー
+    'ŋɐ': '\u30F3\u30AC',  # ンガ
+    'ŋə': '\u30F3\u30B2',  # ンゲ
+    'tsɔ': '\u30C4\u30A9',  # ツォ
+    'tsə': '\u30C3\u30C4\u30A7',  # ッツェ
+    'ʁyː': '\u30EA\u30E5\u30FC',  # リュー
+    'ʃɛ': '\u30B7\u30A7',  # シェ
+    'çə': '\u30D2\u30A7',  # ヒェ
+    'ziː': '\u30B8\u30FC'  # ジー
 }
 MAX_IPA_SUBSTRING_LENGTH = len(max(mappings, key=len))
-
 
 
 def convert_katakana(text):
@@ -132,8 +166,8 @@ def convert_katakana(text):
 
 word_pairings = pandas.read_csv(filepath_or_buffer='words.csv')
 for index, row in word_pairings.iterrows():
-    converted_word, word_ipa = convert_katakana(row['german'])
-    print(converted_word[0], word_ipa)
+    converted_word, word_ip = convert_katakana(row['german'])
+    print(converted_word[0], word_ip)
     if not converted_word or converted_word[0] != row['katakana']:
-        print(word_ipa, converted_word[0], row['katakana'])
+        print(word_ip, converted_word[0], row['katakana'])
         break
