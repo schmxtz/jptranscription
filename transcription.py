@@ -22,6 +22,7 @@ mappings = {
 
     # D+Vowel (Long Vowel)
     'dɐ': '\u30C0',  # dɐ -> ダ (sound "der" in "Bruder")
+    'dɔ': '\u30C9',  # ド
     'dɔɔ': '\u30C9',  # ド
 
     # F+Vowel
