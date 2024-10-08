@@ -10,9 +10,11 @@ mappings = {
     'ʏ': '\u30A4',  # イ
     'ə': '\u30A8',  # エ
     'a': '\u30A2',  # a -> ア (sound "a" in "alt")
-    'aː': '\u30A2\u30FC',  # aː -> アー (sound "a" in "Abend")
     'ɐ': '\u30A2',  # ア
+    'aː': '\u30A2\u30FC',  # aː -> アー (sound "a" in "Abend")
     'ʊ': '\u30A6',  # ウ
+    'uː': '\u30A6\u30FC',  # ウー
+    'ʔuː': '\u30A6\u30FC',  # ウー
 
     # B+Vowel (Long Vowel)
     'bə': '\u30D9',  # ベ
@@ -25,6 +27,8 @@ mappings = {
     'dɐ': '\u30C0',  # dɐ -> ダ (sound "der" in "Bruder")
     'dɔ': '\u30C9',  # ド
     'dɔɔ': '\u30C9',  # ド
+    'dɛ': '\u30C7',  # デ
+    'də': '\u30C7',  # デ
 
     # F+Vowel
     'fa': '\u30D5\u30A1',  # ファ
@@ -94,12 +98,19 @@ mappings = {
     'szə': '\u30BB',  # セ
 
     # T+Vowel
-    'tak': '\u30BF\u30FC\u30AF',  # ターク
+    'ta': '\u30BF',  # タ
     'tɐ': '\u30BF',  # タ
+    'taː': '\u30BF\u30FC',  # ター
+    'tak': '\u30BF\u30FC\u30AF',  # ターク
     'tat': '\u30BF\u30C3\u30C8',  # タット
     'toː': '\u30C8',  # ト
-    'tʏ': '\u30C8\u30A5',  # ト
+    'tɔx': '\u30C8\u30DB',  # トホ
+    'tʏ': '\u30C8\u30A5',  # トゥ
+    'tuː': '\u30C8\u30A5',  # トゥ
+    'tʊ': '\u30C8\u30A5',  # トゥ
+    'tyː': '\u30C8\u30A5\u30FC',  # トゥー
     'tɛ': '\u30C6',  # テ
+    'tiː': '\u30C6\u30A3',  # ティ
 
     # V+Vowel
     'vɛ': '\u30F4\u30A7',  # ヴェ
@@ -139,49 +150,51 @@ mappings = {
     '̯t͡ʃ': '\u30C1\u30E5',  # チュ
     'ʃ': '\u30B7\u30E5',  # シュ
     'ʃuː': '\u30B7\u30E5\u30FC',  # シュー
+    'ʃə': '\u30B7\u30A7',  # シェ
+    'ʃɛ': '\u30B7\u30A7',  # シェ
     'ŋɐ': '\u30F3\u30AC',  # ンガ
     'ŋə': '\u30F3\u30B2',  # ンゲ
     'tsɔ': '\u30C4\u30A9',  # ツォ
     'tsə': '\u30C3\u30C4\u30A7',  # ッツェ
     'ʁyː': '\u30EA\u30E5\u30FC',  # リュー
-    'ʃɛ': '\u30B7\u30A7',  # シェ
     'çə': '\u30D2\u30A7',  # ヒェ
     'ziː': '\u30B8\u30FC',  # ジー
+    'xə': '\u30C3\u30D8',  # ッヘ
 }
 MAX_IPA_SUBSTRING_LENGTH = len(max(mappings, key=len))
 
 
 def convert_katakana(text):
     converted_words = []
-    word_ipa = ''
+    word_ipas = []
     for sent in sentences(text, lang='de-de'):
         for word in sent:
             if word.phonemes:
-                word_ipa = ''.join(word.phonemes)
+                word_ipas.append(''.join(word.phonemes))
                 word_katakana = []
                 start = 0
-                while start < len(word_ipa):
+                while start < len(word_ipas[-1]):
                     modified = False
-                    for i in range(min(len(word_ipa) - start, MAX_IPA_SUBSTRING_LENGTH), 0, -1):
-                        if word_ipa[start:start + i] in mappings:
-                            word_katakana.append(mappings[word_ipa[start:start + i]])
+                    for i in range(min(len(word_ipas[-1]) - start, MAX_IPA_SUBSTRING_LENGTH), 0, -1):
+                        if word_ipas[-1][start:start + i] in mappings:
+                            word_katakana.append(mappings[word_ipas[-1][start:start + i]])
                             # print(word_ipa[start:start + i])
                             start += i
                             modified = True
                             break
                     if not modified:
-                        print('Error converting {}'.format(word_ipa))
+                        print('Error converting {}'.format(word_ipas[-1]))
                         break
                 converted_words.append(''.join(word_katakana))
-    return converted_words, word_ipa
+    return converted_words, word_ipas
 
 
 word_pairings = pandas.read_csv(filepath_or_buffer='words.csv')
 for index, row in word_pairings.iterrows():
     converted_word, word_ip = convert_katakana(row['german'])
-    print(converted_word[0], word_ip)
-    if not converted_word or converted_word[0] != row['katakana']:
-        print(word_ip, converted_word[0], row['katakana'])
+    print(converted_word[-1], word_ip[-1])
+    if not converted_word or converted_word[-1] != row['katakana']:
+        print(word_ip[-1], converted_word[-1], row['katakana'])
         break
     # if row['german'] == 'Straße':
     #     converted_word, word_ip = convert_katakana(row['german'])
@@ -189,4 +202,3 @@ for index, row in word_pairings.iterrows():
     #     if not converted_word or converted_word[0] != row['katakana']:
     #         print(word_ip, converted_word[0], row['katakana'])
     #         break
-
