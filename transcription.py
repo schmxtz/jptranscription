@@ -4,7 +4,7 @@ import pandas
 mappings = {
     # Diphtongs
     'aʊ̯': '\u30A2\u30A6',  # aʊ̯ -> アウ (sound "au" in "Auto")
-    'ʁaʊ̯': '\u30E9\u30A6',  # ラウ
+    'ʁaʊ̯': '\u30E9\u30A6',  # ʁaʊ -> ラウ (sound "rau" in "Frau")
 
     # Vowels (Long Vowel)
     'ʏ': '\u30A4',  # イ
@@ -39,11 +39,10 @@ mappings = {
 
     # H+Vowel
     'ha': '\u30CF',  # ハ
-    'hoː': '\u30DB',  # ホ
+    'hoː': '\u30DB\u30FC',  # hoː -> ホー (sound "ho" in "Hotel")
     'hʊ': '\u30D5',  # フ
 
     # J+Vowel
-    'jaːɐ': '\u30E4\u30FC',  # ヤー
     'jaː': '\u30E4\u30FC',  # ヤー
     'jʊ': '\u30E6',  # ユ
 
@@ -60,7 +59,7 @@ mappings = {
 
     # M+Vowel (Long Vowel)
     'mə': '\u30E1',  # メ
-    'mɛː': '\u30E1',  # メ
+    'mɛː': '\u30E1\u30FC',  # メー
     'miː': '\u30DF',  # ミ
     'ma': '\u30DE',  # マ
     'moː': '\u30E2',  # モ
@@ -70,9 +69,12 @@ mappings = {
 
     # N+Vowel
     'na': '\u30CA',  # ナ
-    'naː': '\u30CA',  # ナ
+    'naː': '\u30CA\u30FC',  # ナー
     'nə': '\u30CD',  # ネ
+    'nɛ': '\u30CD',  # ネ
     'nəə': '\u30CD\u30FC',  # ネー
+    'nɛn': '\u30CD\u30F3',  # ネン
+    'nɪ': '\u30CB',  # ニ
 
     # P+Vowel
     'pa': '\u30D1',  # パ
@@ -81,11 +83,15 @@ mappings = {
     # R+Vowel (Long Vowel)
     'ʁiː': '\u30EA\u30FC',  # リー
     'ʁuː': '\u30EB\u30FC',  # ルー
+    'ʁa': '\u30E9\u30FC',  # ラー
     'ʁaː': '\u30E9\u30FC',  # ラー
     'ʁɔɔ': '\u30ED',  # ロ
     'ʁɔ': '\u30ED',  # ロ
     'ʁoː': '\u30ED\u30FC',  # ロー
     'ʁeː': '\u30EC\u30FC',  # レー
+
+    # S+Vowel
+    'szə': '\u30BB',  # セ
 
     # T+Vowel
     'tak': '\u30BF\u30FC\u30AF',  # ターク
@@ -100,8 +106,8 @@ mappings = {
 
     # Z+Vowel
     'zeː': '\u30BC\u30FC',  # ゼー
-    'szə': '\u30C3\u30BC',  # ッゼ
     'zoː': '\u30BE\u30FC',  # ゾー
+    'zɔn': '\u30BE\u30F3',  # ゾン
     'zɔ': '\u30BE',  # ゾ
 
     # Consonants
@@ -124,9 +130,10 @@ mappings = {
     'p': '\u30D7',  # プ
 
     # Full syllables (Need seperation because 'x' sounds depends on previous one)
-    'buːx': '\u30D6\u30FC\u30D5',  # ブーフ
-    'naχ': '\u30CA\u30CF',  # ナハ
-    'zɔnə': '\u30BE\u30F3\u30CD',  # ゾンネ
+    'buːx': '\u30D6\u30FC\u30D5',  # buːx -> ブーフ (Buch)
+    'naχ': '\u30CA\u30CF',  # naχ -> ナハ (nach)
+    'zɔnə': '\u30BE\u30F3\u30CD',  # zɔnə -> ゾンネ (Sonne)
+    'bɛt': '\u30D9\u30C3\u30C8',  # bɛt -> ベット (Bett)
 
     # Uncategorized (unsure what to call these)
     '̯t͡ʃ': '\u30C1\u30E5',  # チュ
@@ -139,7 +146,7 @@ mappings = {
     'ʁyː': '\u30EA\u30E5\u30FC',  # リュー
     'ʃɛ': '\u30B7\u30A7',  # シェ
     'çə': '\u30D2\u30A7',  # ヒェ
-    'ziː': '\u30B8\u30FC'  # ジー
+    'ziː': '\u30B8\u30FC',  # ジー
 }
 MAX_IPA_SUBSTRING_LENGTH = len(max(mappings, key=len))
 
@@ -158,6 +165,7 @@ def convert_katakana(text):
                     for i in range(min(len(word_ipa) - start, MAX_IPA_SUBSTRING_LENGTH), 0, -1):
                         if word_ipa[start:start + i] in mappings:
                             word_katakana.append(mappings[word_ipa[start:start + i]])
+                            # print(word_ipa[start:start + i])
                             start += i
                             modified = True
                             break
@@ -175,3 +183,10 @@ for index, row in word_pairings.iterrows():
     if not converted_word or converted_word[0] != row['katakana']:
         print(word_ip, converted_word[0], row['katakana'])
         break
+    # if row['german'] == 'Straße':
+    #     converted_word, word_ip = convert_katakana(row['german'])
+    #     print(converted_word[0], word_ip)
+    #     if not converted_word or converted_word[0] != row['katakana']:
+    #         print(word_ip, converted_word[0], row['katakana'])
+    #         break
+
