@@ -1,5 +1,5 @@
-from gruut import sentences
-import pandas
+from transcription.transcribe import IPATranscription
+import pandas, re
 
 mappings = {
     # Diphtongs
@@ -9,12 +9,14 @@ mappings = {
     # Vowels (Long Vowel)
     'ʏ': '\u30A4',  # イ
     'ə': '\u30A8',  # エ
+    'eː': '\u30A8',  # エ
     'a': '\u30A2',  # a -> ア (sound "a" in "alt")
     'ɐ': '\u30A2',  # ア
     'aː': '\u30A2\u30FC',  # aː -> アー (sound "a" in "Abend")
     'ʊ': '\u30A6',  # ウ
     'uː': '\u30A6',  # ウ
     'ʔuː': '\u30A6',  # ウ
+    'oː': '\u30AA',  # オ
 
     # B+Vowel (Long Vowel)
     'bə': '\u30D9',  # ベ
@@ -32,6 +34,7 @@ mappings = {
 
     # F+Vowel
     'fa': '\u30D5\u30A1',  # ファ
+    'faː': '\u30D5\u30A1\u30FC',  # ファー
     'fɪ': '\u30D5\u30A3',  # フィ
     'feː': '\u30D5\u30A7',  # フェ
     'faːɐ': '\u30D5\u30A1\u30FC',  # ファー
@@ -66,6 +69,7 @@ mappings = {
     'mɛː': '\u30E1\u30FC',  # メー
     'miː': '\u30DF',  # ミ
     'ma': '\u30DE',  # マ
+    'mɐ': '\u30DE',  # マ
     'moː': '\u30E2',  # モ
     'mɔ': '\u30E2',  # モ
     'muː': '\u30E0',  # ム
@@ -118,6 +122,8 @@ mappings = {
     # V+Vowel
     'vɛ': '\u30F4\u30A7',  # ヴェ
     'va': '\u30F4\u30A1',  # ヴァ
+    'vɔ': '\u30F4\u30A9',  # ヴォ
+    'viː': '\u30F4\u30A3\u30FC',  # ヴィー
 
     # Z+Vowel
     'zeː': '\u30BC\u30FC',  # ゼー
@@ -131,6 +137,7 @@ mappings = {
     'ŋ': '\u30F3',  # ン
     'nn': '\u30F3',  # ン
     'k': '\u30AF',  # ク
+    'g': '\u30B0',  # グ
     'ŋk': '\u30F3\u30AF',  # ンク
     '̯k': '\u30AF',  # ク
     't': '\u30C8',  # ト
@@ -138,6 +145,7 @@ mappings = {
     'b': '\u30D6',  # ブ
     'f': '\u30D5',  # フ
     's': '\u30B9',  # ス
+    'ss': '\u30B9',  # ス
     '̯s': '\u30B9',  # ス
     'l': '\u30EB',  # ル
     'm': '\u30E0',  # ム
@@ -160,50 +168,43 @@ mappings = {
     'ŋɐ': '\u30F3\u30AC',  # ンガ
     'ŋə': '\u30F3\u30B2',  # ンゲ
     'tsɔ': '\u30C4\u30A9',  # ツォ
+    'tsa': '\u30C4\u30A1',  # ツァ
+    'tsaː': '\u30C4\u30A1\u30FC',  # ツァー
     'tsə': '\u30C3\u30C4\u30A7',  # ッツェ
+    't͡sɪ': '\u30C4\u30A3',  # ツィ
+    't͡suː': '\u30C4\u30FC',  # ツー
     'ʁyː': '\u30EA\u30E5\u30FC',  # リュー
     'çə': '\u30D2\u30A7',  # ヒェ
     'ziː': '\u30B8',  # ジ
     'xə': '\u30C3\u30D8',  # ッヘ
 }
 MAX_IPA_SUBSTRING_LENGTH = len(max(mappings, key=len))
+trans = IPATranscription('lang-de')
+trans.init_lookup_table()
 
 
 def convert_katakana(text):
-    converted_words = []
-    word_ipas = []
-    for sent in sentences(text, lang='de-de'):
-        for word in sent:
-            if word.phonemes:
-                word_ipas.append(''.join(word.phonemes))
-                word_katakana = []
-                start = 0
-                while start < len(word_ipas[-1]):
-                    modified = False
-                    for i in range(min(len(word_ipas[-1]) - start, MAX_IPA_SUBSTRING_LENGTH), 0, -1):
-                        if word_ipas[-1][start:start + i] in mappings:
-                            word_katakana.append(mappings[word_ipas[-1][start:start + i]])
-                            # print(word_ipas[-1][start:start + i])
-                            start += i
-                            modified = True
-                            break
-                    if not modified:
-                        print('Error converting {}'.format(word_ipas[-1]))
-                        break
-                converted_words.append(''.join(word_katakana))
-    return converted_words, word_ipas
+    word_ipa = trans.lookup_word(text)
+
+    word_katakana = ''
+    start = 0
+    while start < len(word_ipa):
+        modified = False
+        for i in range(min(len(word_ipa) - start, MAX_IPA_SUBSTRING_LENGTH), 0, -1):
+            if word_ipa[start:start + i] in mappings:
+                word_katakana += mappings[word_ipa[start:start + i]]
+                start += i
+                modified = True
+                break
+        if not modified:
+            print('Error converting {}'.format(word_ipa))
+            break
+    return word_katakana, word_ipa
 
 
 word_pairings = pandas.read_csv(filepath_or_buffer='words.csv')
 for index, row in word_pairings.iterrows():
     converted_word, word_ip = convert_katakana(row['german'])
-    print(converted_word[-1], word_ip[-1])
-    if not converted_word or converted_word[-1] != row['katakana']:
-        print(word_ip[-1], converted_word[-1], row['katakana'])
-        break
-    # if row['german'] == 'Wasser':
-    #     converted_word, word_ip = convert_katakana(row['german'])
-    #     print(converted_word[-1], word_ip[-1])
-    #     if not converted_word or converted_word[-1] != row['katakana']:
-    #         print(word_ip, converted_word[-1], row['katakana'])
-    #         break
+    print(converted_word, word_ip)
+    # if not converted_word or converted_word[-1] != row['katakana']:
+    #     print(word_ip[-1], converted_word[-1], row['katakana'])
