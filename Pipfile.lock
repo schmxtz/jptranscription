@@ -1,0 +1,36 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "4cc5766cfacc1c1c8392afc87d570bd02bde243342e2c2eeaf977bc9d2f94192"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.10"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "gruut-ipa": {
+            "hashes": [
+                "sha256:71776eb99f46e119ab14d3d4e536f54317133607cc2f6bad9711ab51f1bec66e"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.6'",
+            "version": "==0.13.0"
+        },
+        "gruut-lang-de": {
+            "hashes": [
+                "sha256:483ea98e094fcb5fe7191b6b8679cdf2fec85b3ec7f867a492d48fb0b7b415c0"
+            ],
+            "index": "pypi",
+            "version": "==2.0.1"
+        }
+    },
+    "develop": {}
+}
