@@ -178,21 +178,57 @@ mappings = {
     'ziː': '\u30B8',  # ジ
     'xə': '\u30C3\u30D8',  # ッヘ
 }
-MAX_IPA_SUBSTRING_LENGTH = len(max(mappings, key=len))
+
+updated_mappings = {
+    # Short vowels
+    '\u0061': '\u30A2',  # a -> ア (Short "a" as in "alt")
+    '\u02C8\u0061': '\u30A2',  # ˈa -> ア (Short stressed "a" as in "Auto")
+    '\u028A\u032F': '\u30A6',  # ʊ̯ -> ウ (Short non-syllabic "u" as in "Auto")
+    
+    # Long vowels
+    '\u02C8\u0061\u02D0': '\u30A2\u30FC',  # ˈaː -> アー (Long stressed "a" as in "Abend")
+
+    # B
+    '\u0062\u0061': '\u30D0',  # ba -> バ (Short "ba" as in "Ballon")
+    '\u0062\u006E\u0329': '\u30D9\u30F3',  # bn̩ -> ベン (Silent "e" between "b" and "n" as in "Abend")
+
+    # L
+    '\u006C': '\u30EB',  # l -> ル (Short "l" as in "alt")
+    '\u02C8\u006C\u0254': '\u30ED',  # ˈlɔ -> ロ (Short stressed "lo" as in "Ballon")
+
+    # T
+    '\u0074': '\u30C8',  # t -> ト (Short "t" as in "alt")
+    '\u0074\u0000': '\u30C8',  # t -> ト (End of word "t" with short preceding vowel as in "Bett")
+    '\u0074\u006F': '\u30C8',  # to -> ト (Short "to" as in "Auto")
+
+    # N
+    '\u014B': '\u30F3\u3050',  # ŋ -> ング (Short "ng" sound as in "lang")
+    '\u014B\u006B': '\u30F3\u30AF',  # ŋk -> ンク (Short "nk" sound as in "Bank")
+
+    # Special characters
+    '\u0000': '',  # Null character should not map to anything, if not used
+
+
+}
+MAX_IPA_SUBSTRING_LENGTH = len(max(updated_mappings, key=len))
+# The characters: ˈ̩ˌ̯͡ are not relevant to transcription into Katakana
+IRRELEVANT_IPA_CHAR = '\u02C8\u0329\u02CC\u032F\u0361'
+
+
 trans = IPATranscription('lang-de')
 trans.init_lookup_table()
 
 
 def convert_katakana(text):
     word_ipa = trans.lookup_word(text)
-
+    # word_ipa = re.sub(r'[{}]'.format(IRRELEVANT_IPA_CHAR), '', word_ipa)
     word_katakana = ''
     start = 0
     while start < len(word_ipa):
         modified = False
         for i in range(min(len(word_ipa) - start, MAX_IPA_SUBSTRING_LENGTH), 0, -1):
-            if word_ipa[start:start + i] in mappings:
-                word_katakana += mappings[word_ipa[start:start + i]]
+            if word_ipa[start:start + i] in updated_mappings:
+                word_katakana += updated_mappings[word_ipa[start:start + i]]
                 start += i
                 modified = True
                 break

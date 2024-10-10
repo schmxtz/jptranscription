@@ -18,18 +18,19 @@ class IPATranscription:
         self.lookup_table = json.load(file_handle)
 
     def lookup_word(self, word):
+        ipa_transcription = None
         if not self.lookup_table:
             raise Exception('Lookup table empty. Initialize it first with init_lookup_table.')
-        result = self.__get_entry(word)
+        entry = self.__get_entry(word)
         # Backup logic if word is not in dictionary
-        if not result:
+        if not entry:
             # Check if word is a noun compound
             substring, substring_ipa = self.__compound_word_check(word)
             if substring == word:
-                return substring_ipa
+                ipa_transcription = substring_ipa
         else:
-            return result
-        return None
+            ipa_transcription = self.__get_ipa(entry)
+        return ipa_transcription + '\u0000'  # Null character to mark the end of the IPA-string
 
     def __compound_word_check(self, word):
         substring = ''
