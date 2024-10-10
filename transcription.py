@@ -182,6 +182,7 @@ mappings = {
 updated_mappings = {
     # Short vowels
     '\u0061': '\u30A2',  # a -> ア (Short "a" as in "alt")
+    '\u0250\u032F': '\u30A2',  # ɐ̯ -> ア (Short non-syllabic "a" as in "Bier", it mimics the soft German "r" sound)
     '\u02C8\u0061': '\u30A2',  # ˈa -> ア (Short stressed "a" as in "Auto")
     '\u028A\u032F': '\u30A6',  # ʊ̯ -> ウ (Short non-syllabic "u" as in "Auto")
     
@@ -190,6 +191,9 @@ updated_mappings = {
 
     # B
     '\u0062\u0061': '\u30D0',  # ba -> バ (Short "ba" as in "Ballon")
+    '\u0062\u025B': '\u30D9',  # bɛ -> ベ (Short "be" as in "Bett")
+    '\u0062\u0069\u02D0': '\u30D3\u30FC',  # biː -> ビー (Long "bie" as in "Bier")
+    '\u02C8\u0062\u0069\u02D0': '\u30D3\u30FC',  # ˈbiː -> ビー (Long stressed "bie" as in "Biene")
     '\u0062\u006E\u0329': '\u30D9\u30F3',  # bn̩ -> ベン (Silent "e" between "b" and "n" as in "Abend")
 
     # L
@@ -198,10 +202,11 @@ updated_mappings = {
 
     # T
     '\u0074': '\u30C8',  # t -> ト (Short "t" as in "alt")
-    '\u0074\u0000': '\u30C8',  # t -> ト (End of word "t" with short preceding vowel as in "Bett")
+    '\u0074\u0000': '\u30C3\u30C8',  # t -> ット (End of word "t" with short preceding vowel as in "Bett")
     '\u0074\u006F': '\u30C8',  # to -> ト (Short "to" as in "Auto")
 
     # N
+    '\u006E\u0259': '\u30CD',  # nə -> ネ (Short "ne" as in "Biene")
     '\u014B': '\u30F3\u3050',  # ŋ -> ング (Short "ng" sound as in "lang")
     '\u014B\u006B': '\u30F3\u30AF',  # ŋk -> ンク (Short "nk" sound as in "Bank")
 
@@ -241,6 +246,5 @@ def convert_katakana(text):
 word_pairings = pandas.read_csv(filepath_or_buffer='words.csv')
 for index, row in word_pairings.iterrows():
     converted_word, word_ip = convert_katakana(row['german'])
-    print(converted_word, word_ip)
-    # if not converted_word or converted_word[-1] != row['katakana']:
-    #     print(word_ip[-1], converted_word[-1], row['katakana'])
+    print(converted_word, word_ip, row['katakana'])
+
