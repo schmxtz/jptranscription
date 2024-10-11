@@ -14,7 +14,7 @@ class IPATranscription:
         if SUPPORTED_LANGS.get(self.lang) is None:
             raise Exception('The given language {} does is not supported. List of supported languages are {}.'
                             .format(self.lang, list(SUPPORTED_LANGS.keys())))
-        file_handle = open('./transcription/' + SUPPORTED_LANGS[self.lang])
+        file_handle = open('./phonetics/' + SUPPORTED_LANGS[self.lang])
         self.lookup_table = json.load(file_handle)
 
     def lookup_word(self, word):
@@ -28,6 +28,10 @@ class IPATranscription:
             substring, substring_ipa = self.__compound_word_check(word)
             if substring == word:
                 ipa_transcription = substring_ipa
+            # TODO
+            # - Check if word is an abbreviation
+            # - Check for verb endings
+            # - Check for noun endings
         else:
             ipa_transcription = self.__get_ipa(entry)
         return ipa_transcription + '\u0000'  # Null character to mark the end of the IPA-string
@@ -40,7 +44,6 @@ class IPATranscription:
             for i in range(len(word), len(substring), -1):
                 entry = self.__get_entry(word[len(substring):i])
                 if entry:
-                    print(word[len(substring):i])
                     substring += word[len(substring):i]
                     substring_ipa += self.__get_ipa(entry)
                     unchanged = False
@@ -57,7 +60,3 @@ class IPATranscription:
     def __get_ipa(entry):
         if entry.get('ipa'):
             return entry.get('ipa')[0]
-
-
-ipa = IPATranscription('lang-de')
-ipa.init_lookup_table()
