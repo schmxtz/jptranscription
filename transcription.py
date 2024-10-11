@@ -1,4 +1,4 @@
-from transcription.transcribe import IPATranscription
+from phonetics.transcribe import IPATranscription
 import pandas, re
 
 mappings = {
@@ -216,7 +216,7 @@ updated_mappings = {
 
 }
 MAX_IPA_SUBSTRING_LENGTH = len(max(updated_mappings, key=len))
-# The characters: ˈ̩ˌ̯͡ are not relevant to transcription into Katakana
+# The characters: ˈ̩ˌ̯͡ are not relevant to phonetics into Katakana
 IRRELEVANT_IPA_CHAR = '\u02C8\u0329\u02CC\u032F\u0361'
 
 

@@ -14,7 +14,6 @@ So this project attempts to generate the Katakana pronunciation of all German wo
 Since some sound-combinations include shorter sounds/sound-combinations that might be pronounced differently, I'll start
 looking for a match starting from the longest possible substring.
 
-For example: The sound  "au" ("aʊ̯") in "Frau" includes the "s"
 
 > [!NOTE]
 > Pronunciation remarks for Japanese speakers:
