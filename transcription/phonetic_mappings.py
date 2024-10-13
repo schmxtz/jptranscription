@@ -20,6 +20,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     # Long vowels
     '\u0075\u02D0': '\u30A6\u30FC',  # uː -> ウー (Long "u" as in "UHr")
     '\u02C8\u0061\u02D0': '\u30A2\u30FC',  # ˈaː -> アー (Long stressed "a" as in "Abend")
+    '\u0061\u02D0\u0250\u032F': '\u30A2\u30FC',  # aːɐ̯  -> アー (Very long "ar" as in "januAR")
 
     # B
     '\u0062': '\u30D6',  # ˈb -> ブ (Short "b" as in "Brief")
@@ -42,6 +43,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0064\u0259': '\u30C7',  # də -> デ (Short "de" as in "stunDE")
     '\u02C8\u0064\u025B': '\u30C7',  # ˈdɛ -> デ (Short "de" as in "stuDEnt")
     '\u02C8\u0064\u0254': '\u30C9',  # ˈdɔ -> ド (Short stressed "do" as in "DEUtschland")
+    '\u02C8\u0064\u0069\u02D0': '\u30C7\u30A3\u30FC',  # ˈdiː ->  (Long stressed "die" as in "DIEnstag")
 
     # F
     '\u0066': '\u30D5',  # f -> フ (Short "f" as in "brieF")
@@ -49,10 +51,12 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0066\u0061': '\u30D5\u30A1',  # fa -> ファ (Short "fa" as in "FAmilie")
     '\u0066\u026A': '\u30D5\u30A3',  # fɪ -> フィ (Short "fi" as in "FIlm")
     '\u0066\u0065': '\u30D5\u30A7',  # fe -> フェ (Short "fe" as in "kafFEE")
+    '\u0066\u028F': '\u30D5',  # fʏ -> フ (Short "fü" as in "FÜnf")
     '\u02C8\u0066\u0061': '\u30D5\u30A1',  # ˈfa -> ファ (Short stressed "fa" as in "FAngen")
     '\u02C8\u0066\u026A': '\u30D5\u30A3',  # ˈfɪ -> フィ (Short stressed "fi" as in "FInger")
     '\u02CC\u0066\u026A': '\u30D5\u30A3',  # ˌfɪ -> フィ (Short secondary stressed "fi" as in "sonnnenFInsternis")
     '\u02C8\u0066\u0061\u02D0': '\u30D5\u30A1\u30FC',  # ˈfaː -> ファー (Long stressed "fah" as in "FAHrrad")
+    '\u02C8\u0066\u0065\u02D0': '\u30D5\u30A7\u30FC',  # ˈfeː -> フェー (Long stressed "fe" as in "
 
     # G
     '\u0261': '\u30B0',  # ɡ -> グ (Short "g" as in "Grün")
@@ -70,6 +74,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     # J
     '\u02C8\u006A\u028A': '\u30E6',  # ˈjʊ -> ユ (Short stressed "ju" as in "JUnge")
     '\u006A\u0061\u02D0': '\u30E4\u30FC',  # jaː -> ヤー (Long "jah" as in "JAHr")
+    '\u02C8\u006A\u0061': '\u30E4',  # ˈja -> ヤ
     '\u02C8\u006A\u0061\u02D0': '\u30E4\u30FC',  # ˈjaː -> ヤー (Long stressed "ja" as in "JApan")
 
     # K
@@ -97,14 +102,16 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u02C8\u006D\u025B\u02D0': '\u30E1\u30FC',  # ˈmɛː -> メー (Long stressed "me" as in "MÄdchen")
     '\u02C8\u006D\u006F\u02D0': '\u30E2\u30FC',  # ˈmoː -> モー (Long stressed "mo" as in "MOnat")
 
-
     # N
     '\u006E': '\u30F3',  # n -> ン (Short "n" as in "deutschlaNd")
     '\u014B': '\u30F3\u3050',  # ŋ -> ング (Short "ng" as in "laNG")
     '\u006E\u0061': '\u30CA',  # na -> ナ (Short "na" as in "moNAt")
+    '\u006E\u0250': '\u30CA',  # nɐ -> ナ (Short "ner" as in "donNERstag")
     '\u006E\u0259': '\u30CD',  # nə -> ネ (Short "ne" as in "bieNE")
     '\u006E\u026A': '\u30CB',  # nɪ -> ニ (Short "ni" as in "sonnenfinsterNIs")
     '\u006E\u0069': '\u30CB',  # ni -> ニ (Short "ni" as in "uNIversität")
+    '\u006E\u0254': '\u30CE',  # nɔ -> ノ (Short "neu" as in "NEUn")
+    '\u006E\u0075': '\u30CC',  # nu -> ヌ (Short "nu" as in "jaNUar")
     '\u014B\u006B': '\u30F3\u30AF',  # ŋk -> ンク (Short "nk" as in "baNK")
     '\u014B\u0259': '\u30F3\u30B2',  # ŋə -> ンゲ (Short "nge" as in "faNGEn")
     '\u014B\u0250': '\u30F3\u30AC',  # ŋɐ -> ンガ (Short "nger" as in "fiNGER")
@@ -133,6 +140,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0073': '\u30B9',  # s -> ス (Short "s" as in "buS")
     '\u0283': '\u30B7\u30E5',  # ʃ -> シュ (Short "sch" as in "SCHnee")
     '\u0073\u0259': '\u30BB',  # sə -> セ (Short "ße" as in "straSSE")
+    '\u007A\u025B': '\u30BC',  # zɛ -> ゼ (Short "se" as in "SEchs")
     '\u0073\u0250': '\u30B5',  # sɐ -> サ (Short "ser" as in "wasSER")
     '\u032F\u0073': '\u30B9',  # ̯s -> ス (Short "ß" as in "weiSS")
     '\u007A\u0069': '\u30BA\u30A3',  # zi -> ズィ (Short "si" as in "univerSItät")
@@ -141,7 +149,9 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u02CC\u0283': '\u30B7\u30E5',  # ˌʃ -> シュ (Short secondary stressed "st" as in "frühSTück")
     '\u007A\u0065\u02D0': '\u30BC\u30FC',  # zeː -> ゼー (Long "see" as in "SEE")
     '\u007A\u006F\u02D0': '\u30BE\u30FC',  # zoː -> ゾー (Long "soh" as in "SOHn")
+    '\u02C8\u007A\u0061': '\u30B6',  # ˈza -> ザ (Short stressed "sa" as in "SAmstag")
     '\u02C8\u0283\u025B': '\u30B7\u30A7',  # ˈʃɛ -> シェ (Short "sche" as in "geSCHEnk")
+    '\u007A\u006E\u0329': '\u30BC\u30F3',  # zn̩ -> ゼン (Short "sen" as in "tauSENd")
     '\u02C8\u0283\u0075\u02D0': '\u30B7\u30E5\u30FC',  # ˈʃuː -> シュー (Long stressed "schu" as in "SCHUle")
     '\u02C8\u007A\u0069\u02D0': '\u30BA\u30A3\u30FC',  # ˈziː -> ズィー (Long stressed "si" as in "muSIk")
 
@@ -177,18 +187,22 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u0361\u0073\u0061': '\u30C4\u30A1',  # t͡sa -> ツァ (Short "za" as in "ZEIt")
     '\u0074\u0361\u0073\u0061\u02D0': '\u30C4\u30A1\u30FC',  # t͡saː -> ツァー (Long "zah" as in "ZAHl")
     '\u0074\u0361\u0073\u0075\u02D0': '\u30C4\u30FC',  # t͡suː -> ツー (Long "zu" as in "ZUg")
+    '\u0074\u0361\u0073\u0065\u02D0': '\u30C4\u30A7\u30FC',  # t͡seː -> ツェー (Long "zeh" as in "ZEHn")
     '\u02C8\u0074\u0361\u0073\u026A': '\u30C4\u30A3',  # ˈt͡sɪ -> ツィ (Short stressed "zi" as in "ZImmer")
     '\u02CC\u0074\u0361\u0073\u0254': '\u30C4\u30A9',  # ˌt͡sɔ -> ツォ (Short secondary stressed "zo" as in "flugZEUg")
 
     # Edge cases for T with preceding short vowel
     '\u0062\u025B\u0074': '\u30D9\u30C3\u30C8',  # bɛt -> ベット (Short "t" with preceding short vowel as in "BETT")
-    '\u006C\u025B\u0074': '\u30EC\u30C3\u30C8',  # lɛt -> レット (Short "t" with preceding short vowel as in "vioLETT")
     '\u0074\u0061\u0074': '\u30BF\u30C3\u30C8',  # tat -> タット (Short "t" with preceding short vowel as in "sTADT")
+    '\u02C8\u006C\u025B\u0074': '\u30EC\u30C3\u30C8',  # lɛt -> レット (Short "t" with preceding short vowel as in "vioLETT")
+    '\u02C8\u006D\u026A\u0074': '\u30DF\u30C3\u30C8',  # ˈmɪt -> ミット (Short "t" with preceding short vowel as in "miTTwoch")
 
     # Edge cases for CH (Pronunciation of "ch" depends on the preceding vowel
+    '\u0061\u0078\u0074': '\u30A2\u30CF\u30C8',  # axt -> アハト (Short "cht" with preceding "a" as in "ACHT")
     '\u0062\u0075\u02D0\u0078': '\u30D6\u30FC\u30D5',  # buːx -> ブーフ (Short "ch" with preceding "bu" as in "BUCH")
     '\u006E\u0061\u0078\u0074': '\u30CA\u30CF\u30C8',  # naxt -> ナハト (Short "ch" with preceding "na" as in "NACHT")
     '\u02C8\u0074\u0254\u0078': '\u30C8\u30DB',  # ˈtɔx -> トホ (Short "ch" with preceding "to" as in "toCHter")
+    '\u02CC\u0076\u0254\u0078': '\u30F4\u30A9\u30C3\u30DB',  # ˌvɔx -> ヴォッホ (Short "ch" with preceding "wo" as in "mittWOCH")
     '\u0281\u0061\u02D0\u0078\u0259': '\u30E9\u30FC\u30C3\u30D8',  # ʁaːxə -> ラーッヘ ("spraCHE")
     '\u02C8\u0076\u0254\u0078\u0259': '\u30F4\u30A9\u30C3\u30D8',  # ˈvɔxə -> ヴォッヘ ("woCHE")
 

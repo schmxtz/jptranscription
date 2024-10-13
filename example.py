@@ -7,7 +7,7 @@ kata.init_katakanizer()
 # for entry in kata.phonetics_transcriber.lookup_table:
 #     ipa = kata.phonetics_transcriber.lookup_word(entry)
 #     # if ipa.endswith('nat'+ipa[-1]):
-#     if 'ɔnə' in ipa:
+#     if 'aːɐ̯' in ipa:
 #         print(entry, ipa)
 
 word_pairings = pandas.read_csv(filepath_or_buffer='words.csv')
