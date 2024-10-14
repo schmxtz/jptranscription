@@ -38,6 +38,7 @@ class Katakanizer:
             # Decrease it until we find the longest substring
             for i in range(look_ahead_counter, 0, -1):
                 if word_phonetics[start:start + i] in self.mapping:
+                    # print(word_phonetics[start:start + i])
                     katakana_word.append(self.mapping[word_phonetics[start:start + i]])
                     start += i
                     modified = True
