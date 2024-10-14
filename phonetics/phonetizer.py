@@ -21,6 +21,7 @@ class IPATranscription:
         ipa_transcription = None
         if not self.lookup_table:
             raise Exception('Lookup table empty. Initialize it first with init_lookup_table.')
+        word = word.lower()
         entry = self.__get_entry(word)
         # Backup logic if word is not in dictionary
         if not entry:
@@ -32,6 +33,7 @@ class IPATranscription:
             # - Check if word is an abbreviation
             # - Check for verb endings
             # - Check for noun endings
+            # - Date https://pypi.org/project/text2numde/
         else:
             ipa_transcription = self.__get_ipa(entry)
         return '\u0000' + ipa_transcription + '\u0000'  # Null character to mark the start and end of the IPA-string
