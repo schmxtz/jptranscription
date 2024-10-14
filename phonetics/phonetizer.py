@@ -34,7 +34,7 @@ class IPATranscription:
             # - Check for noun endings
         else:
             ipa_transcription = self.__get_ipa(entry)
-        return ipa_transcription + '\u0000'  # Null character to mark the end of the IPA-string
+        return '\u0000' + ipa_transcription + '\u0000'  # Null character to mark the start and end of the IPA-string
 
     def __compound_word_check(self, word):
         substring = ''

@@ -6,8 +6,8 @@ kata.init_katakanizer()
 
 # for entry in kata.phonetics_transcriber.lookup_table:
 #     ipa = kata.phonetics_transcriber.lookup_word(entry)
-#     # if ipa.endswith('nat'+ipa[-1]):
-#     if 'aːɐ̯' in ipa:
+#     if ipa.startswith('ç'):
+#     # if 'ç' in ipa:
 #         print(entry, ipa)
 
 word_pairings = pandas.read_csv(filepath_or_buffer='words.csv')
