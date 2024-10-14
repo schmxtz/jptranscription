@@ -44,6 +44,5 @@ class Katakanizer:
                     modified = True
                     break
             if not modified:
-                print('Error converting {}'.format(word_phonetics))
-                break
+                raise Exception('Error converting {} with the IPA: {}. Transcribed katakana so far: {}'.format(word, word_phonetics, ''.join(katakana_word)))
         return ''.join(katakana_word), word_phonetics
