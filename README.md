@@ -25,3 +25,10 @@ looking for a match starting from the longest possible substring.
 >    - If the German word ends with *to* like in *Auto*, it is pronounced. But if it ends with *t*, *tt*, *dt* or *d*, then
 >  the *o* in *to* is silent like in [*alt*](https://www.youtube.com/watch?v=d8XzbxmtrbY) (「アルト」), [*Bett*](https://www.youtube.com/watch?v=nLU6-9qDJMA) (「ベット」), [*Stadt*](https://www.youtube.com/watch?v=Q-qnZiMsD_U) (「シュタット」) and *Fahrrad* 
 >  (「ファーラート」).
+
+
+# Contributions:
+- I want to thank [rhasspy](https://github.com/rhasspy) whose library [gruut](https://github.com/rhasspy/gruut) helped me get a basic understanding of German words and their IPA
+- I want to thank [dmort27](https://github.com/dmort27) whose library [epitran](https://github.com/dmort27/epitran) made me come across the wikitionary library
+- [This](https://ttsmp3.com/text-to-speech/Japanese/) website helped me check my Transcription if it sounded similar
+- I want to thank the author of [this](https://doitsugo-yarouze.com/german-words-200/) blogpost who helped me as a starting point

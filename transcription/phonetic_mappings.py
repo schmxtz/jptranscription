@@ -13,6 +13,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u025B': '\u30A8',  # ɛ -> エ (Short "e" as in "Entscheiden")
     '\u006F': '\u30AA',  # o -> オ (Short "o" as in "viOlett")
     '\u0254': '\u30AA',  # ɔ -> オ (Short "o" as in "Oktober")
+    '\u028A': '\u30A6',  # ʊ -> ウ (Short "u" as in "Und")
     '\u0250\u032F': '\u30A2',  # ɐ̯ -> ア (Short non-syllabic "a" as in "bieR", it mimics the soft German "r" sound)
     '\u026A\u032F': '\u30A4',  # ɪ̯  -> イ (Short "i" as in "fREUnd")
     '\u028A\u032F': '\u30A6',  # ʊ̯ -> ウ (Short non-syllabic "u" as in "aUto")
@@ -38,6 +39,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0062\u028A': '\u30D6',  # bʊ -> ブ (Short "bu" as in "BUs")
     '\u0062\u0069\u02D0': '\u30D3\u30FC',  # biː -> ビー (Long "bie" as in "BIEr")
     '\u02C8\u0062\u026A': '\u30D3',  # ˈbɪ -> ビ (Short stressed "bi" as in "BItte")
+    '\u02C8\u0062\u0254': '\u30DC',  # ˈbɔ -> ボ -> (Short stressed "bo" as in "BÄUme")
     '\u0062\u006E\u0329': '\u30D9\u30F3',  # bn̩ -> ベン (Silent "e" between "b" and "n" as in "abEnd")
     '\u02C8\u0062\u0069\u02D0': '\u30D3\u30FC',  # ˈbiː -> ビー (Long stressed "bie" as in "BIEne")
     '\u02C8\u0062\u0075\u02D0': '\u30D6\u30FC',  # ˈbuː -> ブー (Long stressed "bu" as in "geBUrtstag")
@@ -52,6 +54,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0064\u0065': '\u30C7',  # de -> デ (Short "de" as in "DEzember")
     '\u0064\u0075\u02D0': '\u30C9\u30A5\u30FC',  # duː -> ドゥー (Long "du" as in "DU")
     '\u0064\u0065\u02D0': '\u30C7',  # deː -> デ (Long "de" as in "DEr")
+    '\u0064\u0069\u02D0': '\u30C7\u30A3',  # diː -> ディ (Long "die" as in "DIE")
     '\u02C8\u0064\u0061': '\u30C0',  # ˈda -> ダ (Short stressed "da" as in "DAnke")
     '\u02C8\u0064\u025B': '\u30C7',  # ˈdɛ -> デ (Short "de" as in "stuDEnt")
     '\u02C8\u0064\u0254': '\u30C9',  # ˈdɔ -> ド (Short stressed "do" as in "DEUtschland")
@@ -112,6 +115,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006B\u0061': '\u30AB',  # ka -> カ (Short "ka" as in "KEIn")
     '\u006B\u026A': '\u30AD',  # kɪ -> キ (Short "ki" as in "KInd")
     '\u006B\u0254': '\u30B3',  # kɔ -> コ (Short "ko" as in "KOmmt")
+    '\u02C8\u006B': '\u30AF',  # ˈk -> ク (Short stressed "k" as in "Klein")
     '\u02C8\u006B\u0061': '\u30AB',  # ˈka -> カ (Short "ka" as in "KAffee")
     '\u02C8\u006B\u0254': '\u30B3',  # ˈkɔ -> コ (Short stressed "ko" as in "KOmmen")
 
@@ -123,6 +127,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006C\u0069': '\u30EA',  # li -> リ (Short "li" as in "juLI")
     '\u006C\u026A': '\u30EA',  # lɪ -> リ (Short "li" as in "frühLIng")
     '\u006C\u0153': '\u30ED',  # lœ -> ロ (Short "lö" as in "gLÖckchen")
+    '\u006C\u028A': '\u30EB',  # lʊ -> ル (Short "lu" as in "fLUsses")
     '\u02C8\u006C\u0254': '\u30ED',  # ˈlɔ -> ロ (Short stressed "lo" as in "balLOn")
     '\u02C8\u006C\u0061': '\u30E9',  # ˈla -> (Short stressed "la" as in "LAngsam")
     '\u006C\u0061\u02D0': '\u30E9\u30FC',  # laː -> ラー (Long "la" as in "schLAfen")
@@ -140,9 +145,11 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006D\u0075': '\u30E0',  # mu -> ム (Short "mu" as in "MUsik")
     '\u02C8\u006D\u0254': '\u30E2',  # ˈmɔ -> モ (Short "mo" as in "MOrgen")
     '\u02C8\u006D\u028A': '\u30E0',  # ˈmʊ -> ム (Short stressed "mu" as in "MUtter")
-    '\u02C8\u006D\u0069\u02D0': '\u30DF',  # ˈmiː -> (Long stressed "mi" as in "faMIlie")
+    '\u02C8\u006D\u0069\u02D0': '\u30DF',  # ˈmiː -> ミ (Long stressed "mi" as in "faMIlie")
     '\u02C8\u006D\u025B\u02D0': '\u30E1\u30FC',  # ˈmɛː -> メー (Long stressed "me" as in "MÄdchen")
     '\u02C8\u006D\u006F\u02D0': '\u30E2\u30FC',  # ˈmoː -> モー (Long stressed "mo" as in "MOnat")
+    '\u02C8\u006D\u00F8\u02D0': '\u30E2\u30A7\u30FC',  # ˈmøː -> モェー (Long streesed "mö" as in "MÖwen")
+    '\u02C8\u006D\u0079\u02D0': '\u30DF\u30E5\u30FC',  # ˈmyː -> ミュー (Long stressed "mü" as in "geMÜtlich")
 
     # N
     '\u006E': '\u30F3',  # n -> ン (Short "n" as in "deutschlaNd")
@@ -171,6 +178,9 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0070\u0061': '\u30D1',  # pa -> パ (Short "pa" as in "jaPAn")
     '\u0070\u0069\u02D0': '\u30D4\u30FC',  # piː -> ピー (Long "pie" as in "sPIElen")
     '\u02C8\u0070\u0069\u02D0': '\u30D4',  # ˈpiː -> ピ (Long stressed "pie" as in "paPIEr")
+
+    # Q
+    '\u006B\u0076\u0065\u02D0': '\u30AF\u30A7',  # kveː -> クェ (Long "que" as in "QUEr")
 
     # R
     '\u0281': '\u30A2',  # ʁ -> ア (Soft German "r" as in "faRbe")
@@ -246,13 +256,16 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u02C8\u0076\u025B': '\u30F4\u30A7',  # ˈvɛ -> ヴェ (Short stressed "ve" as in "noVEmber")
 
     # W
-    '\u0076\u0061': '\u30F4\u30A1',  # va -> ヴァ
+    '\u0076\u0061': '\u30F4\u30A1',  # va -> ヴァ (Short "wa" as in "schWArz")
     '\u0076\u025B': '\u30F4\u30A7',  # vɛ -> ヴェ (Short "we" as in "schWEster")
     '\u0076\u0254': '\u30F4\u30A9',  # vɔ -> ヴォ (Short "wo" as in "WOrt")
     '\u02C8\u0076\u0061': '\u30F4\u30A1',  # ˈva -> ヴァ (Short stressed "wa" as in "WAsser")
     '\u02C8\u0076\u026A': '\u30F4\u30A3',  # ˈvɪ -> ヴィ (Short stressed "wi" as in "WInter")
     '\u02CC\u0076\u0254': '\u30F4\u30A9',  # ˌvɔ -> ヴォ (Short secondary stressed "wo" as in "antWOrten")
+    '\u0076\u006E\u0329': '\u30F4\u30A7\u30F3',  # vn̩ -> ヴェン (Short "wen" as in "möWEN")
     '\u02C8\u0076\u006F\u02D0': '\u30F4\u30A9\u30FC',  # ˈvoː -> ヴォー (Long stressed "woh" as in "WOHnen")
+    '\u02C8\u0076\u0069\u02D0': '\u30F4\u30A3\u30FC',  # ˈviː -> ヴィー (Long stressed "wie" as in "WIEsen")
+    '\u02C8\u0076\u025B\u02D0': '\u30F4\u30A7\u30FC',  # ˈvɛː -> ヴェー (Long stressed "wäh" as in "WÄHrend")
 
     # Z
     '\u0074\u0361\u0073\u0061': '\u30C4\u30A1',  # t͡sa -> ツァ (Short "za" as in "ZEIt")
@@ -261,7 +274,11 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u0361\u0073\u0065\u02D0': '\u30C4\u30A7\u30FC',  # t͡seː -> ツェー (Long "zeh" as in "ZEHn")
     '\u02C8\u0074\u0361\u0073\u026A': '\u30C4\u30A3',  # ˈt͡sɪ -> ツィ (Short stressed "zi" as in "ZImmer")
     '\u02C8\u0074\u0361\u0073\u025B': '\u30C4\u30A7',  # ˈt͡sɛ -> ツェ (Short stressed "ze" as in "deZEmber")
+    '\u0074\u0361\u0073\u006E\u0329': '\u30C4\u30A7\u30F3',  # t͡sn̩ -> ツェン (Short "zen" as in "ächZEN")
     '\u02CC\u0074\u0361\u0073\u0254': '\u30C4\u30A9',  # ˌt͡sɔ -> ツォ (Short secondary stressed "zo" as in "flugZEUg")
+
+    # Ü
+    '\u02C8\u0079\u02D0': '\u30E6',  # ˈyː -> ユ (Long stressed "ü" as in "Über")
 
     # Edge cases for T with preceding short vowel
     '\u0062\u025B\u0074': '\u30D9\u30C3\u30C8',  # bɛt -> ベット (Short "t" with preceding short vowel as in "BETT")
@@ -294,8 +311,15 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     # Edge cases in general
     '\u0073\u006E\u0329': '\u30C3\u30BB\u30F3',  # sn̩ -> ッセン (Short "ssen" as in "eSSEN")
     '\u0073\u006E\u0329\u0074': '\u30B6\u30F3\u30AF\u30C8',  # sn̩t -> ザンクト	("St." pronounced as "Sankt")
+    '\u02C8\u006E\u025B\u02D0\u0259': '\u30CD\u30FC\u30D8',  # ˈnɛːə -> ネーヘ ("nähe")
 
     # Special characters
     '\u0000': '',  # NULL character should not map to anything, if not used
     '\u0020': '\u0020',  # Space character just maps to space again
+    '\u0000\u002C': '\u3001',  # , -> 、
+    '\u002C\u0000': '\u3001',  # , -> 、
+    '\u002E\u0000': '\u3002',  # . -> 。
+    '\u0000\u002E': '\u3002',  # . -> 。
+    '\u0000\u0022': '\u300C',  # "_ -> 「
+    '\u0022\u0000': '\u300D',  # _" -> 」
 }
