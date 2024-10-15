@@ -1,4 +1,5 @@
 import json
+import re
 
 SUPPORTED_LANGS = {
     'lang-de': 'lang-de.json'
@@ -19,10 +20,16 @@ class IPATranscription:
 
     def lookup_word(self, word):
         ipa_transcription = None
+        special_char_included = True
         if not self.lookup_table:
             raise Exception('Lookup table empty. Initialize it first with init_lookup_table.')
         word = word.lower()
         entry = self.__get_entry(word)
+        if not entry:
+            # Sanitize word and try again
+            word = re.sub('[^A-Za-z0-9]+', '', word)
+            entry = self.__get_entry(word)
+            special_char_included = False
         # Backup logic if word is not in dictionary
         if not entry:
             # Check if word is a noun compound
@@ -30,12 +37,16 @@ class IPATranscription:
             if substring == word:
                 ipa_transcription = substring_ipa
             # TODO
-            # - Check if word is an abbreviation
             # - Check for verb endings
             # - Check for noun endings
             # - Date https://pypi.org/project/text2numde/
         else:
             ipa_transcription = self.__get_ipa(entry)
+        if word and not special_char_included:
+            if not word[0].isalnum():
+                ipa_transcription = word[0] + ipa_transcription
+            if not word[-1].isalnum():
+                ipa_transcription = ipa_transcription + word[0]
         return '\u0000' + ipa_transcription + '\u0000'  # Null character to mark the start and end of the IPA-string
 
     def __compound_word_check(self, word):
