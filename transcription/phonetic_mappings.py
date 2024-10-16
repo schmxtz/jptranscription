@@ -20,8 +20,10 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u02C8\u0061': '\u30A2',  # ˈa -> ア (Short stressed "a" as in "Auto")
     '\u02C8\u026A': '\u30A4',  # ˈɪ -> イ (Short stressed "i" as in "Immer")
     '\u02C8\u025B': '\u30A8',  # ˈɛ -> エ (Short stressed "e" as in "Essen")
+    '\u02C8\u028A': '\u30A6',  # ˈʊ -> ウ (Short stressed "u" as in "untergehenden")
     '\u02C8\u0153': '\u30AA\u30A7',  # ˈœ -> オェ (Short stressed "ö" as in "Öffnen")
     '\u02CC\u0075': '\u30A6',  # ˌu -> ウ (Short secondary stressed "u" as in "Universität")
+    '\u02C8\u0075\u02D0': '\u30A6\u30FC',  # ˈuː -> ウー (Long stressed "u" as in "Ufer")
 
     # Long vowels
     '\u0065\u02D0': '\u30A8',  # eː -> エ (Long "e" as in "Er")
@@ -49,9 +51,12 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
 
     # D
     '\u0064': '\u30C9',  # d -> ド (Short "d" as in "Drei")
+    '\u0064\u0061': '\u30C0',  # da -> ダ (Short "da" as in "DAs")
     '\u0064\u0250': '\u30C0',  # dɐ -> ダ (Short "der" as in "bruDER")
     '\u0064\u0259': '\u30C7',  # də -> デ (Short "de" as in "stunDE")
     '\u0064\u0065': '\u30C7',  # de -> デ (Short "de" as in "DEzember")
+    '\u0064\u025B': '\u30C7',  # dɛ -> デ (Short "de" as in "DEs")
+    '\u0064\u0254': '\u30C9',  # dɔ -> ド (Short "do" as in "DOrf")
     '\u0064\u0075\u02D0': '\u30C9\u30A5\u30FC',  # duː -> ドゥー (Long "du" as in "DU")
     '\u0064\u0065\u02D0': '\u30C7',  # deː -> デ (Long "de" as in "DEr")
     '\u0064\u0069\u02D0': '\u30C7\u30A3',  # diː -> ディ (Long "die" as in "DIE")
@@ -66,6 +71,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0066': '\u30D5',  # f -> フ (Short "f" as in "brieF")
     '\u02C8\u0066': '\u30D5',  # ˈf -> (Short stressed "f" as in "Flugzeug")
     '\u0066\u0061': '\u30D5\u30A1',  # fa -> ファ (Short "fa" as in "FAmilie")
+    '\u0066\u0250': '\u30D5\u30A1',  # fɐ -> ファ (Short "fer" as in "uFER")
     '\u0066\u026A': '\u30D5\u30A3',  # fɪ -> フィ (Short "fi" as in "FIlm")
     '\u0066\u0065': '\u30D5\u30A7',  # fe -> フェ (Short "fe" as in "kafFEE")
     '\u0066\u028A': '\u30D5',  # fʊ -> フ (Short "fu" as in "FUchs")
@@ -89,6 +95,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0261\u0075\u02D0': '\u30B0\u30FC',  # ɡuː -> グー (Long "gu" as in "GUt")
     '\u0261\u006E\u0329': '\u30B2\u30F3',  # ɡn̩ -> ゲン (Silent "e" between "g" and "n" as in "morGEN"
     '\u02C8\u0261\u0065\u02D0': '\u30B2\u30FC',  # ˈɡeː -> ゲー (Long stressed "ge" as in "GEben")
+    '\u02CC\u0261\u0065\u02D0': '\u30B2\u30FC',  # ˌɡeː -> ゲー (Long secondary stressed "ge" as in "unterGEHenden")
 
     # H
     '\u0259\u006E': '\u30D8\u30F3',  # ən -> ヘン (Short "hen" as in "geHEN")
@@ -116,6 +123,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006B\u026A': '\u30AD',  # kɪ -> キ (Short "ki" as in "KInd")
     '\u006B\u0254': '\u30B3',  # kɔ -> コ (Short "ko" as in "KOmmt")
     '\u02C8\u006B': '\u30AF',  # ˈk -> ク (Short stressed "k" as in "Klein")
+    '\u006B\u0079\u02D0': '\u30AD\u30E5\u30FC',  # kyː -> キュー (Long "küh" as in KÜHl) 
     '\u02C8\u006B\u0061': '\u30AB',  # ˈka -> カ (Short "ka" as in "KAffee")
     '\u02C8\u006B\u0254': '\u30B3',  # ˈkɔ -> コ (Short stressed "ko" as in "KOmmen")
 
@@ -128,6 +136,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006C\u026A': '\u30EA',  # lɪ -> リ (Short "li" as in "frühLIng")
     '\u006C\u0153': '\u30ED',  # lœ -> ロ (Short "lö" as in "gLÖckchen")
     '\u006C\u028A': '\u30EB',  # lʊ -> ル (Short "lu" as in "fLUsses")
+    '\u006C\u0329': '\u30EB',  # l̩ -> ル (Short "l" as in "spiegeLte")
     '\u02C8\u006C\u0254': '\u30ED',  # ˈlɔ -> ロ (Short stressed "lo" as in "balLOn")
     '\u02C8\u006C\u0061': '\u30E9',  # ˈla -> (Short stressed "la" as in "LAngsam")
     '\u006C\u0061\u02D0': '\u30E9\u30FC',  # laː -> ラー (Long "la" as in "schLAfen")
@@ -198,6 +207,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0281\u0079\u02D0': '\u30EA\u30E5\u30FC',  # ʁyː -> リュー (Long "rüh" as in "fRÜHstück")
     '\u02C8\u0281\u025B': '\u30EC',  # ˈʁɛ -> レ (Short stressed "re" as in "REchen")
     '\u02C8\u0281\u0065\u02D0': '\u30EC\u30FC',  # ˈʁeː -> レー (Long stressed "re" as in "REgen")
+    '\u02C8\u0281\u0075\u02D0': '\u30EB\u30FC',  # ˈʁuː -> ルー (Long stressed "")
     '\u02CC\u0281\u0061\u02D0': '\u30E9\u30FC',  # ˌʁaː -> ラー (Long secondary stressed "ra" as in "fahrRAd")
 
     # S
@@ -206,6 +216,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0073\u0259': '\u30BB',  # sə -> セ (Short "ße" as in "straSSE")
     '\u007A\u025B': '\u30BC',  # zɛ -> ゼ (Short "se" as in "SEchs")
     '\u0073\u0250': '\u30B5',  # sɐ -> サ (Short "ser" as in "wasSER")
+    '\u007A\u026A': '\u30BA\u30A3',  # zɪ -> ズィ (Short "si" as in "SIch")
     '\u032F\u0073': '\u30B9',  # ̯s -> ス (Short "ß" as in "weiSS")
     '\u007A\u0069': '\u30BA\u30A3',  # zi -> ズィ (Short "si" as in "univerSItät")
     '\u007A\u0061': '\u30B6',  # za -> ザ (Short "sa" as in "sein")

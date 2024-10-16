@@ -27,7 +27,7 @@ class IPATranscription:
         entry = self.__get_entry(word)
         if not entry:
             # Sanitize word and try again
-            word = re.sub('[^A-Za-z0-9]+', '', word)
+            word = re.sub('[^A-Za-z0-9üäöß]+', '', word)
             entry = self.__get_entry(word)
             special_char_included = False
         # Backup logic if word is not in dictionary
