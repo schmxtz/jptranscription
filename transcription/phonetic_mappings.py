@@ -42,6 +42,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0062\u0259': '\u30D9',  # bə -> ベ (Short "be" as in "farBE")
     '\u0062\u028A': '\u30D6',  # bʊ -> ブ (Short "bu" as in "BUs")
     '\u0062\u0069\u02D0': '\u30D3\u30FC',  # biː -> ビー (Long "bie" as in "BIEr")
+    ''
     '\u02C8\u0062\u026A': '\u30D3',  # ˈbɪ -> ビ (Short stressed "bi" as in "BItte")
     '\u02C8\u0062\u0254': '\u30DC',  # ˈbɔ -> ボ -> (Short stressed "bo" as in "BÄUme")
     '\u0062\u006E\u0329': '\u30D9\u30F3',  # bn̩ -> ベン (Silent "e" between "b" and "n" as in "abEnd")
@@ -96,7 +97,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u02C8\u0261\u025B': '\u30B2',  # ˈɡɛ -> ゲ (Short stressed "ge" as in "GEstern")
     '\u02C8\u0261\u028A': '\u30B0',  # ˈɡʊ -> グ (Short stressed "gu" as in "auGUst")
     '\u0261\u0075\u02D0': '\u30B0\u30FC',  # ɡuː -> グー (Long "gu" as in "GUt")
-    '\u0261\u006E\u0329': '\u30B2\u30F3',  # ɡn̩ -> ゲン (Silent "e" between "g" and "n" as in "morGEN"
+    '\u0261\u006E\u0329': '\u30B2\u30F3',  # ɡn̩ -> ゲン (Silent "e" between "g" and "n" as in "morGEN")
+    '\u0261\u014B\u030D': '\u30B2\u30F3',  # ɡŋ̍ -> ゲン (Silent "e" between "g" and "n" as in "morGEN")
     '\u02C8\u0261\u0065\u02D0': '\u30B2\u30FC',  # ˈɡeː -> ゲー (Long stressed "ge" as in "GEben")
     '\u02CC\u0261\u0065\u02D0': '\u30B2\u30FC',  # ˌɡeː -> ゲー (Long secondary stressed "ge" as in "unterGEHenden")
 
@@ -292,6 +294,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0066\u0069\u02D0': '\u30D5\u30A3',  # fiː -> フィ (Long "vie" as in "VIEr")
     '\u0066\u006F\u02D0': '\u30D5\u30A9\u30FC',  # foː -> フォー (Long "vo" as in "VOr")
     '\u02C8\u0076\u025B': '\u30F4\u30A7',  # ˈvɛ -> ヴェ (Short stressed "ve" as in "noVEmber")
+    '\u0076\u0069\u032F': '\u30F4\u30A3',  # vi̯ -> ヴィ (Short "vi" as in "VIolett")
     '\u02C8\u0066\u00F8\u02D0': '',  # ˈføː -> フォエ (Long stressed "vö" as in "VÖgeln")
 
     # W
@@ -332,13 +335,14 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u02C8\u006D\u026A\u0074': '\u30DF\u30C3\u30C8',  # ˈmɪt -> ミット (Short "t" with preceding short vowel as in "miTTwoch")
 
     # Edge cases for CH "x" (Pronunciation of "ch" depends on the preceding vowel
-    '\u0078\u0259': '\u30C3\u30D8',  # xə -> ラーッヘ ("spraCHE")
-    '\u0061\u0078\u0074': '\u30A2\u30CF\u30C8',  # axt -> アハト (Short "cht" with preceding "a" as in "ACHT")
-    '\u006E\u0061\u0078': '\u30CA\u30CF',  # nax -> ナハ (Short "ch" with preceding "na" as in "NACH")
-    '\u0062\u0075\u02D0\u0078': '\u30D6\u30FC\u30D5',  # buːx -> ブーフ (Short "ch" with preceding "bu" as in "BUCH")
-    '\u02C8\u0074\u0254\u0078': '\u30C8\u30DB',  # ˈtɔx -> トホ (Short "ch" with preceding "to" as in "toCHter")
+    '\u0078\u0259': '\u30C3\u30D8',  # xə -> ッヘ (Short "che" as in "spraCHE")
+    '\u0078\u0074\u0259': '',  # xtə -> ッヘテ (Short "chte" as in "daCHTE")
+    '\u0061\u0078\u0074': '\u30A2\u30C3\u30CF\u30C8',  # axt -> アッハト (Short "cht" with preceding "a" as in "ACHT")
+    '\u006E\u0061\u0078': '\u30CA\u30C3\u30CF',  # nax -> ナッハ (Short "ch" with preceding "na" as in "NACH")
+    '\u0062\u0075\u02D0\u0078': '\u30D6\u30FC\u30C3\u30D5',  # buːx -> ブーッフ (Short "ch" with preceding "bu" as in "BUCH")
+    '\u02C8\u0074\u0254\u0078': '\u30C8\u30C3\u30DB',  # ˈtɔx -> トッホ (Short "ch" with preceding "to" as in "toCHter")
     '\u02CC\u0076\u0254\u0078': '\u30F4\u30A9\u30C3\u30DB',  # ˌvɔx -> ヴォッホ (Short "ch" with preceding "wo" as in "mittWOCH")
-    '\u02C8\u006E\u0061\u02D0\u0078\u02CC': '\u30CA\u30CF',  # ˈnaːxˌ -> ナハ
+    '\u02C8\u006E\u0061\u02D0\u0078\u02CC': '\u30CA\u30C3\u30CF',  # ˈnaːxˌ -> ナッハ
     
     # Edge cases for CH "ç" 
     '\u00E7': '\u30C3\u30D2',  # ç -> ッヒ (Short "ch" anywhere not previously covered as in "niCHt")

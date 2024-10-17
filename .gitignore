@@ -1,3 +1,6 @@
 .idea
 .venv
 .gitignore
+de-extract.jsonl
+.gitignore
+*\__*
