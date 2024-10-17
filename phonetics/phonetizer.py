@@ -20,16 +20,20 @@ class IPATranscription:
 
     def lookup_word(self, word):
         ipa_transcription = None
-        special_char_included = True
+        special_char_included = len(word) != len(re.sub('[^A-Za-z0-9üäöß]+', '', word))
         if not self.lookup_table:
             raise Exception('Lookup table empty. Initialize it first with init_lookup_table.')
-        target = word.lower()
+        target = word
         entry = self.__get_entry(target)
         if not entry:
             # Sanitize word and try again
             target = re.sub('[^A-Za-z0-9üäöß]+', '', target)
             entry = self.__get_entry(target)
             special_char_included = False
+        if not entry:
+            # Make lower caps and try again
+            target = target.lower()
+            entry = self.__get_entry(target)
         # Backup logic if word is not in dictionary
         if not entry:
             # Check if word is a noun compound
@@ -62,9 +66,9 @@ class IPATranscription:
 
     def __get_entry(self, word):
         if isinstance(word, str):
-            return self.lookup_table.get(word.lower())
+            return self.lookup_table.get(word)
 
     @staticmethod
     def __get_ipa(entry):
         if entry.get('ipa'):
-            return entry.get('ipa')[0]
+            return entry.get('ipa')
