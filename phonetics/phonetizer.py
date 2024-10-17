@@ -23,17 +23,17 @@ class IPATranscription:
         special_char_included = True
         if not self.lookup_table:
             raise Exception('Lookup table empty. Initialize it first with init_lookup_table.')
-        word = word.lower()
-        entry = self.__get_entry(word)
+        target = word.lower()
+        entry = self.__get_entry(target)
         if not entry:
             # Sanitize word and try again
-            word = re.sub('[^A-Za-z0-9üäöß]+', '', word)
-            entry = self.__get_entry(word)
+            target = re.sub('[^A-Za-z0-9üäöß]+', '', target)
+            entry = self.__get_entry(target)
             special_char_included = False
         # Backup logic if word is not in dictionary
         if not entry:
             # Check if word is a noun compound
-            substring, substring_ipa = self.__compound_word_check(word)
+            substring, substring_ipa = self.__compound_word_check(target)
             if substring == word:
                 ipa_transcription = substring_ipa
             # TODO
@@ -42,12 +42,7 @@ class IPATranscription:
             # - Date https://pypi.org/project/text2numde/
         else:
             ipa_transcription = self.__get_ipa(entry)
-        if word and not special_char_included:
-            if not word[0].isalnum():
-                ipa_transcription = word[0] + ipa_transcription
-            if not word[-1].isalnum():
-                ipa_transcription = ipa_transcription + word[0]
-        return '\u0000' + ipa_transcription + '\u0000'  # Null character to mark the start and end of the IPA-string
+        return '\u0000' + ipa_transcription + '\u0000', special_char_included  # Null character to mark the start and end of the IPA-string
 
     def __compound_word_check(self, word):
         substring = ''

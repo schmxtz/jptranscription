@@ -24,11 +24,7 @@ class Katakanizer:
     def transcribe_word(self, word):
         if not self.phonetics_transcriber:
             raise Exception('Katakanizer has not been properly initialized.')
-        word_phonetics = self.phonetics_transcriber.lookup_word(word)
-        # Not yet sure if I need this in the future, so it will remain an artifact until proven useless. It basically
-        # just removes characters that I deemed unnecessary for the transcription into Katakana (like the character "ˈ"
-        # to show that the following sound is to be stressed).
-        # word_phonetics = re.sub(r'[{}]'.format(self.irrelevant_characters), '', word_ipa)
+        word_phonetics, special_char_included = self.phonetics_transcriber.lookup_word(word)
         katakana_word = []
         start = 0
         while start < len(word_phonetics):
@@ -47,7 +43,7 @@ class Katakanizer:
                 raise Exception('Error converting {} with the IPA {} and katakana so far {}'.format(word, word_phonetics, ''.join(katakana_word)))
         # Put the special characters like "." and "," after the conversion into phonetics, since the characters might be relevant in the lookup
         delimiter_token = '\u0000'
-        if word and len(word) > 1:
+        if not special_char_included and word and len(word) > 1:
             start = delimiter_token + word[0]
             if not start.isalnum() and start in self.mapping:
                 katakana_word.insert(0, self.mapping[start])
