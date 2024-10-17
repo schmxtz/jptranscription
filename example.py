@@ -20,12 +20,12 @@ for index, row in word_pairings.iterrows():
         print(row['german'], row['katakana'], converted_word, word_ipa)
 
 # New sounds
-# text = open('text.txt', encoding='utf-8').readline()
+text = open('text.txt', encoding='utf-8').readline()
 
-# words = text.split(' ')
-# for word in words:
-#     try:
-#         converted_word, word_ipa = kata.transcribe_word(word)
-#         print('{},{} {}'.format(word, converted_word, word_ipa))
-#     except Exception as e:
-#         print(word, e)
+words = text.split(' ')
+for word in words:
+    try:
+        converted_word, word_ipa = kata.transcribe_word(word)
+        print('{},{} {}'.format(word, converted_word, word_ipa))
+    except Exception as e:
+        print(word, e)

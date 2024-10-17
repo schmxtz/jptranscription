@@ -10,6 +10,10 @@ class IPATranscription:
     def __init__(self, lang):
         self.lang = lang
         self.lookup_table = None
+        self.LOOKUP_FUNCTIONS = [self.__get_entry, 
+                                 self.__try_sanitized, 
+                                 self.__try_lowercase, 
+                                 self.__try_first_letter_capitalized]
 
     def init_lookup_table(self):
         if SUPPORTED_LANGS.get(self.lang) is None:
@@ -19,33 +23,20 @@ class IPATranscription:
         self.lookup_table = json.load(file_handle)
 
     def lookup_word(self, word):
-        ipa_transcription = None
-        special_char_included = len(word) != len(re.sub('[^A-Za-z0-9üäöß]+', '', word))
         if not self.lookup_table:
             raise Exception('Lookup table empty. Initialize it first with init_lookup_table.')
-        target = word
-        entry = self.__get_entry(target)
-        if not entry:
-            # Sanitize word and try again
-            target = re.sub('[^A-Za-z0-9üäöß]+', '', target)
-            entry = self.__get_entry(target)
-            special_char_included = False
-        if not entry:
-            # Make lower caps and try again
-            target = target.lower()
-            entry = self.__get_entry(target)
-        # Backup logic if word is not in dictionary
-        if not entry:
-            # Check if word is a noun compound
-            substring, substring_ipa = self.__compound_word_check(target)
-            if substring == word:
-                ipa_transcription = substring_ipa
-            # TODO
-            # - Check for verb endings
-            # - Check for noun endings
-            # - Date https://pypi.org/project/text2numde/
-        else:
-            ipa_transcription = self.__get_ipa(entry)
+        ipa_transcription = ''
+        special_char_included = True
+        entry = {'size': 0}
+        for lookup_func in self.LOOKUP_FUNCTIONS:
+            new_entry = lookup_func(word)
+            if new_entry is not None and new_entry['size'] > entry['size']:
+                entry = new_entry
+                ipa_transcription = self.__get_ipa(entry)
+                if len(word) != len(re.sub('[^A-Za-z0-9üäöß]+', '', word)):
+                    special_char_included = False
+        if entry['size'] == 0:
+            ipa_transcription = self.__compound_word_check(word)
         return '\u0000' + ipa_transcription + '\u0000', special_char_included  # Null character to mark the start and end of the IPA-string
 
     def __compound_word_check(self, word):
@@ -62,13 +53,26 @@ class IPATranscription:
                     break
             if unchanged:
                 break
-        return substring, substring_ipa
+        return substring_ipa
 
     def __get_entry(self, word):
         if isinstance(word, str):
             return self.lookup_table.get(word)
+        
+    def __try_sanitized(self, word):
+        word = re.sub('[^A-Za-z0-9üäöß]+', '', word)
+        entry = self.__get_entry(word)
+        return entry
+    def __try_lowercase(self, word):
+        word = word.lower()
+        return self.__get_entry(word)
+    
+    def __try_first_letter_capitalized(self, word):
+        word = word[0].upper() + word[1:]
+        return self.__get_entry(word)
 
     @staticmethod
     def __get_ipa(entry):
         if entry.get('ipa'):
             return entry.get('ipa')
+        
