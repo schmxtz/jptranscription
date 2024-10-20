@@ -28,7 +28,6 @@ with (open(file=file_name, encoding='UTF-8') as file):
     while line := file.readline():
         line = line.rstrip()
         json_obj = json.loads(line)
-
         # Only need store German word with at least one IPA entry
         if json_obj.get('lang_code') == 'de' and \
                 len(json_obj.get('sounds') or []) > 0 and \
