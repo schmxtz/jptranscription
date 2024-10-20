@@ -8,8 +8,8 @@ kata.init_katakanizer()
 
 # for entry in kata.phonetics_transcriber.lookup_table:
 #     ipa, t = kata.phonetics_transcriber.lookup_word(entry)
-#     if ipa.startswith('\u0000' + 'xə'):
-#     # if 'hʏ' in ipa:
+#     # if ipa.startswith('\u0000' + 'xə'):
+#     if 'ml̩' in ipa and 'mm' not in entry:
 #         print(entry, ipa)   
 
 # Making sure old words don't break
@@ -25,7 +25,8 @@ text = open('text.txt', encoding='utf-8').readline()
 words = text.split(' ')
 for word in words:
     try:
-        converted_word, word_ipa = kata.transcribe_word(word)
-        print('{},{} {}'.format(word, converted_word, word_ipa))
+        if word:
+            converted_word, word_ipa = kata.transcribe_word(word)
+            print('{},{} {}'.format(word, converted_word, word_ipa))
     except Exception as e:
         print(word, e)
