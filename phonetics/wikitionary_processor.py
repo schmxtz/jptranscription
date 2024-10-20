@@ -42,10 +42,8 @@ with (open(file=file_name, encoding='UTF-8') as file):
 
             if not output.get(word) and ipa != '…' and ipa:
                 output[word] = {'ipa': ipa,
-                                'pos': pos,
-                                'alternate_reading': [],
-                                'original_word': json_obj.get('word'),
-                                'size': len(line)}
+                                'pos': pos,}
+                                # 'original_word': json_obj.get('word')}
             else:
                 if ipa and ipa != '…' and 'name' not in (json_obj.get('pos')) and \
                     'outdated' not in (json_obj.get('senses')[0].get('tags') or []) and \
@@ -53,8 +51,7 @@ with (open(file=file_name, encoding='UTF-8') as file):
                     pos in word_types_to_keep and output[word]['pos'] in word_types_to_ignore:
                     output[word]['ipa'] = ipa
                     output[word]['pos'] = pos
-                    output[word]['original_word'] = json_obj.get('word')
-                    output[word]['size'] = len(line)                
+                    # output[word]['original_word'] = json_obj.get('word')             
 
 print(output['bus'])
 print(output['auto'])
