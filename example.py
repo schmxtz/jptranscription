@@ -25,6 +25,7 @@ text = open('text.txt', encoding='utf-8').readline()
 words = text.split(' ')
 for word in words:
     try:
+        word =  re.sub('[^A-Za-z0-9üäöß ]+', '', word.lower())
         if word:
             converted_word, word_ipa = kata.transcribe_word(word)
             print('{},{} {}'.format(word, converted_word, word_ipa))

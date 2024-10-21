@@ -25,9 +25,9 @@ class IPATranscription:
         target = re.sub('[^A-Za-z0-9üäöß ]+', '', word.lower())
         entry = self.__get_entry(target)
         if not entry:
-            entry['ipa_transcription'] = self.__compound_word_check(word.lower())
-        ipa_transcription = self.__get_ipa(entry)
-        return '\u0000' + ipa_transcription + '\u0000', self.__get_original_word(entry)  # Null character to mark the start and end of the IPA-string
+            ipa_transcription = self.__compound_word_check(word.lower())
+        ipa_transcription = ipa_transcription or self.__get_ipa(entry)
+        return '\u0000' + ipa_transcription + '\u0000'  # Null character to mark the start and end of the IPA-string
 
     def __compound_word_check(self, word):
         substring = ''
@@ -53,9 +53,4 @@ class IPATranscription:
     def __get_ipa(entry):
         if entry.get('ipa'):
             return entry.get('ipa')
-        
-    @staticmethod
-    def __get_original_word(entry):
-        if entry.get('original_word'):
-            return entry.get('original_word')
         
