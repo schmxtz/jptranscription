@@ -15,11 +15,8 @@ class Katakanizer:
         self.irrelevant_characters = SUPPORTED_LANGS[self.language]['irrelevant_chars']
         self.max_ipa_substring_length = None
         self.phonetics_transcriber = None
-
-    def init_katakanizer(self):
         self.max_ipa_substring_length = len(max(SUPPORTED_LANGS[self.language]['map'], key=len))
         self.phonetics_transcriber = IPATranscription(self.language)
-        self.phonetics_transcriber.init_lookup_table()
 
     def transcribe_word(self, word):
         if not self.phonetics_transcriber:

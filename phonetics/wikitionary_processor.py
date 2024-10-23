@@ -33,7 +33,7 @@ with (open(file=file_name, encoding='UTF-8') as file):
                 len(json_obj.get('sounds') or []) > 0 and \
                 json_obj.get('sounds')[0].get('ipa'):
             
-            word = re.sub('[^A-Za-z0-9üäöß ]+', '', json_obj.get('word').lower())
+            word = json_obj.get('word').lower()
             ipa = json_obj.get('sounds')[0].get('ipa')
             pos = json_obj.get('pos')
 
@@ -42,15 +42,17 @@ with (open(file=file_name, encoding='UTF-8') as file):
             if not output.get(word) and ipa != '…' and ipa:
                 output[word] = {'ipa': ipa,
                                 'pos': pos,}
-                                # 'original_word': json_obj.get('word')}
             else:
                 if ipa and ipa != '…' and 'name' not in (json_obj.get('pos')) and \
                     'outdated' not in (json_obj.get('senses')[0].get('tags') or []) and \
                     'name' not in (json_obj.get('other_pos') or []) and \
                     pos in word_types_to_keep and output[word]['pos'] in word_types_to_ignore:
                     output[word]['ipa'] = ipa
-                    output[word]['pos'] = pos
-                    # output[word]['original_word'] = json_obj.get('word')             
+                    output[word]['pos'] = pos   
+    output[' '] = {'ipa': '',
+                   'pos': 'unknown'}
+    output['-'] = {'ipa': '',
+                   'pos': 'unknown'} 
 
 print(output['bus'])
 print(output['auto'])

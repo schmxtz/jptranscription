@@ -10,22 +10,30 @@ class IPATranscription:
     def __init__(self, lang):
         self.lang = lang
         self.lookup_table = None
-
-    def init_lookup_table(self):
         if SUPPORTED_LANGS.get(self.lang) is None:
             raise Exception('The given language {} does is not supported. List of supported languages are {}.'
                             .format(self.lang, list(SUPPORTED_LANGS.keys())))
         file_handle = open('./phonetics/' + SUPPORTED_LANGS[self.lang])
-        self.lookup_table = json.load(file_handle)
+        self.lookup_table = json.load(file_handle)     
 
     def lookup_word(self, word):
         if not self.lookup_table:
             raise Exception('Lookup table empty. Initialize it first with init_lookup_table.')
         ipa_transcription = ''
-        target = re.sub('[^A-Za-z0-9üäöß ]+', '', word.lower())
+        target = word.lower()
         entry = self.__get_entry(target)
         if not entry:
-            ipa_transcription = self.__compound_word_check(word.lower())
+            target = self.__sanitize_word(target)
+            entry = self.__get_entry(target)
+        if not entry:
+            ipa_transcription, matches_original = self.__compound_word_check(word.lower())
+            if not matches_original: 
+                sanitized_ipa_transcription, sanitized_matches_original = self.__compound_word_check(self.__sanitize_word(word.lower()))
+                if sanitized_matches_original:
+                    ipa_transcription = sanitized_ipa_transcription
+                else:
+                    ipa_transcription = ipa_transcription if len(ipa_transcription) > len(sanitized_ipa_transcription) else sanitized_ipa_transcription 
+
         ipa_transcription = ipa_transcription or self.__get_ipa(entry)
         return '\u0000' + ipa_transcription + '\u0000'  # Null character to mark the start and end of the IPA-string
 
@@ -43,11 +51,15 @@ class IPATranscription:
                     break
             if unchanged:
                 break
-        return substring_ipa
+        return substring_ipa, word == substring
 
     def __get_entry(self, word):
         if isinstance(word, str):
             return self.lookup_table.get(word)
+        
+    @staticmethod
+    def __sanitize_word(word):
+        return re.sub('[^A-Za-z0-9üäöß ]+', '', word)
     
     @staticmethod
     def __get_ipa(entry):
