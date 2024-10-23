@@ -26,7 +26,7 @@ for index, row in word_pairings.iterrows():
         print(word, katakana, converted_word, word_ipa)
 
 # Replace duplicates
-with open('words.csv', 'w', encoding='UTF-8') as csvfile:
+with open('test/words.csv', 'w', encoding='UTF-8') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=['german', 'katakana'], lineterminator='\n')
     writer.writeheader()
     writer.writerows(pairings)
