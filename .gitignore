@@ -3,4 +3,4 @@
 .gitignore
 de-extract.jsonl
 .gitignore
-*\__*
+*\__pycache__

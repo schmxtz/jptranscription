@@ -37,13 +37,4 @@ class Katakanizer:
                     break
             if not modified:
                 raise Exception('Error converting {} with the IPA {} and katakana so far {}'.format(word, word_phonetics, ''.join(katakana_word)))
-        # # Put the special characters like "." and "," after the conversion into phonetics, since the characters might be relevant in the lookup
-        # delimiter_token = '\u0000'
-        # if original_word and not original_word.endswith('.'):
-        #     start = delimiter_token + word[0]
-        #     if not start.isalnum() and start in self.mapping:
-        #         katakana_word.insert(0, self.mapping[start])
-        #     end = word[-1] + delimiter_token
-        #     if not end.isalnum() and end in self.mapping:
-        #         katakana_word.append(self.mapping[end])
         return ''.join(katakana_word), word_phonetics
