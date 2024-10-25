@@ -48,7 +48,7 @@ class IPATranscription:
                 entry = self.__get_entry(word[len(substring):i])
                 if entry:
                     substring += word[len(substring):i]
-                    substring_ipa += self.__get_ipa(entry)
+                    substring_ipa += self.__get_ipa(entry) or ''
                     unchanged = False
                     break
             if unchanged:

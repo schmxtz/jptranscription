@@ -167,6 +167,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0070': '\u30D7',  # p -> プ (Short "p" as in "Problem")
     '\u0070\u0061': '\u30D1',  # pa -> パ (Short "pa" as in "jaPAn")
     '\u0070\u0069': '\u30D4',  # pi -> ピ (Long "pie" as in "sPIElen")
+    '\u0070\u0065': '',  # pe -> ペ (Long "pe" as in "PEter")
     '\u0070\u0079': '\u30D4\u30E5',  # py -> ピュ (Long "pü" as in "sPÜrte")
     '\u0070\u0361\u0066': '\u30D7\u30D5',  # p͡f -> プフ (Short "pf" as in "baumstumPF")
     '\u0070\u0361\u0066\u0061': '\u30D5\u30A1',  # p͡fa -> ファ ("P" has to be silent here)
@@ -320,15 +321,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     # Special characters
     '\u0000': '',  # NULL character should not map to anything, if not used
     '\u0020': '\u0020',  # Space character just maps to space again
-    '\u0000\u002C': '\u3001',  # , -> 、
-    '\u002C\u0000': '\u3001',  # , -> 、
-    '\u002E\u0000': '\u3002',  # . -> 。
-    '\u0000\u002E': '\u3002',  # . -> 。
-    '\u0000\u0022': '\u300C',  # "_ -> 「
-    '\u0022\u0000': '\u300D',  # _" -> 」
     '\u002D': '',  # - -> 
     '\u0294': '',  # ʔ ->
-
     '\u02C8': '',  # ˈ -> 
     '\u02D0': '\u30FC',  # ː -> ー
     '\u02CC': '',  # ˌ ->

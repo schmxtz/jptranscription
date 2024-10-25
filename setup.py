@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
    name='jptranscription',
-   version='0.0.8',
+   version='0.1.0',
    description='Transcribes German words into Katakana using IPA',
    author='Philipp Schmitz',
    author_email='schmxtz@gmail.com',
