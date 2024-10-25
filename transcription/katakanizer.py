@@ -9,7 +9,7 @@ SUPPORTED_LANGS = {
 
 
 class Katakanizer:
-    def __init__(self, language: str):
+    def __init__(self, language: str = 'lang-de'):
         self.language = language
         self.mapping = SUPPORTED_LANGS[self.language]['map']
         self.irrelevant_characters = SUPPORTED_LANGS[self.language]['irrelevant_chars']

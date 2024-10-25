@@ -7,7 +7,7 @@ SUPPORTED_LANGS = {
 
 
 class IPATranscription:
-    def __init__(self, lang):
+    def __init__(self, lang: str = 'lang-de'):
         self.lang = lang
         self.lookup_table = None
         if SUPPORTED_LANGS.get(self.lang) is None:
