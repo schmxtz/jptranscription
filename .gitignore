@@ -4,3 +4,5 @@
 de-extract.jsonl
 .gitignore
 *\__pycache__
+dist/
+*.egg-info

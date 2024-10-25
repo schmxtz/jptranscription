@@ -1,9 +1,9 @@
-from transcription.phonetic_mappings import *
-from phonetics.phonetizer import IPATranscription
+import jptranscription.transcription.ipakatamapping as ipakatamapping
+import jptranscription.phonetics.phonetizer as phonetizer
 
 
 SUPPORTED_LANGS = {
-    'lang-de': {'map': GERMAN_IPA_TO_KATAKANA_MAP,
+    'lang-de': {'map': ipakatamapping.GERMAN_IPA_TO_KATAKANA_MAP,
                 'irrelevant_chars': '\u02C8\u0329\u02CC\u032F\u0361'}
 }
 
@@ -16,7 +16,7 @@ class Katakanizer:
         self.max_ipa_substring_length = None
         self.phonetics_transcriber = None
         self.max_ipa_substring_length = len(max(SUPPORTED_LANGS[self.language]['map'], key=len))
-        self.phonetics_transcriber = IPATranscription(self.language)
+        self.phonetics_transcriber = phonetizer.IPATranscription(self.language)
 
     def transcribe_word(self, word):
         if not self.phonetics_transcriber:

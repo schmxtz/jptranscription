@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+include jptranscription/phonetics/lang-de.json

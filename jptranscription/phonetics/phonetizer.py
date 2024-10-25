@@ -1,5 +1,6 @@
 import json
 import re
+from pathlib import Path
 
 SUPPORTED_LANGS = {
     'lang-de': 'lang-de.json'
@@ -13,7 +14,8 @@ class IPATranscription:
         if SUPPORTED_LANGS.get(self.lang) is None:
             raise Exception('The given language {} does is not supported. List of supported languages are {}.'
                             .format(self.lang, list(SUPPORTED_LANGS.keys())))
-        file_handle = open('./phonetics/' + SUPPORTED_LANGS[self.lang])
+        file_path = Path(__file__).parent.joinpath(SUPPORTED_LANGS[self.lang])
+        file_handle = open(str(file_path))
         self.lookup_table = json.load(file_handle)     
 
     def lookup_word(self, word):
