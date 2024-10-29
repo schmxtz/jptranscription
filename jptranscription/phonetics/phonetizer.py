@@ -8,21 +8,24 @@ SUPPORTED_LANGS = {
 
 
 class IPATranscription:
-    def _init_(self, lang: str = 'lang-de'):
+    def __init__(self, lang: str = 'lang-de'):
         self.lang = lang
         self.lookup_table = None
         assert(SUPPORTED_LANGS.get(self.lang) is not None)
         # Init lookup table
         file_path = Path(__file__).parent.joinpath(SUPPORTED_LANGS[self.lang])
         file_handle = open(str(file_path))
-        self.lookup_table = json.load(file_handle)     
+        self.lookup_table = json.load(file_handle) 
 
-    def lookup_word(self, word):
-        ipa_transcription = ''
-        entry = self._get_entry(word)
-        if not entry:
-            entry = self._get_entry(self._sanitize_word(word))
-        if not entry:
+    def lookup_word(self, word: str, pos: str):
+        if pos == 'NOUN' or pos == 'PROPN':
+            new_target = pos.capitalize()
+        else:
+            new_target = word.lower()
+        ipa_transcription = self._get_entry(new_target)
+        if not ipa_transcription:
+            ipa_transcription = self._get_entry(self._sanitize_word(word))
+        if not ipa_transcription:
             ipa_transcription, matches_original = self._compound_word_check(word)
             if not matches_original: 
                 sanitized_ipa_transcription, sanitized_matches_original = self._compound_word_check(self._sanitize_word(word))
@@ -30,27 +33,27 @@ class IPATranscription:
                     ipa_transcription = sanitized_ipa_transcription
                 else:
                     ipa_transcription = ipa_transcription if len(ipa_transcription) > len(sanitized_ipa_transcription) else sanitized_ipa_transcription 
-
-        ipa_transcription = ipa_transcription or self._get_ipa(entry) or None
         return ipa_transcription
 
     def _compound_word_check(self, word):
-        substring = ''
-        substring_ipa = ''
-        while len(substring) != len(word):
+        substring = []
+        substring_len = 0
+        substring_ipa = []
+        while substring_len != len(word):
             unchanged = True
-            for i in range(len(word), len(substring), -1):
-                entry = self._get_entry(word[len(substring):i])
+            for i in range(len(word), substring_len, -1):
+                entry = self._get_entry(word[substring_len:i])
                 if entry:
-                    substring += word[len(substring):i]
-                    substring_ipa += self._get_ipa(entry) or ''
+                    substring.append(word[substring_len:i])
+                    substring_len += (i-substring_len)
+                    substring_ipa.append(entry or '')
                     unchanged = False
                     break
             if unchanged:
                 break
-        return substring_ipa, word == substring
+        return ''.join(substring_ipa), word.lower() == ''.join(substring).lower()
 
-    def _get_entry(self, word, pos):
+    def _get_entry(self, word):
         if not word: return ''
         assert(isinstance(word, str))
 
@@ -70,8 +73,3 @@ class IPATranscription:
     def _sanitize_word(word):
         return re.sub('[^A-Za-z0-9üäöß ]+', '', word)
     
-    @staticmethod
-    def _get_ipa(entry):
-        if entry.get('ipa'):
-            return entry.get('ipa')
-        

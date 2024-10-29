@@ -167,7 +167,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0070': '\u30D7',  # p -> プ (Short "p" as in "Problem")
     '\u0070\u0061': '\u30D1',  # pa -> パ (Short "pa" as in "jaPAn")
     '\u0070\u0069': '\u30D4',  # pi -> ピ (Long "pie" as in "sPIElen")
-    '\u0070\u0065': '',  # pe -> ペ (Long "pe" as in "PEter")
+    '\u0070\u0065': '\u30DA',  # pe -> ペ (Long "pe" as in "PEter")
     '\u0070\u0079': '\u30D4\u30E5',  # py -> ピュ (Long "pü" as in "sPÜrte")
     '\u0070\u0361\u0066': '\u30D7\u30D5',  # p͡f -> プフ (Short "pf" as in "baumstumPF")
     '\u0070\u0361\u0066\u0061': '\u30D5\u30A1',  # p͡fa -> ファ ("P" has to be silent here)
@@ -218,6 +218,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0283\u00F8': '\u30B7\u30E5',  # ʃø -> シュ (Long "schö" as in "SCHÖn")
     '\u0283\u006C\u0329': '\u30B7\u30A7\u30EB',  # ʃl̩ -> シェル (Short "schel" as in "raSCHELn")
     '\u007A\u006E\u0329': '\u30BC\u30F3',  # zn̩ -> ゼン (Short "sen" as in "tauSENd")
+    '\u007A\u006C\u0329': '\u30BC\u30EB',  # zl̩ -> ゼル (Short "sel" as in "inSEL")
     '\u0283\u006E\u0329': '\u30B7\u30A7\u30F3',  # ʃn̩ -> シェン (Short "schen" as in "rauSCHENden")
 
     # T
