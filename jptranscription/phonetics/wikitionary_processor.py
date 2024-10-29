@@ -1,19 +1,22 @@
 import json
 import urllib.request
 import os
+import sys
+import time
 
-# For German dictionary
-file_name = 'de-extract.jsonl'
-# Check if it hasn't been downloaded yet
-if not os.path.isfile(file_name):
-    german_dict_link = 'https://kaikki.org/dictionary/downloads/de/de-extract.jsonl'
-    # https://kaikki.org/dictionary/downloads/de/de-extract.jsonl.gz compressed archive here
-    file_name = german_dict_link.split('/')[-1]
-    print('Downloading file')
-    urllib.request.urlretrieve(german_dict_link, file_name)
 
-IGNORE_TAGS = set(['Austrian German', 'outdated'])
-IGNORE_RAW_TAGS = set(['umgangssprachlich,', 'umgangssprachlich'])
+def reporthook(count, block_size, total_size):
+    global start_time
+    if count == 0:
+        start_time = time.time()
+        return
+    duration = time.time() - start_time
+    progress_size = int(count * block_size)
+    speed = int(progress_size / (1024 * duration))
+    percent = int(count * block_size * 100 / total_size)
+    sys.stdout.write("\r...%d%%, %d MB, %d KB/s, %d seconds passed" %
+                    (percent, progress_size / (1024 * 1024), speed, duration))
+    sys.stdout.flush()
 
 def get_ipa(x):
     sounds = x.get('sounds')
@@ -61,36 +64,50 @@ def debug_print(i, total):
     print('[' + 'X'* (percent//4) + '_'* ((100-percent)//4) + ']' + f' {i}/{total} entries analyzed')
 
 
-file_name = 'de-extract.jsonl'
-# Line count for 
-with open(file_name, 'rb') as f:
-    num_lines = sum(1 for _ in f)
+if __name__ == '__main__':
+    # For German dictionary
+    file_name = 'de-extract.jsonl'
+    # Check if it hasn't been downloaded yet
+    if not os.path.isfile(file_name):
+        german_dict_link = 'https://kaikki.org/dictionary/downloads/de/de-extract.jsonl'
+        # https://kaikki.org/dictionary/downloads/de/de-extract.jsonl.gz compressed archive here
+        file_name = german_dict_link.split('/')[-1]
+        print('Downloading file')
+        urllib.request.urlretrieve(german_dict_link, file_name, reporthook)
 
-output = {}
-print('Starting analysis')
-with open(file=file_name, encoding='UTF-8') as file:
-    i = 0
-    while line := file.readline():
-        line = line.rstrip()
-        json_obj = json.loads(line)
+    IGNORE_TAGS = set(['Austrian German', 'outdated'])
+    IGNORE_RAW_TAGS = set(['umgangssprachlich,', 'umgangssprachlich'])
 
-        word = get_word(json_obj)
-        if word and is_german(json_obj) and contains_ipa_entry(json_obj):
-            """
-            This part is unsure, in the list, the most relevant entry comes first
+    file_name = 'de-extract.jsonl'
+    # Line count for 
+    with open(file_name, 'rb') as f:
+        num_lines = sum(1 for _ in f)
 
-            if output.get(word) and not contains_tags_to_ignore(json_obj):
-                if output[word] != get_ipa(json_obj) and not might_be_foreign_word(json_obj):
-                    print(f'word: {word}, old_ipa: {output[word]}, new_word: {get_ipa(json_obj)}')
+    output = {}
+    print('Starting analysis')
+    with open(file=file_name, encoding='UTF-8') as file:
+        i = 0
+        while line := file.readline():
+            line = line.rstrip()
+            json_obj = json.loads(line)
+
+            word = get_word(json_obj)
+            if word and is_german(json_obj) and contains_ipa_entry(json_obj):
+                """
+                This part is unsure, in the list, the most relevant entry comes first
+
+                if output.get(word) and not contains_tags_to_ignore(json_obj):
+                    if output[word] != get_ipa(json_obj) and not might_be_foreign_word(json_obj):
+                        print(f'word: {word}, old_ipa: {output[word]}, new_word: {get_ipa(json_obj)}')
+                        output[word] = get_ipa(json_obj)
+                """
+                if output.get(word):
+                    pass
+                else:
                     output[word] = get_ipa(json_obj)
-            """
-            if output.get(word):
-                pass
-            else:
-                output[word] = get_ipa(json_obj)
-        i += 1
-        if  i % (num_lines//25) == 0:
-            debug_print(i, num_lines)
+            i += 1
+            if  i % (num_lines//25) == 0:
+                debug_print(i, num_lines)
 
-# Dump file
-json.dump(output, open('lang-de.json', 'w', encoding='UTF-8'))
+    # Dump file
+    json.dump(output, open('lang-de.json', 'w', encoding='UTF-8'))
