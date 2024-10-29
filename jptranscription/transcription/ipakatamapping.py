@@ -103,6 +103,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006B': '\u30AF',  # k -> ク (Short stressed "k" as in "Klein")
     '\u006B\u0061': '\u30AB',  # ka -> カ (Short "ka" as in "KEIn")
     '\u006B\u026A': '\u30AD',  # kɪ -> キ (Short "ki" as in "KInd")
+    '\u006B\u0069': '\u30AD',  # ki -> キ (Short "ki" as in "KInd")
     '\u006B\u0254': '\u30B3',  # kɔ -> コ (Short "ko" as in "KOmmt")
     '\u006B\u006F': '\u30B3',  # ko -> コ (Short "cho" as in "melanCHOlie") 
     '\u006B\u028A': '\u30AF',  # kʊ -> ク (Short secondary stressed "ku" as in "zuKUnft")
