@@ -1,8 +1,6 @@
 import json
-import re
 import urllib.request
 import os
-import spacy
 
 # For German dictionary
 file_name = 'de-extract.jsonl'

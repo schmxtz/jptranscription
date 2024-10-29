@@ -1,5 +1,4 @@
 import jptranscription.transcription.ipakatamapping as ipakatamapping
-import jptranscription.phonetics.phonetizer as phonetizer
 
 
 SUPPORTED_LANGS = {
