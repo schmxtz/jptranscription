@@ -1,3 +1,10 @@
+# Installation
+No external libary dependencies except the wikitionary database
+
+But before using this library you need to run jptranscription\phonetics\wikitionary_processor.py
+
+Afterwards you need to move this file to jptranscription\phonetics\lang-de.json
+
 # Introduction
 I'm developing a script to transcribe German words into Japanese sounds using IPA. 
 
