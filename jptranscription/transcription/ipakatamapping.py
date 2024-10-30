@@ -286,20 +286,18 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
 
     # Edge cases for CH "x" (Pronunciation of "ch" depends on the preceding vowel
     '\u0078\u0259': '\u30C3\u30D8',  # xə -> ッヘ (Short "che" as in "spraCHE")
-    '\u028A\u032F\u0078\u0259': '\u30A6\u30C3\u30D8',  # ʊ̯xə -> ウッヘ (Short "uche" as in "braUCHE")
     '\u0078\u0074\u0259': '\u30C3\u30D8\u30C6',  # xtə -> ッヘテ (Short "chte" as in "daCHTE")
     '\u0061\u0078\u0074': '\u30A2\u30C3\u30CF\u30C8',  # axt -> アッハト (Short "cht" with preceding "a" as in "ACHT")
     '\u006E\u0061\u0078': '\u30CA\u30C3\u30CF',  # nax -> ナッハ (Short "ch" with preceding "na" as in "NACH")
-    '\u006E\u0061\u02D0\u0078': '\u30CA\u30C3\u30CF',  # naːx -> ナッハ (Short "ch" with preceding "na" as in "NACH")
     '\u006E\u0254\u0078': '\u30CE\u30C3\u30DB',  # nɔx -> ノッホ (Short "ch" with preceding "no" as in "NOCH")
     '\u0064\u0254\u0078': '\u30C9\u30C3\u30DB',  # dɔx -> ドッホ (Short "ch" with preceding "do" as in "DOCH")
-    '\u0078\u006E\u0329': '\u30C3\u30D8\u30F3',  # xn̩ -> ッヘン (Short "chen" as in "spraCHEN")
+    '\u0078\u006E': '\u30C3\u30D8\u30F3',  # xn -> ッヘン (Short "chen" as in "spraCHEN")
     '\u028A\u032F\u0078': '\u30A6\u30C3\u30D5',  # ʊ̯x -> ウッフ (Short "uch" as in "raUCH")
     '\u0062\u0061\u0078': '\u30D0\u30C3\u30CF',  # bax -> バッハ (Short "ch" with preceding "ba" as in "BACH")
+    '\u0074\u0254\u0078': '\u30C8\u30C3\u30DB',  # tɔx -> トッホ (Short "ch" with preceding "to" as in "toCHter")
+    '\u0076\u0254\u0078': '\u30F4\u30A9\u30C3\u30DB',  # vɔx -> ヴォッホ (Short "ch" with preceding "wo" as in "mittWOCH")
+    '\u006E\u0061\u02D0\u0078': '\u30CA\u30C3\u30CF',  # naːx -> ナッハ
     '\u0062\u0075\u02D0\u0078': '\u30D6\u30FC\u30C3\u30D5',  # buːx -> ブーッフ (Short "ch" with preceding "bu" as in "BUCH")
-    '\u02C8\u0074\u0254\u0078': '\u30C8\u30C3\u30DB',  # ˈtɔx -> トッホ (Short "ch" with preceding "to" as in "toCHter")
-    '\u02CC\u0076\u0254\u0078': '\u30F4\u30A9\u30C3\u30DB',  # ˌvɔx -> ヴォッホ (Short "ch" with preceding "wo" as in "mittWOCH")
-    '\u02C8\u006E\u0061\u02D0\u0078\u02CC': '\u30CA\u30C3\u30CF',  # ˈnaːxˌ -> ナッハ
     
     # Edge cases for CH "ç" 
     '\u00E7': '\u30C3\u30D2',  # ç -> ッヒ (Short "ch" anywhere not previously covered as in "niCHt")

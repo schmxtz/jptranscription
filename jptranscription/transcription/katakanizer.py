@@ -15,6 +15,7 @@ class Katakanizer:
     def transcribe_word(self, ipa: str):
         katakana_word = []
         start = 0
+        ipa = '\u0000' + ipa + '\u0000'
         while start < len(ipa):
             modified = False
             # Take minimum so that we don't look ahead of the actual string
@@ -27,6 +28,6 @@ class Katakanizer:
                     modified = True
                     break
             if not modified:
-                katakana_word = ''.join(katakana_word)
-                raise Exception(f'Error converting {ipa} with katakana so far {katakana_word}')
+                print(f'Error converting {ipa} with katakana so far {katakana_word}')
+                return ''.join(katakana_word)
         return ''.join(katakana_word)
