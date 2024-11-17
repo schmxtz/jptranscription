@@ -4,6 +4,8 @@ import os
 import sys
 import time
 
+IGNORE_TAGS = set(['Austrian German', 'outdated'])
+IGNORE_RAW_TAGS = set(['umgangssprachlich,', 'umgangssprachlich'])
 
 def reporthook(count, block_size, total_size):
     global start_time
@@ -74,9 +76,6 @@ if __name__ == '__main__':
         file_name = german_dict_link.split('/')[-1]
         print('Downloading file')
         urllib.request.urlretrieve(german_dict_link, file_name, reporthook)
-
-    IGNORE_TAGS = set(['Austrian German', 'outdated'])
-    IGNORE_RAW_TAGS = set(['umgangssprachlich,', 'umgangssprachlich'])
 
     file_name = 'de-extract.jsonl'
     # Line count for 

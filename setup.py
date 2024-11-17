@@ -7,6 +7,6 @@ setup(
    author='Philipp Schmitz',
    author_email='schmxtz@gmail.com',
    packages=['jptranscription', 'jptranscription.phonetics', 'jptranscription.transcription'],  #same as name
-   install_requires=[], #external packages as dependencies
+   install_requires=['split-words'], #external packages as dependencies
    include_package_data=True,
 )

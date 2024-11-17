@@ -291,10 +291,14 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006E\u0061\u0078': '\u30CA\u30C3\u30CF',  # nax -> ナッハ (Short "ch" with preceding "na" as in "NACH")
     '\u006E\u0254\u0078': '\u30CE\u30C3\u30DB',  # nɔx -> ノッホ (Short "ch" with preceding "no" as in "NOCH")
     '\u0064\u0254\u0078': '\u30C9\u30C3\u30DB',  # dɔx -> ドッホ (Short "ch" with preceding "do" as in "DOCH")
+    '\u0064\u0061\u0078': '\u30C0\u30C3\u30CF',  # dax -> ダッハ (Short "ch" with preceding "da" as in "daCH")
     '\u0078\u006E': '\u30C3\u30D8\u30F3',  # xn -> ッヘン (Short "chen" as in "spraCHEN")
     '\u028A\u032F\u0078': '\u30A6\u30C3\u30D5',  # ʊ̯x -> ウッフ (Short "uch" as in "raUCH")
     '\u0062\u0061\u0078': '\u30D0\u30C3\u30CF',  # bax -> バッハ (Short "ch" with preceding "ba" as in "BACH")
     '\u0074\u0254\u0078': '\u30C8\u30C3\u30DB',  # tɔx -> トッホ (Short "ch" with preceding "to" as in "toCHter")
+    '\u006B\u0254\u0078': '\u30B3\u30C3\u30DB',  # kɔx -> コッホ (Short "ch" with preceding "ko" as in "koCHt")
+    '\u0281\u0061\u0078': '\u30E9\u30C3\u30CF',  # ʁax -> ラッハ (Short "ch" with preceding "ra" as in "herunterbraCHst")
+    '\u0066\u006C\u0075\u0078\u028A': '',  # fluxʊ -> フルッフ
     '\u0076\u0254\u0078': '\u30F4\u30A9\u30C3\u30DB',  # vɔx -> ヴォッホ (Short "ch" with preceding "wo" as in "mittWOCH")
     '\u006E\u0061\u02D0\u0078': '\u30CA\u30C3\u30CF',  # naːx -> ナッハ
     '\u0062\u0075\u02D0\u0078': '\u30D6\u30FC\u30C3\u30D5',  # buːx -> ブーッフ (Short "ch" with preceding "bu" as in "BUCH")

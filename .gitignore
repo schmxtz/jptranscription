@@ -6,3 +6,6 @@ de-extract.jsonl
 *\__pycache__
 dist/
 *.egg-info
+test.py
+lang-de.json
+analyze.py
