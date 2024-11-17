@@ -35,9 +35,11 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0062\u0254': '\u30DC',  # bɔ -> ボ -> (Short stressed "bo" as in "BÄUme")
     '\u0062\u028A': '\u30D6',  # bʊ -> ブ (Short "bu" as in "BUs")
     '\u0062\u0075': '\u30D6',  # bu -> ブ (Long stressed "bu" as in "geBUrtstag")
+    '\u0062\u028F': '\u30D3\u30E5',  # bʏ -> ビュ (Short stressed "bü" as in "BÜffeln")
     '\u0062\u006E\u0329': '\u30D9\u30F3',  # bn̩ -> ベン (Silent "e" between "b" and "n" as in "abEnd")
 
     # C
+    '\u00E7\u0065': '\u30B1',  # çe -> ケ (Short "che" as in "CHEmie")
 
     # D
     '\u0064': '\u30C9',  # d -> ド (Short "d" as in "Drei")
@@ -49,6 +51,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0064\u0069': '\u30C7\u30A3',  # di -> ディ (Long "die" as in "DIE")
     '\u0064\u026A': '\u30C7\u30A3',  # dɪ -> ディ (Short "di" as in "DIchter") 
     '\u0064\u0254': '\u30C9',  # dɔ -> ド (Short "do" as in "DOrf")
+    '\u0064\u006F': '\u30C9',  # do -> ド (Short "do" as in "suborDO")
     '\u0064\u0075': '\u30C9\u30A5',  # du -> ドゥ (Long "du" as in "DU")
     '\u0064\u028A': '\u30C9\u30A5',  # dʊ -> ドゥ (Short stressed "du" as in "DUnkelheit")
     '\u0064\u006C\u0329': '\u30C7\u30EB',  # dl̩ -> デル (Short "del" as in in "verwanDELt")
@@ -64,6 +67,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0066\u028A': '\u30D5',  # fʊ -> フ (Short "fu" as in "FUchs")
     '\u0066\u028F': '\u30D5\u30E5',  # fʏ -> フュ (Short "fü" as in "FÜnf")
     '\u0066\u0079': '\u30D5\u30E5',  # fy -> フュ (Long "fü" as in "FÜr")
+    '\u0066\u006C': '\u30D5\u30A7\u30EB',  # fl -> フェル (Short "fel" as in "büFFELn")
     '\u0066\u006E\u0329': '\u30D5\u30A7\u30F3',  # fn̩ -> フェン (Short "fen" as in "helFEN")
 
     # G
@@ -96,6 +100,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     # J
     '\u006A\u0061': '\u30E4',  # ja -> ヤ (Long "jah" as in "JAHr")
     '\u006A\u0065': '\u30A4\u30A7',  # je -> イェ (Long stressed "je" as in "JEden")
+    '\u006A\u0069': '\u30B8',  # ji -> ジ (Long "ji" as in "oktroYIeren")
     '\u006A\u028A': '\u30E6',  # jʊ -> ユ (Short stressed "ju" as in "JUnge")
     '\u006A\u0075': '\u30E6',  # ju -> ユ (Long stressed "ju" as in "JUni")
 
@@ -168,7 +173,9 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0070': '\u30D7',  # p -> プ (Short "p" as in "Problem")
     '\u0070\u0061': '\u30D1',  # pa -> パ (Short "pa" as in "jaPAn")
     '\u0070\u0069': '\u30D4',  # pi -> ピ (Long "pie" as in "sPIElen")
+    '\u0070\u026A': '\u30D4',  # pɪ -> ピ (Short "pi" as in "PIttoresk")
     '\u0070\u0065': '\u30DA',  # pe -> ペ (Long "pe" as in "PEter")
+    '\u0070\u0259': '\u30DA',  # pə -> ペ 
     '\u0070\u0079': '\u30D4\u30E5',  # py -> ピュ (Long "pü" as in "sPÜrte")
     '\u0070\u0361\u0066': '\u30D7\u30D5',  # p͡f -> プフ (Short "pf" as in "baumstumPF")
     '\u0070\u0361\u0066\u0061': '\u30D5\u30A1',  # p͡fa -> ファ ("P" has to be silent here)
@@ -199,6 +206,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0283': '\u30B7\u30E5',  # ʃ -> シュ (Short "sch" as in "SCHnee")
     '\u007A\u0250': '\u30B6',  # zɐ -> ザ (Short "sa" as in "häuSERn")
     '\u0073\u0250': '\u30B5',  # sɐ -> サ (Short "ser" as in "wasSER")
+    '\u0073\u0061': '\u30B5',  # sa -> サ (Short "sa" as in "XAnten")
     '\u007A\u0061': '\u30B6',  # za -> ザ (Short "sa" as in "sein")
     '\u0073\u0259': '\u30BB',  # sə -> セ (Short "ße" as in "straSSE")
     '\u007A\u0259': '\u30BC',  # zə -> ゼ (Short "se" as in "tauSEnd")
@@ -209,7 +217,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u007A\u006F': '\u30BE',  # zo -> ゾ (Long "soh" as in "SOHn")
     '\u007A\u0254': '\u30BE',  # zɔ -> ゾ (Short stressed "so" as in "SOmmer")
     '\u0073\u0254': '\u30BE',  # sɔ -> ゾ (Short stressed "so" as in "SOmmer")
-    '\u007A\u0075': '\u30BA',  # zu -> ズ (Long stressed "su" as in "SUche") 
+    '\u007A\u0075': '\u30BA',  # zu -> ズ (Long stressed "su" as in "SUche")
+    '\u007A\u028A': '\u30BA',  # zʊ -> ズ (Short "su" as in "SUbordo")
     '\u0283\u0061': '\u30B7\u30E3',  # ʃa -> シャ (Short stressed "scha" as in "entSCHEIden")
     '\u0283\u0259': '\u30B7\u30A7',  # ʃə -> シェ (Short "sche" as in "taSCHE")    
     '\u0283\u025B': '\u30B7\u30A7',  # ʃɛ -> シェ (Short "sche" as in "geSCHEnk")
@@ -230,6 +239,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u025B': '\u30C6',  # tɛ -> テ (Short stressed "te" as in "hoTEl")
     '\u0074\u0065': '\u30C6',  # te -> テ (Long "te" as in "sTEhen") 
     '\u0074\u0069': '\u30C6\u30A3',  # ti -> ティ (Long "tie" as in "TIEr")
+    '\u0074\u026A': '\u30C6\u30A3',  # tɪ -> ティ (Short "ti" as in "aalarTIg")
     '\u0074\u006F': '\u30C8',  # to -> ト (Short "to" as in "auTO")
     '\u0074\u0075': '\u30C8\u30A5',  # tu -> トゥ (Short "tu" as in "sTUdent")
     '\u0074\u028A': '\u30C8\u30A5',  # tʊ -> トゥ (Short "tu" as in "sTUdent")
@@ -238,6 +248,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u0361\u0283': '\u30C1\u30E5',  # t͡ʃ -> チュ (Short "tsch" as in "deuTSCHland")
     '\u0074\u0361\u0073': '\u30C4',  # t͡s -> ツ (Short "ts" as in "geburTStag")
     '\u0074\u006E\u0329': '\u30C6\u30F3',  # tn̩ -> テン (Short "ten" as in "antworTEN")
+    '\u0074\u0361\u0283\u025B': '\u30C1\u30A7',  # t͡ʃɛ -> チェ (Short "che" as in "CHAtten")
     '\u0074\u0361\u0073\u0259': '\u30C3\u30C4\u30A7',  # t͡sə -> ッツェ (Short "tze" as in "kaTZE")
     '\u0074\u0361\u0283\u0250': '\u30C1\u30E3',  # -> チャ (Short "tsche" as in "zwiTSCHErn")
 
@@ -307,7 +318,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u00E7': '\u30C3\u30D2',  # ç -> ッヒ (Short "ch" anywhere not previously covered as in "niCHt")
     '\u00E7\u0000': '\u30C3\u30D2',  # çNULL -> ッヒ (Short "ch" at the end of a word as in "iCH")
     '\u00E7\u0259': '\u30C3\u30D2\u30A7',  # çə -> ッヒェ (Short "che" in the middle of the word as in "glöckCHEn")
-    '\u0000\u00E7\u0065': '\u30B7\u30A7',  # NULLçe -> シェ (Short "che" at the start of a word as in "CHEmie")
+    '\u0000\u00E7\u0065': '\u30B1',  # NULLçe -> ケ (Short "che" at the start of a word as in "CHEmie")
     '\u00E7\u006E\u0329': '\u30C3\u30D2\u30A7\u30F3',  # çn̩ -> ッヒェン (Short "chen" as in "reCHEN")
 
     # Edge cases for N in the middle of word as "nn", e.g. "soNNe"
@@ -330,6 +341,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u02C8': '',  # ˈ -> 
     '\u02D0': '\u30FC',  # ː -> ー
     '\u02CC': '',  # ˌ ->
+    '\u0329': '',  # ˌ ->
     '\u032F': '',  # ̯  ->
-    '\u0303': '',  # ̃ -> 
+    '\u0303': '',  # ̃  -> 
+    '\u0361': '',  # ͡  ->
 }
