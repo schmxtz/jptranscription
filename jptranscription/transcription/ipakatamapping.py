@@ -299,6 +299,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0078\u0259': '\u30C3\u30D8',  # xə -> ッヘ (Short "che" as in "spraCHE")
     '\u0078\u0074\u0259': '\u30C3\u30D8\u30C6',  # xtə -> ッヘテ (Short "chte" as in "daCHTE")
     '\u0061\u0078\u0074': '\u30A2\u30C3\u30CF\u30C8',  # axt -> アッハト (Short "cht" with preceding "a" as in "ACHT")
+    '\u006D\u0061\u0078\u0074': '\u30DE\u30C3\u30CF\u30C8',  # -> マッハト (Short "cht" with preceding "ma" as in "MACHT")
     '\u006E\u0061\u0078': '\u30CA\u30C3\u30CF',  # nax -> ナッハ (Short "ch" with preceding "na" as in "NACH")
     '\u006E\u0254\u0078': '\u30CE\u30C3\u30DB',  # nɔx -> ノッホ (Short "ch" with preceding "no" as in "NOCH")
     '\u0064\u0254\u0078': '\u30C9\u30C3\u30DB',  # dɔx -> ドッホ (Short "ch" with preceding "do" as in "DOCH")
