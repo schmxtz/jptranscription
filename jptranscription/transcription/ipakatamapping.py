@@ -62,6 +62,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0066\u0061': '\u30D5\u30A1',  # fa -> ファ (Short "fa" as in "FAmilie")
     '\u0066\u0250': '\u30D5\u30A1',  # fɐ -> ファ (Short "fer" as in "uFER")
     '\u0066\u0065': '\u30D5\u30A7',  # fe -> フェ (Short "fe" as in "kafFEE")
+    '\u0066\u0259': '\u30D5\u30A7',  # fə -> フェ (Short "fe" as in "kafFEE")
     '\u0066\u026A': '\u30D5\u30A3',  # fɪ -> フィ (Short "fi" as in "FIlm")
     '\u0066\u0254': '\u30D5\u30A9',  # fɔ -> フォ (Short "fo" as in "FOrt")
     '\u0066\u028A': '\u30D5',  # fʊ -> フ (Short "fu" as in "FUchs")
@@ -162,6 +163,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006E\u0254': '\u30CE',  # nɔ -> ノ (Short "neu" as in "NEUn")
     '\u006E\u006F': '\u30CE',  # no -> ノ (Short "no" as in "NOvember")
     '\u006E\u0075': '\u30CC',  # nu -> ヌ (Short "nu" as in "jaNUar")
+    '\u006E\u028A': '\u30CC',  # nʊ -> ヌ (Short "nu" as in "subregNUm")
     '\u014B\u006B': '\u30F3\u30AF',  # ŋk -> ンク (Short "nk" as in "baNK")
     '\u014B\u0259': '\u30F3\u30B2',  # ŋə -> ンゲ (Short "nge" as in "faNGEn")
     '\u014B\u0250': '\u30F3\u30AC',  # ŋɐ -> ンガ (Short "nger" as in "fiNGER")
@@ -182,7 +184,16 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0070\u0361\u0066\u006E\u0329': '\u30D7\u30D5\u30A7\u30F3',  # p͡fn̩ -> プフェン (Short "pfen" as in "troPFEN")
 
     # Q
+    '\u006B\u0076\u0061': '\u30AF\u30A1',  # kva -> クァ (Short "qua" as in "QUArk")
+    '\u006B\u0076\u0061': '\u30AF\u30A1',  # kva -> クァ (Short "qua" as in "QUArk")
+    '\u006B\u0076\u0250': '\u30AF\u30A1',  # kvɐ -> クァ (Short "qua" as in "QUArk")
     '\u006B\u0076\u0065': '\u30AF\u30A7',  # kve -> クェ (Long "que" as in "QUEr")
+    '\u006B\u0076\u025B': '\u30AF\u30A7',  # kvɛ -> クェ (Short stressed "que" as in "QUElle")
+    '\u006B\u0076\u0259': '\u30AF\u30A7',  # kvə -> クェ (Short stressed "que" as in "QUElle")
+    '\u006B\u0076\u026A': '\u30AF\u30A3',  # kvɪ -> クィ (Short "qui" as in "QUIz")
+    '\u006B\u0076\u0069': '\u30AF\u30A3',  # kvi -> クィ (Short "qui" as in "quiekt")
+    '\u006B\u0076\u006F': '\u30AF\u30A9',  # kvo -> クォ (Short "quo" as in "QUOte")
+    '\u006B\u0076\u0254': '\u30AF\u30A9',  # kvɔ -> クォ (Short "quo" as in "QUOte")
 
     # R
     '\u0281': '\u30A2',  # ʁ -> ア (Soft German "r" as in "faRbe")
@@ -249,6 +260,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u0361\u0073': '\u30C4',  # t͡s -> ツ (Short "ts" as in "geburTStag")
     '\u0074\u006E\u0329': '\u30C6\u30F3',  # tn̩ -> テン (Short "ten" as in "antworTEN")
     '\u0074\u0361\u0283\u025B': '\u30C1\u30A7',  # t͡ʃɛ -> チェ (Short "che" as in "CHAtten")
+    '\u0074\u0361\u0283\u0069': '\u30C1',  # t͡ʃi -> チ (Short "tschi" as in "liTSCHI")
     '\u0074\u0361\u0073\u0259': '\u30C3\u30C4\u30A7',  # t͡sə -> ッツェ (Short "tze" as in "kaTZE")
     '\u0074\u0361\u0283\u0250': '\u30C1\u30E3',  # -> チャ (Short "tsche" as in "zwiTSCHErn")
 
@@ -271,6 +283,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0076\u006F': '\u30F4\u30A9',  # vo -> ヴォ (Long stressed "woh" as in "WOHnen")
     '\u0076\u028A': '\u30F4',  # vʊ -> ヴ (Short stressed "wu" as in "WUrde")
     '\u0076\u00F8': '\u30F4\u30A9\u30A8',  # vø -> ヴォエ (Long stressed "wöh" as in "geWÖHnlich")
+    '\u0076\u0153': '\u30F4\u30A9\u30A8',  # vœ -> ヴォエ ()
     '\u0076\u006E\u0329': '\u30F4\u30A7\u30F3',  # vn̩ -> ヴェン (Short "wen" as in "möWEN")
 
     # Z
