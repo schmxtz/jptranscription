@@ -11,16 +11,15 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0250': '\u30A2',  # ɐ -> ア (Short "er" as in "schleiER")
     '\u0259': '\u30A8',  # ə -> エ (Short "e" as in "familiE")
     '\u025B': '\u30A8',  # ɛ -> エ (Short "e" as in "Entscheiden")
+    '\u0065': '\u30A8',  # e -> エ (Long "e" as in "Er")
     '\u026A': '\u30A4',  # ɪ -> イ (Short "i" as in "DEUtschland")
-    '\u028A': '\u30A6',  # ʊ -> ウ (Short "u" as in "Und")
+    '\u0069': '\u30A4',  # i -> イ (Long "i" as in "IHr")
     '\u006F': '\u30AA',  # o -> オ (Short "o" as in "viOlett")
     '\u0254': '\u30AA',  # ɔ -> オ (Short "o" as in "Oktober")
-    '\u0153': '\u30AA\u30A7',  # œ -> オェ (Short stressed "ö" as in "Öffnen")
-
-    # Long vowels
-    '\u0065': '\u30A8',  # e -> エ (Long "e" as in "Er")
-    '\u0069': '\u30A4',  # i -> イ (Long "i" as in "IHr")
     '\u0075': '\u30A6',  # u -> ウ (Long "u" as in "UHr")
+    '\u028A': '\u30A6',  # ʊ -> ウ (Short "u" as in "Und")
+    '\u0153': '\u30AA\u30A7',  # œ -> オェ (Short stressed "ö" as in "Öffnen")
+    '\u00F8': '\u30AA\u30A7',  # ø -> オェ (Short "ö" as in "Ökologie")
     '\u0061\u02D0\u0250\u032F': '\u30A2\u30FC',  # aːɐ̯  -> アー (Very long "ar" as in "januAR")
 
     # B
@@ -78,6 +77,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0261\u025B': '\u30B2',  # ɡɛ -> ゲ (Short "ge" as in "GEld")
     '\u0261\u0065': '\u30B2',  # ɡe -> ゲ (Short "ge" as in "GEld")
     '\u0261\u026A': '\u30AE',  # ɡɪ -> ギ (Short "gi" as in "beGInnen")
+    '\u0261\u0069': '\u30AE',  # ɡi -> ギ (Long "gie" as in "ÖkologIE")
     '\u0261\u028A': '\u30B0',  # ɡʊ -> グ (Short stressed "gu" as in "auGUst")
     '\u0261\u0075': '\u30B0',  # ɡu -> グ (Long "gu" as in "GUt")
     '\u0261\u006E\u0329': '\u30B2\u30F3',  # ɡn̩ -> ゲン (Silent "e" between "g" and "n" as in "morGEN")
@@ -233,6 +233,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0283\u0061': '\u30B7\u30E3',  # ʃa -> シャ (Short stressed "scha" as in "entSCHEIden")
     '\u0283\u0259': '\u30B7\u30A7',  # ʃə -> シェ (Short "sche" as in "taSCHE")    
     '\u0283\u025B': '\u30B7\u30A7',  # ʃɛ -> シェ (Short "sche" as in "geSCHEnk")
+    '\u0283\u026A': '\u30B7',  # ʃɪ -> シ (Short "schi" as in "muSCHI")
+    '\u0283\u0069': '\u30B7',  # ʃi -> シ (Short "schi" as in "muSCHI")
     '\u0283\u0254': '\u30B7\u30E7',  # ʃɔ -> ショ (Short stressed "scho" as in "SCHOrnstein")
     '\u0283\u006F': '\u30B7\u30E7',  # ʃo -> ショ (Short "scho" as in "SCHOn")
     '\u0283\u0075': '\u30B7\u30E5',  # ʃu -> シュ (Long stressed "schu" as in "SCHUle")
