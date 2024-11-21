@@ -68,6 +68,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0066\u028F': '\u30D5\u30E5',  # fʏ -> フュ (Short "fü" as in "FÜnf")
     '\u0066\u0079': '\u30D5\u30E5',  # fy -> フュ (Long "fü" as in "FÜr")
     '\u0066\u006C': '\u30D5\u30A7\u30EB',  # fl -> フェル (Short "fel" as in "büFFELn")
+    '\u0066\u006C\u0075': '\u30D5\u30EB',  # flu -> フル (Long "flu" as in "FLUghafen")
     '\u0066\u006E\u0329': '\u30D5\u30A7\u30F3',  # fn̩ -> フェン (Short "fen" as in "helFEN")
 
     # G
@@ -108,11 +109,13 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     # K
     '\u006B': '\u30AF',  # k -> ク (Short stressed "k" as in "Klein")
     '\u006B\u0061': '\u30AB',  # ka -> カ (Short "ka" as in "KEIn")
+    '\u006B\u0259': '\u30B1',  # kə -> ケ (Short "ke" as in "rabauKE")
     '\u006B\u026A': '\u30AD',  # kɪ -> キ (Short "ki" as in "KInd")
     '\u006B\u0069': '\u30AD',  # ki -> キ (Short "ki" as in "KInd")
     '\u006B\u0254': '\u30B3',  # kɔ -> コ (Short "ko" as in "KOmmt")
     '\u006B\u006F': '\u30B3',  # ko -> コ (Short "cho" as in "melanCHOlie") 
     '\u006B\u028A': '\u30AF',  # kʊ -> ク (Short secondary stressed "ku" as in "zuKUnft")
+    '\u006B\u0075': '\u30AF',  # ku -> ク (Short secondary stressed "ku" as in "KUh")
     '\u006B\u0079': '\u30AD\u30E5',  # ky -> キュ (Long "küh" as in KÜHl)
     '\u006B\u028F': '\u30AD\u30E5',  # kʏ -> キュ (Short stressed "kü" as in KÜche)
     '\u006B\u006E\u0329': '\u30B1\u30F3',  # kn̩ -> ケン (Short "ken" as in "wolKEN")
@@ -149,6 +152,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006D\u028F': '\u30DF\u30E5',  # mʏ -> ミュ (Short stressed "mü" as in "Müller")
     '\u006D\u0079': '\u30DF\u30E5',  # my -> ミュ (Long stressed "mü" as in "geMÜtlich")
     '\u006D\u006C\u0329': '\u30E1\u30EB',  # ml̩ -> メル (Short "mel" as in "himMEL")
+    '\u006D\u02C8\u0070\u006A\u0075': '\u30F3\u30D4\u30E5',  # mˈpju -> ンピュ
 
     # N
     '\u006E': '\u30F3',  # n -> ン (Short "n" as in "deutschlaNd")
@@ -174,6 +178,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     # P
     '\u0070': '\u30D7',  # p -> プ (Short "p" as in "Problem")
     '\u0070\u0061': '\u30D1',  # pa -> パ (Short "pa" as in "jaPAn")
+    '\u0070\u0250': '\u30D1',  # pɐ -> パ (Short "pa" as in "jaPAn")
     '\u0070\u0069': '\u30D4',  # pi -> ピ (Long "pie" as in "sPIElen")
     '\u0070\u026A': '\u30D4',  # pɪ -> ピ (Short "pi" as in "PIttoresk")
     '\u0070\u0065': '\u30DA',  # pe -> ペ (Long "pe" as in "PEter")
@@ -254,6 +259,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u0069': '\u30C6\u30A3',  # ti -> ティ (Long "tie" as in "TIEr")
     '\u0074\u026A': '\u30C6\u30A3',  # tɪ -> ティ (Short "ti" as in "aalarTIg")
     '\u0074\u006F': '\u30C8',  # to -> ト (Short "to" as in "auTO")
+    '\u0074\u0254': '\u30C8',  # tɔ -> ト (Short "to" as in "auTO")
     '\u0074\u0075': '\u30C8\u30A5',  # tu -> トゥ (Short "tu" as in "sTUdent")
     '\u0074\u028A': '\u30C8\u30A5',  # tʊ -> トゥ (Short "tu" as in "sTUdent")
     '\u0074\u028F': '\u30C8\u30A5',  # tʏ -> トゥ (Short "tü" as in "frühsTÜck)
@@ -278,6 +284,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
 
     # W
     '\u0076\u0061': '\u30F4\u30A1',  # va -> ヴァ (Short "wa" as in "schWArz")
+    '\u0076\u0251': '\u30F4\u30A1',  # vɑ -> ヴァ 
+    '\u0076\u0250': '\u30F4\u30A1',  # vɐ -> ヴァ 
     '\u0076\u025B': '\u30F4\u30A7',  # vɛ -> ヴェ (Short "we" as in "schWEster")
     '\u0076\u0065': '\u30F4\u30A7',  # ve -> ヴェ (Long "weh" as in "WEHt")
     '\u0076\u026A': '\u30F4\u30A3',  # vɪ -> ヴィ (Short "wi" as in "WInd")
@@ -325,10 +333,13 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u0254\u0078': '\u30C8\u30C3\u30DB',  # tɔx -> トッホ (Short "ch" with preceding "to" as in "toCHter")
     '\u006B\u0254\u0078': '\u30B3\u30C3\u30DB',  # kɔx -> コッホ (Short "ch" with preceding "ko" as in "koCHt")
     '\u0281\u0061\u0078': '\u30E9\u30C3\u30CF',  # ʁax -> ラッハ (Short "ch" with preceding "ra" as in "herunterbraCHst")
+    '\u0283\u0061\u0078': '\u30B7\u30E3\u30C3\u30CF',  # ʃax -> シャッハ (Short "ch" with preceding "scha" as in "schaCH")
     '\u0066\u006C\u0075\u0078\u028A': '',  # fluxʊ -> フルッフ
     '\u0076\u0254\u0078': '\u30F4\u30A9\u30C3\u30DB',  # vɔx -> ヴォッホ (Short "ch" with preceding "wo" as in "mittWOCH")
+    '\u0076\u0254\u0078\u0259': '\u30F4\u30A9\u30C3\u30D8',  # vɔxə -> ヴォッヘ (Short "ch" with preceding "wo" as in "mittWOCH")
     '\u006E\u0061\u02D0\u0078': '\u30CA\u30C3\u30CF',  # naːx -> ナッハ
-    '\u0062\u0075\u02D0\u0078': '\u30D6\u30FC\u30C3\u30D5',  # buːx -> ブーッフ (Short "ch" with preceding "bu" as in "BUCH")
+    '\u0062\u0075\u02D0\u0078': '\u30D6\u30FC\u30C3\u30D5',  # buːx -> ブーッフ (Long "ch" with preceding "bu" as in "BUCH")
+    '\u0074\u0075\u02D0\u0078': '\u30C8\u30A5\u30FC\u30C3\u30D5',  # tuːx -> トゥーッフ (Long "ch" with predecing "tu" as in "TUCH")
     
     # Edge cases for CH "ç" 
     '\u00E7': '\u30C3\u30D2',  # ç -> ッヒ (Short "ch" anywhere not previously covered as in "niCHt")
@@ -344,6 +355,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006D\u0062\u0250': '\u30F3\u30D0',  # mbɐ -> ンバ (Short "mber" as in "September")
 
     # Edge cases in general
+    '\u0281\u00E7\u0000': '\u30A2\u30B7\u30E5',  # ʁç -> アシュ (Short "rch" at the end of the word as in "stoRCH")
     '\u0073\u006E\u0329': '\u30C3\u30BB\u30F3',  # sn̩ -> ッセン (Short "ssen" as in "eSSEN")
     '\u0073\u006E\u0329\u0074': '\u30B6\u30F3\u30AF\u30C8',  # sn̩t -> ザンクト	("St." pronounced as "Sankt")
     '\u0076\u026A\u0073\u0259': '\u30F4\u30A3\u30C3\u30BB',  # vɪsə -> ヴィッセ (Short "wisse" as in "geWISSE")
