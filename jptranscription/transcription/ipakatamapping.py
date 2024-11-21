@@ -7,11 +7,11 @@ Some notes to this mapping:
 '''
 GERMAN_IPA_TO_KATAKANA_MAP = {
     # Short vowels
-    '\u0061': '\u30A2',  # a -> ア (Short "a" as in "Alt")
-    '\u0250': '\u30A2',  # ɐ -> ア (Short "er" as in "schleiER")
-    '\u0259': '\u30A8',  # ə -> エ (Short "e" as in "familiE")
-    '\u025B': '\u30A8',  # ɛ -> エ (Short "e" as in "Entscheiden")
-    '\u0065': '\u30A8',  # e -> エ (Long "e" as in "Er")
+    '\u0061': '\u30A2',  # a -> ア (word: "alt", ipa: "alt")
+    '\u0250': '\u30A2',  # ɐ -> ア (word: "Schleier", ipa: "ˈʃlaɪ̯ɐ")
+    '\u0259': '\u30A8',  # ə -> エ (word: "Familie", ipa: "faˈmiːli̯ə")
+    '\u025B': '\u30A8',  # ɛ -> エ (word: "Entscheiden", ipa: "ɛntˈʃaɪ̯dn̩")
+    '\u0065': '\u30A8',  # e -> エ (word: "er", ipa: "eːɐ̯")
     '\u026A': '\u30A4',  # ɪ -> イ (Short "i" as in "DEUtschland")
     '\u0069': '\u30A4',  # i -> イ (Long "i" as in "IHr")
     '\u006F': '\u30AA',  # o -> オ (Short "o" as in "viOlett")
