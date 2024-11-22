@@ -22,7 +22,7 @@ class IPATranscription:
 
     def lookup_word(self, word: str, pos: str):
         if pos == 'NOUN' or pos == 'PROPN':
-            new_target = pos.capitalize()
+            new_target = word.capitalize()
         else:
             new_target = word.lower()
         ipa_transcription = self._get_entry(new_target)
