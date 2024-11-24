@@ -81,6 +81,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0066\u028A': '\u30D5',                           # fʊ -> フ (word: "Fundort", ipa: "ˈfʊntˌʔɔʁt")
     '\u0066\u0079': '\u30D5\u30E5',                     # fy -> フュ (word: "Subphylum", ipa: "ˌzʊpˈfyːlʊm")
     '\u0066\u028F': '\u30D5\u30E5',                     # fʏ -> フュ (word: "fünf", ipa: "fʏnf")
+    '\u0066\u00F8': '\u30D5\u30A9\u30A7',               # fø -> フォェ (word: "vögeln", ipa: "ˈføːɡl̩n")
+    '\u0066\u0153': '\u30D5\u30A9\u30A7',               # fœ -> フォェ (word: "Förderturm", ipa: "ˈfœʁdɐˌtʊʁm")
     '\u0066\u006C\u0329': '\u30D5\u30A7\u30EB',         # fl̩ -> フェル (word: "büffeln", ipa: "ˈbʏfl̩n")
     '\u0066\u006E\u0329': '\u30D5\u30A7\u30F3',         # fn̩ -> フェン (word: "kaufen", ipa: "ˈkaʊ̯fn̩")
 
