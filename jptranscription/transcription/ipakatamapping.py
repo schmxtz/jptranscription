@@ -86,11 +86,6 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0066\u006C\u0329': '\u30D5\u30A7\u30EB',         # fl̩ -> フェル (word: "büffeln", ipa: "ˈbʏfl̩n")
     '\u0066\u006E\u0329': '\u30D5\u30A7\u30F3',         # fn̩ -> フェン (word: "kaufen", ipa: "ˈkaʊ̯fn̩")
 
-
-    '\u0076\u025B': '\u30F4\u30A7',             # vɛ -> ヴェ (Short stressed "ve" as "noVEmber")
-    '\u0076\u0069': '\u30F4\u30A3',             # vi -> ヴィ (Short "vi" as "VIolett")
-    '\u0066\u00F8': '\u30D5\u30A9\u30A8',       # fø -> フォエ (Long stressed "vö" as "VÖgeln")
-
     # G
     '\u0261': '\u30B0',                                 # ɡ -> グ (word: "grün", ipa: "ɡʁyːn")
     '\u0261\u0061': '\u30AC',                           # ɡa -> ガ (word: "Garçonnière", ipa: "ɡaʁsɔˈni̯ɛːʁə")
@@ -294,7 +289,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u0361\u0283\u0250': '\u30C1\u30E3',  # -> チャ (Short "tsche" as "zwiTSCHErn")
 
     # V
-
+    '\u0076\u025B': '\u30F4\u30A7',             # vɛ -> ヴェ (Short stressed "ve" as "noVEmber")
+    '\u0076\u0069': '\u30F4\u30A3',             # vi -> ヴィ (Short "vi" as "VIolett")
 
     # W
     '\u0076\u0061': '\u30F4\u30A1',  # va -> ヴァ (Short "wa" as "schWArz")
