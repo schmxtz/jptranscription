@@ -210,10 +210,10 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006D\u02C8\u0070\u006A\u0075': '\u30F3\u30D4\u30E5',  # mˈpju -> ンピュ (word: "Computer", ipa: "kɔmˈpjuːtɐ")
 
     # N
-    '\u006E': '\u30F3',                                 # n -> ン (Short "n" as "deutschlaNd")
-    '\u014B': '\u30F3\u30B0',                           # ŋ -> ング (Short "ng" as "laNG")
-    '\u006E\u0061': '\u30CA',                           # na -> ナ (Short "na" as "moNAt")
-    '\u006E\u0250': '\u30CA',                           # nɐ -> ナ (Short "ner" as "donNERstag")
+    '\u006E': '\u30F3',                                 # n -> ン (word: "Deutschland", ipa: "ˈdɔɪ̯t͡ʃlant")
+    '\u014B': '\u30F3\u30B0',                           # ŋ -> ング (word: "lang", ipa: "laŋ")
+    '\u006E\u0061': '\u30CA',                           # na -> ナ (word: "Monat", ipa: "ˈmoːnat")
+    '\u006E\u0250': '\u30CA',                           # nɐ -> ナ (word: "Donnerstag", ipa: "ˈdɔnɐsˌtaːk")
     '\u006E\u0065': '\u30CD',                           # ne -> ネ (Long "nee" as "schNEE")
     '\u006E\u0259': '\u30CD',                           # nə -> ネ (Short "ne" as "bieNE")
     '\u006E\u025B': '\u30CD',                           # nɛ -> ネ (Short "ne" as "schNEll")
@@ -252,7 +252,13 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0070\u0361\u0066': '\u30D7\u30D5',               # p͡f -> プフ (Short "pf" as "baumstumPF")
     '\u0070\u0361\u0066\u0061': '\u30D5\u30A1',         # p͡fa -> ファ (word: "Pfad", ipa: "p͡faːt") (p is rather silent here so I'll not use プ)
     '\u0070\u0361\u0066\u0250':'\u30D7\u30D5\u30A1',    # p͡fɐ -> プファ (word: "Kupfer", ipa: "ˈkʊp͡fɐ") (p in p͡fɐ is voiced more than p͡fa)
-    # ipas = ['p͡fe', 'p͡fə', 'p͡fɛ', 'p͡fi', 'p͡fɪ', 'p͡fo', 'p͡fɔ']...
+    '\u0070\u0361\u0066\u0065': '\u30D5\u30A7',         # p͡fe -> フェ (word: "Pferd", ipa: "p͡feːɐ̯t")
+    '\u0070\u0361\u0066\u0259': '\u30D5\u30A7',         # p͡fə -> フェ (word: "Pferd", ipa: "p͡feːɐ̯t")
+    '\u0070\u0361\u0066\u025B': '\u30D5\u30A7',         # p͡fɛ -> フェ (word: "Mauerpfeffer", ipa: "ˈmaʊ̯ɐˌp͡fɛfɐ")
+    '\u0070\u0361\u0066\u0069': '\u30D5\u30A3',         # p͡fi -> フィ (word: "empfiehl", ipa: "ɛmˈp͡fiːl")
+    '\u0070\u0361\u0066\u026A': '\u30D5\u30A3',         # p͡fɪ -> フィ (word: "Pfiffikus", ipa: "ˈp͡fɪfikʊs")
+    '\u0070\u0361\u0066\u006F': '\u30D5\u30A9',         # p͡fo -> フォ (word: "empfohlen", ipa: "ɛmˈp͡foːlən")
+    '\u0070\u0361\u0066\u0254': '\u30D5\u30A9',         # p͡fɔ -> フォ (word: "Pforzheim", ipa: "ˈp͡fɔʁt͡shaɪ̯m")
     '\u0070\u0361\u0066\u006E\u0329': '\u30D7\u30D5\u30A7\u30F3',  # p͡fn̩ -> プフェン (Short "pfen" as "troPFEN")
     '\u0070\u0361\u0066\u006C\u0329': '\u30D7\u30D5\u30A7\u30EB',  # p͡fl̩ -> プフェル (word: "Apfel", ipa: "ˈap͡fl̩")
 
