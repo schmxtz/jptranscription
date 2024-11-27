@@ -24,7 +24,7 @@ class Katakanizer:
             for i in range(look_ahead_counter, 0, -1):
                 if ipa[start:start + i] in self.mapping:
                     katakana_word.append(self.mapping[ipa[start:start + i]])
-                    # print(ipa[start:start + i])  # debugging
+                    # print(ipa[start:start + i], self.mapping[ipa[start:start + i]])  # debugging
                     start += i
                     modified = True
                     break
