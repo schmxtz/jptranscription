@@ -128,7 +128,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
 
     # H
     '\u0068\u0061': '\u30CF',                           # ha -> ハ (word: "Hallo", ipa: "haˈloː")
-    # '\u0068\u0250': '\u30CF',                           # hɐ -> ハ no entry exists so far
+    '\u0068\u0250': '\u30CF',                           # hɐ: no entry exists so far
     '\u0068\u025B': '\u30D8',                           # he -> ヘ (word: "Herzog", ipa: "ˈhɛʁt͡soːk")
     '\u0068\u0259': '\u30D8',                           # hə -> ヘ (word: "Teheran", ipa: "ˈteːhəʁaːn")
     '\u0068\u025B': '\u30D8',                           # hɛ -> ヘ (word: "Herzog", ipa: "ˈhɛʁt͡soːk")
@@ -259,20 +259,25 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0070\u0361\u0066\u026A': '\u30D5\u30A3',         # p͡fɪ -> フィ (word: "Pfiffikus", ipa: "ˈp͡fɪfikʊs")
     '\u0070\u0361\u0066\u006F': '\u30D5\u30A9',         # p͡fo -> フォ (word: "empfohlen", ipa: "ɛmˈp͡foːlən")
     '\u0070\u0361\u0066\u0254': '\u30D5\u30A9',         # p͡fɔ -> フォ (word: "Pforzheim", ipa: "ˈp͡fɔʁt͡shaɪ̯m")
+    '\u0070\u0361\u0066\u0075': '\u30D5',               # p͡fu -> フ (word: "Pfuhl", ipa: "p͡fuːl")
+    '\u0070\u0361\u0066\u028A': '\u30D5',               # p͡fʊ -> フ (word: "Impfung", ipa: "ˈɪmp͡fʊŋ")
+    '\u0070\u0361\u0066\u0079': '\u30D5\u30E5',         # p͡fy -> フュ (word: "Pfühl", ipa: "p͡fyːl")
+    '\u0070\u0361\u0066\u028F': '\u30D5\u30E5',         # p͡fʏ -> フュ (word: "Pfütze", ipa: "ˈp͡fʏt͡sə")
+    '\u0070\u0361\u0066\u00F8': '\u30D5\u30A9\u30A7',   # p͡fø -> フォェ (word: "empföhle", ipa: "ɛmˈp͡føːlə")
+    '\u0070\u0361\u0066\u0153': '\u30D5\u30A9\u30A7',   # p͡fœ -> フォェ (word: "Pförtner", ipa: "ˈp͡fœʁtnɐ")
     '\u0070\u0361\u0066\u006E\u0329': '\u30D7\u30D5\u30A7\u30F3',  # p͡fn̩ -> プフェン (word: "Tropfen", ipa: "ˈtʁɔp͡fn̩")
     '\u0070\u0361\u0066\u006C\u0329': '\u30D7\u30D5\u30A7\u30EB',  # p͡fl̩ -> プフェル (word: "Apfel", ipa: "ˈap͡fl̩")
 
     # Q
-    '\u006B\u0076\u0061': '\u30AF\u30A1',  # kva -> クァ (Short "qua" as "QUArk")
-    '\u006B\u0076\u0250': '\u30AF\u30A1',  # kvɐ -> クァ (Short "qua" as "QUArk")
-    '\u006B\u0076\u0065': '\u30AF\u30A7',  # kve -> クェ (Long "que" as "QUEr")
-    '\u006B\u0076\u025B': '\u30AF\u30A7',  # kvɛ -> クェ (Short stressed "que" as "QUElle")
-    '\u006B\u0076\u0259': '\u30AF\u30A7',  # kvə -> クェ (Short stressed "que" as "QUElle")
-    '\u006B\u0076\u026A': '\u30AF\u30A3',  # kvɪ -> クィ (Short "qui" as "QUIz")
-    '\u006B\u0076\u0069': '\u30AF\u30A3',  # kvi -> クィ (Short "qui" as "quiekt")
-    '\u006B\u0076\u006F': '\u30AF\u30A9',  # kvo -> クォ (Short "quo" as "QUOte")
-    '\u006B\u0076\u0254': '\u30AF\u30A9',  # kvɔ -> クォ (Short "quo" as "QUOte")
-
+    '\u006B\u0076\u0061': '\u30AF\u30A1',               # kva -> クァ (word: "Qualm", ipa: "kvalm")
+    '\u006B\u0076\u0250': '\u30AF\u30A1',               # kvɐ -> クァ (word: "Äquer", ipa: "ˈɛːkvɐ")
+    '\u006B\u0076\u0065': '\u30AF\u30A7',               # kve -> クェ (word: "quer", ipa: "kveːɐ̯")
+    '\u006B\u0076\u0259': '\u30AF\u30A7',               # kvə -> クェ (word: "obliquen", ipa: "oˈbliːkvən")
+    '\u006B\u0076\u025B': '\u30AF\u30A7',               # kvɛ -> クェ (word: "Quelle", ipa: "ˈkvɛlə")
+    '\u006B\u0076\u0069': '\u30AF\u30A3',               # kvi -> クィ (word: "Requiem", ipa: "ˈʁeːkviɛm")
+    '\u006B\u0076\u026A': '\u30AF\u30A3',               # kvɪ -> クィ (word: "Quiz", ipa: "kvɪs")
+    '\u006B\u0076\u006F': '\u30AF\u30A9',               # kvo -> クォ (word: "Quotient", ipa: "ˌkvoˈt͡si̯ɛnt")
+    '\u006B\u0076\u0254': '\u30AF\u30A9',               # kvɔ -> クォ (word: "gequollen", ipa: "ɡəˈkvɔlən")
     # R
     '\u0072': '\u30EB',  # r -> ル (Döner, ˈdœnɛr)
     '\u0281': '\u30A2',  # ʁ -> ア (Soft German "r" as "faRbe")
