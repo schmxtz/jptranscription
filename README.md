@@ -1,9 +1,10 @@
 # Installation
-No external libary dependencies except the wikitionary database
+~~No external libary dependencies except the wikitionary database.~~ I'm using the following libraries:
+* [Splitter](https://github.com/dtuggener/CharSplit) to split compound nouns IPA lookup
 
-But before using this library you need to run jptranscription\phonetics\wikitionary_processor.py
+But before using this library you need to run the file [wikitionary_processor.py](./jptranscription/phonetics/wikitionary_processor.py) to generate a slimmer version of  the dictionary for the IPA lookup. 
 
-Afterwards you need to move this file to jptranscription\phonetics\lang-de.json
+Afterwards you need to move the generated file to jptranscription\phonetics\lang-de.json
 
 # Introduction
 I'm developing a script to transcribe German words into Japanese sounds using IPA. 
@@ -34,6 +35,7 @@ I'm using the Wikipedia [Wiktionary](https://de.wiktionary.org/) as a lookup tab
 >    - If the German word ends with *to* like in *Auto*, it is pronounced. But if it ends with *t*, *tt*, *dt* or *d*, then
 >  the *o* in *to* is silent like in [*alt*](https://www.youtube.com/watch?v=d8XzbxmtrbY) (「アルト」), [*Bett*](https://www.youtube.com/watch?v=nLU6-9qDJMA) (「ベット」), [*Stadt*](https://www.youtube.com/watch?v=Q-qnZiMsD_U) (「シュタット」) and *Fahrrad* 
 >  (「ファーラート」).
+> - It is not possible to faithfully represent German words with *ö* and *ü* in Japanese. I'm still working on a way to make them sound as close to German a possible
 
 
 # Contributions:

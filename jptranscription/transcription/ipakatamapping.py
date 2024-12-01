@@ -189,6 +189,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006C\u028F': '\u30EA\u30E5',                     # lʏ -> リュ (word: "flüssig", ipa: "ˈflʏsɪç")
     '\u006C\u00F8': '\u30EC',                           # lø -> レ (word: "flöten", ipa: "ˈfløːtn̩")
     '\u006C\u0153': '\u30EC',                           # lœ -> レ (word: "Glöckchen", ipa: "ˈɡlœkçən")
+    '\u006C\u006E\u0329': '\u30EC\u30F3',               # ln̩ -> レン (word: "holen", ipa: "ˌhoːln̩")
 
     # M
     '\u006D': '\u30E0',                                 # m -> ム (word: "Film", ipa: "fɪlm")
@@ -208,6 +209,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006D\u00F8': '\u30E1',                           # mø -> メ (word: "Möwen", ipa: "ˈmøːvn̩")
     '\u006D\u0153': '\u30E1',                           # mœ -> メ (word: "Mörder", ipa: "ˈmœʁdɐ")
     '\u006D\u006C\u0329': '\u30E1\u30EB',               # ml̩ -> メル (word: "Himmel", ipa: "ˈhɪml̩")
+    '\u006D\u006E\u0329': '\u30E1\u30F3',               # mn̩ -> メン (word: "Aldhelmen", ipa: "ˈalthɛlmn̩")
     '\u006D\u02C8\u0070\u006A\u0075': '\u30F3\u30D4\u30E5',  # mˈpju -> ンピュ (word: "Computer", ipa: "kɔmˈpjuːtɐ")
 
     # N
@@ -231,6 +233,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u014B\u0250': '\u30F3\u30AC',                     # ŋɐ -> ンガ (word: "Finger", ipa: "ˈfɪŋɐ")
     '\u014B\u0259': '\u30F3\u30B2',                     # ŋə -> ンゲ (word: "fangen", ipa: "ˈfaŋən")
     '\u014B\u006B': '\u30F3\u30AF',                     # ŋk -> ンク (word: "Bank", ipa: "baŋk")
+    '\u006E\u006C\u0329': '\u30CD\u30EB',               # nl̩ -> ネル (word: "Tunnel", ipa: "ˈtʊnl̩")
+    '\u006E\u006E\u0329': '\u30CD\u30F3',               # nn̩ -> ネン (word: "zehnen", ipa: "ˈt͡seːnn̩")
     '\u014B\u006B\u0259': '\u30F3\u30B1',               # ŋkə -> ンケ (word: "danke", ipa: "ˈdaŋkə")
     '\u014B\u006B\u006C\u0329': '\u30F3\u30B1\u30EB',   # ŋkl̩ -> ンケル (word: "Dunkelheit", ipa: "ˈdʊŋkl̩haɪ̯t")
     '\u014B\u006B\u006E\u0329': '\u30F3\u30B1\u30F3',   # ŋkn̩ -> ンケン (word: "denken", ipa: "ˈdɛŋkn̩")
@@ -250,6 +254,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0070\u028A': '\u30D7',                           # pʊ -> プ (word: "Pulver", ipa: "ˈpʊlfɐ")
     '\u0070\u0079': '\u30D4\u30E5',                     # py -> ピュ (word: "spürte", ipa: "ˈʃpyːɐ̯tə")
     '\u0070\u028F': '\u30D4\u30E5',                     # pʏ -> ピュ (word: "pünktlich", ipa: "ˈpʏŋktlɪç")
+    '\u0070\u006C\u0329': '\u30DA\u30EB',               # pl̩ -> ペル (word: "Ampel", ipa: "ˈampl̩")
+    '\u0070\u006E\u0329': '\u30DA\u30F3',               # pn̩ -> ペン (word: "Wappen", ipa: "ˈvapn̩")
     '\u0070\u0361\u0066': '\u30D7\u30D5',               # p͡f -> プフ (word: "Baumstumpf", ipa: "ˈbaʊ̯mˌʃtʊmp͡f")
     '\u0070\u0361\u0066\u0061': '\u30D5\u30A1',         # p͡fa -> ファ (word: "Pfad", ipa: "p͡faːt") (p is rather silent here so I'll not use プ)
     '\u0070\u0361\u0066\u0250':'\u30D7\u30D5\u30A1',    # p͡fɐ -> プファ (word: "Kupfer", ipa: "ˈkʊp͡fɐ") (p in p͡fɐ is voiced more than p͡fa)
@@ -299,6 +305,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0281\u028F': '\u30EA\u30E5',                     # ʁʏ -> リュ (word: "zurück", ipa: "t͡suˈʁʏk")
     '\u0281\u00F8': '\u30ED',                           # ʁø -> ロ (word: "Kröte", ipa: "ˈkʁøːtə")
     '\u0281\u0153': '\u30ED',                           # ʁœ -> ロ (word: "bröckeln", ipa: "ˈbʁœkl̩n")
+    '\u0281\u006E\u0329': '\u30EC\u30F3',               # ʁn̩ -> レン (word: "Moosbeeren", ipa: "ˈmoːsˌbeːʁn̩")
 
     # S
     '\u0073': '\u30B9',                                 # s -> ス (word: "Bus", ipa: "bʊs")
@@ -384,34 +391,41 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     # '': '',  # t͡ʃœ (no word for this mapping yet)
 
     # V
-    '\u0076\u025B': '\u30F4\u30A7',             # vɛ -> ヴェ (Short stressed "ve" as "noVEmber")
-    '\u0076\u0069': '\u30F4\u30A3',             # vi -> ヴィ (Short "vi" as "VIolett")
-
-    # W
-    '\u0076\u0061': '\u30F4\u30A1',  # va -> ヴァ (Short "wa" as "schWArz")
-    '\u0076\u0251': '\u30F4\u30A1',  # vɑ -> ヴァ 
-    '\u0076\u0250': '\u30F4\u30A1',  # vɐ -> ヴァ 
-    '\u0076\u025B': '\u30F4\u30A7',  # vɛ -> ヴェ (Short "we" as "schWEster")
-    '\u0076\u0065': '\u30F4\u30A7',  # ve -> ヴェ (Long "weh" as "WEHt")
-    '\u0076\u026A': '\u30F4\u30A3',  # vɪ -> ヴィ (Short "wi" as "WInd")
-    '\u0076\u0254': '\u30F4\u30A9',  # vɔ -> ヴォ (Short "wo" as "WOrt")
-    '\u0076\u006F': '\u30F4\u30A9',  # vo -> ヴォ (Long stressed "woh" as "WOHnen")
-    '\u0076\u028A': '\u30F4',  # vʊ -> ヴ (Short stressed "wu" as "WUrde")
-    '\u0076\u00F8': '\u30F4\u30A9\u30A8',  # vø -> ヴォエ (Long stressed "wöh" as "geWÖHnlich")
-    '\u0076\u0153': '\u30F4\u30A9\u30A8',  # vœ -> ヴォエ ()
-    '\u0076\u006E\u0329': '\u30F4\u30A7\u30F3',  # vn̩ -> ヴェン (Short "wen" as "möWEN")
+    '\u0076\u0061': '\u30F4\u30A1',                     # va -> ヴァ (word: "Wald", ipa: "valt")
+    '\u0076\u0250': '\u30F4\u30A1',                     # vɐ -> ヴァ (word: "Pulverschnee", ipa: "ˈpʊlvɐˌʃneː")
+    '\u0076\u0251': '\u30F4\u30A1',                     # vɑ -> ヴァ (word: "Revanche", ipa: "ʁeˈvɑ̃ːʃ")
+    '\u0076\u0065': '\u30F4\u30A7',                     # ve -> ヴェ (word: "Wesen", ipa: "ˈveːzn̩")
+    '\u0076\u0259': '\u30F4\u30A7',                     # və -> ヴェ (word: "Alternative", ipa: "ˌaltɛʁnaˈtiːvə")
+    '\u0076\u025B': '\u30F4\u30A7',                     # vɛ -> ヴェ (word: "November", ipa: "noˈvɛmbɐ")
+    '\u0076\u0069': '\u30F4\u30A3',                     # vi -> ヴィ (word: "violett", ipa: "vi̯oˈlɛt")
+    '\u0076\u026A': '\u30F4\u30A3',                     # vɪ -> ヴィ (word: "Wind", ipa: "vɪnt")
+    '\u0076\u006F': '\u30F4\u30A9',                     # vo -> ヴォ (Long stressed "woh" as "WOHnen")
+    '\u0076\u0254': '\u30F4\u30A9',                     # vɔ -> ヴォ (word: "Wort", ipa: "vɔʁt")
+    '\u0076\u0075': '\u30F4',                           # vu -> ヴ (word: "Wut", ipa: "vuːt")
+    '\u0076\u028A': '\u30F4',                           # vʊ -> ヴ (word: "wurde", ipa: "ˈvʊʁdə")
+    '\u0076\u0079' :'\u30F4\u30E5',                     # vy -> ヴュ (word: "Wüste", ipa: "ˈvyːstə")
+    '\u0076\u028F' :'\u30F4\u30E5',                     # vʏ -> ヴュ (word: "Würfel", ipa: "ˈvʏʁfl̩")
+    '\u0076\u00F8': '\u30F4\u30A9\u30A8',               # vø -> ヴォエ (word: "gewöhnlich", ipa: "ɡəˈvøːnlɪç")
+    '\u0076\u0153': '\u30F4\u30A9\u30A8',               # vœ -> ヴォエ (word: "Wörterbuch", ipa: "ˈvœʁtɐˌbuːx")
+    '\u0076\u006E\u0329': '\u30F4\u30A7\u30F3',         # vn̩ -> ヴェン (word: "Möwen", ipa: "ˈmøːvn̩")
+    
 
     # Z
-    '\u0074\u0361\u0073\u0061': '\u30C4\u30A1',  # t͡sa -> ツァ (Short "za" as "ZEIt")
-    '\u0074\u0361\u0073\u0065': '\u30C4\u30A7',  # t͡se -> ツェ (Long "zeh" as "ZEHn")
-    '\u0074\u0361\u0073\u0259': '\u30C3\u30C4\u30A7',   # t͡sə -> ッツェ (Short "tze" as "kaTZE")
-    '\u0074\u0361\u0073\u025B': '\u30C4\u30A7',  # t͡sɛ -> ツェ (Short stressed "ze" as "deZEmber")
-    '\u0074\u0361\u0073\u026A': '\u30C4\u30A3',  # t͡sɪ -> ツィ (Short stressed "zi" as "ZImmer")
-    '\u0074\u0361\u0073\u0069': '\u30C4\u30A3',  # t͡si -> ツィ (Long stressed "zieh" as "ZIEHen")
-    '\u0074\u0361\u0073\u006F': '\u30C4\u30A9',  # t͡so -> ツォ (Long "zo" as "ZOg")
-    '\u0074\u0361\u0073\u0254': '\u30C4\u30A9',  # t͡sɔ -> ツォ (Short stressed "zo" as "horiZOnt")
-    '\u0074\u0361\u0073\u0075': '\u30C4',  # t͡su -> ツ (Short "zu" as "ZUrück")
-    '\u0074\u0361\u0073\u028F': '\u30C4',  # t͡sʏ -> ツ (Short secondary stressed "zü" as "angeZÜndet"W)
+    '\u0074\u0361\u0073\u0061': '\u30C4\u30A1',         # t͡sa -> ツァ (word: "Zeit", ipa: "t͡saɪ̯t")
+    '\u0074\u0361\u0073\u0250': '\u30C4\u30A1',         # t͡sɐ -> ツァ (word: "Kratzer", ipa: "ˈkʁat͡sɐ")
+    '\u0074\u0361\u0073\u0065': '\u30C4\u30A7',         # t͡se -> ツェ (word: "zehn", ipa: "t͡seːn")
+    '\u0074\u0361\u0073\u0259': '\u30C3\u30C4\u30A7',   # t͡sə -> ッツェ (word: "Katze", ipa: "ˈkat͡sə")
+    '\u0074\u0361\u0073\u025B': '\u30C4\u30A7',         # t͡sɛ -> ツェ (word: "Dezember", ipa: "deˈt͡sɛmbɐ")
+    '\u0074\u0361\u0073\u0069': '\u30C4\u30A3',         # t͡si -> ツィ (word: "ziehen", ipa: "ˈt͡siːən")
+    '\u0074\u0361\u0073\u026A': '\u30C4\u30A3',         # t͡sɪ -> ツィ (word: "Zimmer", ipa: "ˈt͡sɪmɐ")
+    '\u0074\u0361\u0073\u006F': '\u30C4\u30A9',         # t͡so -> ツォ (Long "zo" as "ZOg")
+    '\u0074\u0361\u0073\u0254': '\u30C4\u30A9',         # t͡sɔ -> ツォ (Short stressed "zo" as "horiZOnt")
+    '\u0074\u0361\u0073\u0075': '\u30C4',               # t͡su -> ツ (Short "zu" as "ZUrück")
+    '\u0074\u0361\u0073\u028A': '\u30C4',               # t͡sʊ -> ツ (word: "Zucker", ipa: "ˈt͡sʊkɐ")
+    '\u0074\u0361\u0073\u0079': '\u30C5\u30E5',         # t͡sy -> ヅュ (word: "Zyklon", ipa: "ˈt͡syklɔn")
+    '\u0074\u0361\u0073\u028F': '\u30C5\u30E5',         # t͡sʏ -> ヅュ (word: "angezündet", ipa: "ˈanɡəˌt͡sʏndət")
+    '\u0074\u0361\u0073\u00F8': '\u30C5\u30E7',         # t͡sø -> ヅョ (word: "zögern", ipa: "ˈt͡søːɡɐn")
+    '\u0074\u0361\u0073\u0153': '\u30C5\u30E7',         # t͡sœ -> ヅョ (word: "Zöllner", ipa: "ˈt͡sœlnɐ")
     '\u0074\u0361\u0073\u006E\u0329': '\u30C4\u30A7\u30F3',  # t͡sn̩ -> ツェン (Short "zen" as "ächZEN")
     '\u0361\u0073\u0074\u006E\u0329': '\u30C4\u30C6\u30F3',  # ͡stn -> ツテン (Short "zten" as "letZTEN")
 
