@@ -41,12 +41,28 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0062\u028F': '\u30D3\u30E5',                     # bʏ -> ビュ (word: "büffeln", ipa: "ˈbʏfl̩n")
     '\u0062\u00F8': '\u30DC\u30A7',                     # bø -> ボェ (word: "Bögen", ipa: "ˈbøːɡn̩")
     '\u0062\u0153': '\u30DC\u30A7',                     # bœ -> ボェ (word: "Börse", ipa: "ˈbœʁzə")
-    '\u0062\u006C\u0329': '\u30D9\u30EB',               # bl̩ -> ベル (word: "Wirbel", ipa: "ˈvɪʁbl̩")
+    '\u0062\u006C\u0329': '\u30D9\u30EB',               # bl̩ -> ベル (word: "Wコirbel", ipa: "ˈvɪʁbl̩")
     '\u0062\u006E\u0329': '\u30D9\u30F3',               # bn̩ -> ベン (word: "lieben", ipa: "ˈliːbn̩")
 
     # C
+    '\u00E7': '\u30C3\u30D2',                           # ç -> ッヒ (Short "ch" anywhere not previously covered as "niCHt")
+    '\u00E7\u0061': '\u30B7\u30E3',                     # ça -> シャ (word: "Mechaniker", ipa: "meˈçaːnɪkɐ")
+    '\u00E7\u0250': '\u30B7\u30E3',                     # çɐ -> シャ (word: "Stammbücher", ipa: "ˈʃtamˌbyːçɐ")
     '\u00E7\u0065': '\u30B1',                           # çe -> ケ (word: "Elektrochemie", ipa: "eˌlɛktʁoçeˈmiː")
+    '\u00E7\u0259': '\u30C3\u30D2\u30A7',               # çə -> ッヒェ (word: "Teilchen", ipa: "ˈtaɪ̯lçən")
+    '\u00E7\u025B': '\u30B7\u30A7',                     # çɛ -> シェ (word: "Archäologe", ipa: "aʁçɛoˈloːɡə")
     '\u00E7\u0069': '\u30AD',                           # çi -> キ (word: "China", ipa: "ˈçiːna")
+    '\u00E7\u026A': '\u30C3\u30D2',                     # çɪ -> ッヒ (word: "Griechisch", ipa: "ˈɡʁiːçɪʃ")
+    '\u00E7\u006F': '\u30B7\u30A9',                     # ço -> シォ (word: "Psychopath", ipa: "psyçoˈpaːt")
+    '\u00E7\u0254': '\u30B3',                           # çɔ -> コ (word: "Chondrom", ipa: "çɔnˈdʁoːm")
+    '\u00E7\u0075': '\u30B7\u30E5',                     # çu -> シュ (word: "Ischurie", ipa: "ɪsçuˈʁiː")
+    '\u00E7\u028A': '\u30B7\u30E5',                     # çʊ -> シュ (word: "Gleichung", ipa: "ˈɡlaɪ̯çʊŋ")
+    '\u00E7\u0079': '\u30B7\u30E5',                     # çy -> シュ (word: "Mesenchym", ipa: "mezɛnˈçyːm")
+    '\u00E7\u028F': '\u30B7\u30E5',                     # çʏ -> シュ (no word for this mapping yet)
+    '\u00E7\u00F8': '\u30B7\u30E7',                     # çø -> ショ (no word for this mapping yet)
+    '\u00E7\u0153': '\u30B7\u30E7',                     # çœ -> ショ (no word for this mapping yet)
+    '\u00E7\u006C\u0329': '\u30C3\u30D2\u30A7\u30EB',   # çl̩ -> ッヒェル (word: "Sichel", ipa: "ˈzɪçl̩")
+    '\u00E7\u006E\u0329': '\u30C3\u30D2\u30A7\u30F3',   # çn̩ -> ッヒェン (Short "chen" as "reCHEN")
 
     # D
     '\u0064': '\u30C9',                                 # d -> ド (word: "Drei", ipa: "dʁaɪ̯")
@@ -130,7 +146,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
 
     # H
     '\u0068\u0061': '\u30CF',                           # ha -> ハ (word: "Hallo", ipa: "haˈloː")
-    '\u0068\u0250': '\u30CF',                           # hɐ: no entry exists so far
+    '\u0068\u0250': '\u30CF',                           # hɐ -> ハ (no word for this mapping yet)
     '\u0068\u025B': '\u30D8',                           # he -> ヘ (word: "Herzog", ipa: "ˈhɛʁt͡soːk")
     '\u0068\u0259': '\u30D8',                           # hə -> ヘ (word: "Teheran", ipa: "ˈteːhəʁaːn")
     '\u0068\u025B': '\u30D8',                           # hɛ -> ヘ (word: "Herzog", ipa: "ˈhɛʁt͡soːk")
@@ -392,8 +408,8 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u0361\u0283\u028A': '\u30C1\u30E5',         # t͡ʃʊ -> チュ (word: "Kautschuk", ipa: "ˈkaʊ̯t͡ʃʊk")
     '\u0074\u0361\u0283\u0079': '\u30C1\u30E5',         # t͡ʃy -> チュ (word: "tschüs", ipa: "t͡ʃyːs")
     '\u0074\u0361\u0283\u028F': '\u30C1\u30E5',         # t͡ʃʏ -> チュ (word: "tschüss", ipa: "t͡ʃʏs")
-    # '': '',  # t͡ʃø (no word for this mapping yet)
-    # '': '',  # t͡ʃœ (no word for this mapping yet)
+    '\u0074\u0361\u0283\u00F8': '\u30C1\u30E7',         # t͡ʃø -> チョ (no word for this mapping yet)
+    '\u0074\u0361\u0283\u0153': '\u30C1\u30E7',         # t͡ʃœ -> チョ (no word for this mapping yet)
     '\u0074\u0361\u0283\u006E\u0329': '\u30C1\u30A7\u30F3',  # t͡ʃn̩ -> チェン (word: "quatschen", ipa: "ˈkvat͡ʃn̩")
     '\u0074\u0361\u0283\u006C\u0329': '\u30C1\u30A7\u30EB',  # t͡ʃl̩ -> チェル (word: "verhätscheln", ipa: "fɛɐ̯ˈhɛt͡ʃl̩n")
 
@@ -437,12 +453,11 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0074\u0361\u0073\u006C\u0329': '\u30C4\u30A7\u30EB',  # t͡sl̩ -> ツェル (word: "Wurzel", ipa: "ˈvʊʁt͡sl̩")
     '\u0074\u0361\u0073\u006E\u0329': '\u30C4\u30A7\u30F3',  # t͡sn̩ -> ツェン (word: "ächzen", ipa: "ˈɛçt͡sn̩")
     '\u0361\u0073\u0074\u006E\u0329': '\u30C4\u30C6\u30F3',  # ͡stn -> ツテン (word: "letzten", ipa: "ˈlɛt͡stn̩")
-
+    
     # Edge cases for T with preceding short vowel
     '\u0062\u025B\u0074': '\u30D9\u30C3\u30C8',  # bɛt -> ベット (Short "t" with preceding short vowel as "BETT")
     '\u0074\u0061\u0074': '\u30BF\u30C3\u30C8',  # tat -> タット (Short "t" with preceding short vowel as "sTADT")
     '\u02C8\u006C\u025B\u0074': '\u30EC\u30C3\u30C8',  # ˈlɛt -> レット (Short "t" with preceding short vowel as "vioLETT")
-    '\u02C8\u006D\u026A\u0074': '\u30DF\u30C3\u30C8',  # ˈmɪt -> ミット (Short "t" with preceding short vowel as "miTTwoch")
 
     # Edge cases for CH "x" (Pronunciation of "ch" depends on the preceding vowel
     '\u0078\u0259': '\u30C3\u30D8',  # xə -> ッヘ (Short "che" as "spraCHE")
@@ -468,55 +483,48 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0062\u0075\u02D0\u0078': '\u30D6\u30FC\u30C3\u30D5',  # buːx -> ブーッフ (Long "ch" with preceding "bu" as "BUCH")
     '\u0074\u0075\u02D0\u0078': '\u30C8\u30A5\u30FC\u30C3\u30D5',  # tuːx -> トゥーッフ (Long "ch" with predecing "tu" as "TUCH")
     
-    # Edge cases for CH "ç" 
-    '\u00E7': '\u30C3\u30D2',  # ç -> ッヒ (Short "ch" anywhere not previously covered as "niCHt")
-    '\u00E7\u0000': '\u30C3\u30D2',  # çNULL -> ッヒ (Short "ch" at the end of a word as "iCH")
-    '\u00E7\u0259': '\u30C3\u30D2\u30A7',  # çə -> ッヒェ (Short "che" the middle of the word as "glöckCHEn")
-    '\u0000\u00E7\u0065': '\u30B1',  # NULLçe -> ケ (Short "che" at the start of a word as "CHEmie")
-    '\u00E7\u006E\u0329': '\u30C3\u30D2\u30A7\u30F3',  # çn̩ -> ッヒェン (Short "chen" as "reCHEN")
-
     # Edge cases for N the middle of word as "nn", e.g. "soNNe"
     '\u02C8\u007A\u0254\u006E\u0259': '\u30BE\u30F3\u30CD',  # ˈzɔnə -> ゾンネ (Short "ne" as "soNNE")
 
     # Edge cases for M pronunciation, "ン" is pronuounced "m" when it is followed by a "b"
     '\u006D\u0062\u0061': '\u30F3\u30D0',               # mba -> ンバ (word: "Schwimmbad", ipa: "ˈʃvɪmbaːt")
     '\u006D\u0062\u0250': '\u30F3\u30D0',               # mbɐ -> ンバ (word: "Dezember", ipa: "deˈt͡sɛmbɐ")
-    '\u006D\u0062\u0065': '\u30F3\u30D9',               # mbe -> ンベ 
-    '\u006D\u0062\u0259': '\u30F3\u30D9',               # mbə -> ンベ 
-    '\u006D\u0062\u025B': '\u30F3\u30D9',               # mbɛ -> ンベ 
-    '\u006D\u0062\u0069': '\u30F3\u30D3',               # mbi -> ンビ 
-    '\u006D\u0062\u026A': '\u30F3\u30D3',               # mbɪ -> ンビ 
-    '\u006D\u0062\u006F': '\u30F3\u30DC',               # mbo -> ンボ 
-    '\u006D\u0062\u0254': '\u30F3\u30DC',               # mbɔ -> ンボ 
-    '\u006D\u0062\u0075': '\u30F3\u30D6',               # mbu -> ンブ 
-    '\u006D\u0062\u028A': '\u30F3\u30D6',               # mbʊ -> ンブ 
-    '\u006D\u0062\u0079': '\u30F3\u30D3\u30E5',         # mby -> ンビュ 
-    '\u006D\u0062\u028F': '\u30F3\u30D3\u30E5',         # mbʏ -> ンビュ 
+    '\u006D\u0062\u0065': '\u30F3\u30D9',               # mbe -> ンベ (word: "Himbeereises", ipa: "ˈhɪmbeːɐ̯ˌʔaɪ̯zəs")
+    '\u006D\u0062\u0259': '\u30F3\u30D9',               # mbə -> ンベ (word: "Bombe", ipa: "ˈbɔmbə") 
+    '\u006D\u0062\u025B': '\u30F3\u30D9',               # mbɛ -> ンベ (word: "Bamberger", ipa: "ˈbambɛʁɡɐ")
+    '\u006D\u0062\u0069': '\u30F3\u30D3',               # mbi -> ンビ (word: "ambivalent", ipa: "ambivaˈlɛnt")
+    '\u006D\u0062\u026A': '\u30F3\u30D3',               # mbɪ -> ンビ (word: "Imbiss", ipa: "ˈɪmbɪs")
+    '\u006D\u0062\u006F': '\u30F3\u30DC',               # mbo -> ンボ (word: "Tombola", ipa: "ˈtɔmbola")
+    '\u006D\u0062\u0254': '\u30F3\u30DC',               # mbɔ -> ンボ (word: "Amboss", ipa: "ˈambɔs")
+    '\u006D\u0062\u0075': '\u30F3\u30D6',               # mbu -> ンブ (word: "Ambulanz", ipa: "ambuˈlant͡s")
+    '\u006D\u0062\u028A': '\u30F3\u30D6',               # mbʊ -> ンブ (word: "Hamburg", ipa: "ˈhambʊʁk")
+    '\u006D\u0062\u0079': '\u30F3\u30D3\u30E5',         # mby -> ンビュ (word: "Stammbücher", ipa: "ˈʃtamˌbyːçɐ")
+    '\u006D\u0062\u028F': '\u30F3\u30D3\u30E5',         # mbʏ -> ンビュ (word: "Heimbürgin", ipa: "ˈhaɪ̯mbʏʁɡɪn")
     '\u006D\u0062\u00F8': '\u30F3\u30DC\u30A7',         # mbø -> ンボェ 
     '\u006D\u0062\u0153': '\u30F3\u30DC\u30A7',         # mbœ -> ンボェ 
     '\u006D\u0062\u006C\u0329': '\u30F3\u30D9\u30EB',   # mbl̩ -> ンベル 
     '\u006D\u0062\u006E\u0329': '\u30F3\u30D9\u30F3',   # mbn̩ -> ンベン
 
     # Edge cases for M pronunciation, "ン" is pronuounced "m" when it is followed by a "p"
-    '\u0070': '\u30D7',                                 # p -> プ (word: "Problem", ipa: "pʁoˈbleːm")
-    '\u0070\u0061': '\u30D1',                           # pa -> パ (word: "Japan", ipa: "ˈjaːpan")
-    '\u0070\u0250': '\u30D1',                           # pɐ -> パ (word: "Klapperstorch", ipa: "ˈklapɐˌʃtɔʁç")
-    '\u0070\u0065': '\u30DA',                           # pe -> ペ (word: "Peter", ipa: "ˈpeːtɐ")
-    '\u0070\u0259': '\u30DA',                           # pə -> ペ (word: "Lupe", ipa: "ˈluːpə")
-    '\u0070\u025B': '\u30DA',                           # pɛ -> ペ (word: "Person", ipa: "pɛʁˈzoːn")
-    '\u0070\u0069': '\u30D4',                           # pi -> ピ (word: "spielen", ipa: "ˈʃpiːlən")
-    '\u0070\u026A': '\u30D4',                           # pɪ -> ピ (word: "Beispiel", ipa: "ˈbaɪ̯ˌʃpiːl")
-    '\u0070\u006F': '\u30DD',                           # po -> ポ (word: "Potenz", ipa: "ˌpoˈtɛnt͡s")
-    '\u0070\u0254': '\u30DD',                           # pɔ -> ポ (word: "Sport", ipa: "ʃpɔʁt")
-    '\u0070\u0075': '\u30D7',                           # pu -> プ (word: "pudern", ipa: "ˈpuːdɐn")
-    '\u0070\u028A': '\u30D7',                           # pʊ -> プ (word: "Pulver", ipa: "ˈpʊlfɐ")
-    '\u0070\u0079': '\u30D4\u30E5',                     # py -> ピュ (word: "spürte", ipa: "ˈʃpyːɐ̯tə")
-    '\u0070\u028F': '\u30D4\u30E5',                     # pʏ -> ピュ (word: "pünktlich", ipa: "ˈpʏŋktlɪç")
-    '\u0070\u006C\u0329': '\u30DA\u30EB',               # pl̩ -> ペル (word: "Ampel", ipa: "ˈampl̩")
-    '\u0070\u006E\u0329': '\u30DA\u30F3',               # pn̩ -> ペン (word: "Wappen", ipa: "ˈvapn̩")
-    '\u0070\u0361\u0066': '\u30D7\u30D5',               # p͡f -> プフ (word: "Baumstumpf", ipa: "ˈbaʊ̯mˌʃtʊmp͡f")
-    '\u0070\u0361\u0066\u006E\u0329': '\u30D7\u30D5\u30A7\u30F3',  # p͡fn̩ -> プフェン (word: "Tropfen", ipa: "ˈtʁɔp͡fn̩")
-    '\u0070\u0361\u0066\u006C\u0329': '\u30D7\u30D5\u30A7\u30EB',  # p͡fl̩ -> プフェル (word: "Apfel", ipa: "ˈap͡fl̩")
+    '\u0070': '\u30D7',                                 # np -> プ (word: "Problem", ipa: "pʁoˈbleːm")
+    '\u0070\u0061': '\u30D1',                           # npa -> パ (word: "Japan", ipa: "ˈjaːpan")
+    '\u0070\u0250': '\u30D1',                           # npɐ -> パ (word: "Klapperstorch", ipa: "ˈklapɐˌʃtɔʁç")
+    '\u0070\u0065': '\u30DA',                           # npe -> ペ (word: "Peter", ipa: "ˈpeːtɐ")
+    '\u0070\u0259': '\u30DA',                           # npə -> ペ (word: "Lupe", ipa: "ˈluːpə")
+    '\u0070\u025B': '\u30DA',                           # npɛ -> ペ (word: "Person", ipa: "pɛʁˈzoːn")
+    '\u0070\u0069': '\u30D4',                           # npi -> ピ (word: "spielen", ipa: "ˈʃpiːlən")
+    '\u0070\u026A': '\u30D4',                           # npɪ -> ピ (word: "Beispiel", ipa: "ˈbaɪ̯ˌʃpiːl")
+    '\u0070\u006F': '\u30DD',                           # npo -> ポ (word: "Potenz", ipa: "ˌpoˈtɛnt͡s")
+    '\u0070\u0254': '\u30DD',                           # npɔ -> ポ (word: "Sport", ipa: "ʃpɔʁt")
+    '\u0070\u0075': '\u30D7',                           # npu -> プ (word: "pudern", ipa: "ˈpuːdɐn")
+    '\u0070\u028A': '\u30D7',                           # npʊ -> プ (word: "Pulver", ipa: "ˈpʊlfɐ")
+    '\u0070\u0079': '\u30D4\u30E5',                     # npy -> ピュ (word: "spürte", ipa: "ˈʃpyːɐ̯tə")
+    '\u0070\u028F': '\u30D4\u30E5',                     # npʏ -> ピュ (word: "pünktlich", ipa: "ˈpʏŋktlɪç")
+    '\u0070\u006C\u0329': '\u30DA\u30EB',               # npl̩ -> ペル (word: "Ampel", ipa: "ˈampl̩")
+    '\u0070\u006E\u0329': '\u30DA\u30F3',               # npn̩ -> ペン (word: "Wappen", ipa: "ˈvapn̩")
+    '\u0070\u0361\u0066': '\u30D7\u30D5',               # np͡f -> プフ (word: "Baumstumpf", ipa: "ˈbaʊ̯mˌʃtʊmp͡f")
+    '\u0070\u0361\u0066\u006E\u0329': '\u30D7\u30D5\u30A7\u30F3',  # np͡fn̩ -> プフェン (word: "Tropfen", ipa: "ˈtʁɔp͡fn̩")
+    '\u0070\u0361\u0066\u006C\u0329': '\u30D7\u30D5\u30A7\u30EB',  # np͡fl̩ -> プフェル (word: "Apfel", ipa: "ˈap͡fl̩")
 
     # Edge cases general
     '\u02D0\u0259': '\u30FC\u30D8',  # ːə -> ーヘ (word: "nahe", ipa: "ˈnaːə")
