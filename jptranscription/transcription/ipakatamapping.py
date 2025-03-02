@@ -351,6 +351,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u0073\u028A': '\u30B9',                           # sʊ -> ス (word: "Impressum", ipa: "ɪmˈpʁɛsʊm")
     '\u007A\u0075': '\u30BA',                           # zu -> ズ (word: "Suche", ipa: "ˈzuːxə")
     '\u007A\u028A': '\u30BA',                           # zʊ -> ズ (word: "subtil", ipa: "zʊpˈtiːl")
+    '\u007A\u0079': '\u30C5\u30E5',                     # zy -> ヅュ (word: "Süd", ipa: "ˈzyːt")
     '\u0283\u0061': '\u30B7\u30E3',                     # ʃa -> シャ (word: "entscheiden", ipa: "ɛntˈʃaɪ̯dn̩")
     '\u0283\u0250': '\u30B7\u30E3',                     # ʃɐ -> シャ (word: "zwitschern", ipa: "ˈt͡svɪt͡ʃɐn")
     '\u0283\u0251': '\u30B7\u30E3',                     # ʃɑ -> シャ (word: "Chance", ipa: "ʃɑ̃ːs")

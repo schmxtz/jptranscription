@@ -10,3 +10,5 @@ test.py
 lang-de.json
 analyze.py
 uni.py
+build/*
+.ipynb_checkpoints/*
