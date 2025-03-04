@@ -22,7 +22,8 @@ So this project attempts to generate the Katakana pronunciation of all German wo
 Since some sound-combinations include shorter sounds/sound-combinations that might be pronounced differently, I'll start
 looking for a match starting from the longest possible substring.
 
-I'm using the Wikipedia [Wiktionary](https://de.wiktionary.org/) as a lookup table for most German words. It has as an IPA entry for most of them. Then each word is transcribed into Katakana using the IPA sounds.
+I'm using the Wikipedia [Wiktionary](https://de.wiktionary.org/) as a lookup table for most German words. It has as an IPA entry for most of them. Then each word is transcribed into Katakana using the IPA sounds. I changed the entries to only contain the pairs (word, phonetics). This is allowed as per the 
+[Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/) license.
 
 
 > [!NOTE]
