@@ -43,4 +43,4 @@ I'm using the Wikipedia [Wiktionary](https://de.wiktionary.org/) as a lookup tab
 - I want to thank [rhasspy](https://github.com/rhasspy) whose library [gruut](https://github.com/rhasspy/gruut) helped me get a basic understanding of German words and their IPA
 - I want to thank [dmort27](https://github.com/dmort27) whose library [epitran](https://github.com/dmort27/epitran) made me come across the wikitionary library
 - [This](https://ttsmp3.com/text-to-speech/Japanese/) website helped me check my Transcription if it sounded similar
-- I want to thank the author of [this](https://doitsugo-yarouze.com/german-words-200/) blogpost who helped me as a starting point
+- I want to thank the author of [this](https://doitsugo-yarouze.com/german-words-200/) blogpost who helped me as a starting point 
