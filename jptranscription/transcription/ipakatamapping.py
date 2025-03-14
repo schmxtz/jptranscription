@@ -483,6 +483,7 @@ GERMAN_IPA_TO_KATAKANA_MAP = {
     '\u006E\u0061\u02D0\u0078': '\u30CA\u30C3\u30CF',  # naːx -> ナッハ
     '\u0062\u0075\u02D0\u0078': '\u30D6\u30FC\u30C3\u30D5',  # buːx -> ブーッフ (Long "ch" with preceding "bu" as "BUCH")
     '\u0074\u0075\u02D0\u0078': '\u30C8\u30A5\u30FC\u30C3\u30D5',  # tuːx -> トゥーッフ (Long "ch" with predecing "tu" as "TUCH")
+    '\u007A\u0075\u02D0\u0078': '\u30BA\u30FC\u30C3\u30D5',  # zuːx -> ズーッフ (Long "ch" with preceding "su" as "Besuch")
     
     # Edge cases for N the middle of word as "nn", e.g. "soNNe"
     '\u02C8\u007A\u0254\u006E\u0259': '\u30BE\u30F3\u30CD',  # ˈzɔnə -> ゾンネ (Short "ne" as "soNNE")
